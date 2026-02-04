@@ -21,6 +21,7 @@ enum OnboardingStep: String, Codable, CaseIterable {
     case goalSelection2            // E09
     case thinkingBigger            // E10
     case youreInRightPlace         // E11
+    case hadithScreen              // E11.5 - Hadis ekranı
     case prayerFrequency           // E12
     case relationshipWithAllah     // E13
     case mainBlockers              // E14
@@ -55,8 +56,23 @@ enum OnboardingStep: String, Codable, CaseIterable {
     case completed                 // Final state
     
     var progressValue: Double {
-        let index = Double(OnboardingStep.allCases.firstIndex(of: self) ?? 0)
-        let total = Double(OnboardingStep.allCases.count)
-        return index / total
+        // Progress bar'da gösterilen step'ler
+        let progressSteps: [OnboardingStep] = [
+            .goalSelection1,
+            .thinkingBigger,
+            .prayerFrequency,
+            .relationshipWithAllah,
+            .mainBlockers,
+            .deeperStruggles,
+            .madhhabSelection,
+            .sexSelection
+        ]
+        
+        guard let currentIndex = progressSteps.firstIndex(of: self) else {
+            return 0.0
+        }
+        
+        let progress = Double(currentIndex) / Double(progressSteps.count - 1)
+        return progress
     }
 }

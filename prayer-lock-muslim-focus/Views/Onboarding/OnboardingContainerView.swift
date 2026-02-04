@@ -18,9 +18,7 @@ struct OnboardingContainerView: View {
             VStack(spacing: 0) {
                 // Progress bar
                 if shouldShowProgressBar {
-                    ProgressView(value: viewModel.progressValue)
-                        .progressViewStyle(LinearProgressViewStyle(tint: Color.appPrimary))
-                        .frame(height: 2)
+                    CustomProgressBar(progress: viewModel.progressValue)
                 }
                 
                 // Main content
@@ -28,7 +26,7 @@ struct OnboardingContainerView: View {
                     .transition(.opacity)
             }
         }
-        .preferredColorScheme(.medium)
+        .preferredColorScheme(.light)
     }
     
     // MARK: - Computed Views
@@ -54,6 +52,26 @@ struct OnboardingContainerView: View {
             OnboardingPhoneImpactView(viewModel: viewModel)
         case .timeIntro:
             OnboardingTimeIntroView(viewModel: viewModel)
+        case .goalSelection1:
+            OnboardingGoalSelectionView(viewModel: viewModel)
+        case .thinkingBigger:
+            OnboardingBiggerVisionView(viewModel: viewModel)
+        case .hadithScreen:
+            OnboardingHadithView(viewModel: viewModel)
+        case .prayerFrequency:
+            OnboardingPrayerFrequencyView(viewModel: viewModel)
+        case .relationshipWithAllah:
+            OnboardingRelationshipView(viewModel: viewModel)
+        case .mainBlockers:
+            OnboardingBlockersView(viewModel: viewModel)
+        case .deeperStruggles:
+            OnboardingRootStrugglesView(viewModel: viewModel)
+        case .madhhabSelection:
+            OnboardingMadhhabView(viewModel: viewModel)
+        case .sexSelection:
+            OnboardingSexView(viewModel: viewModel)
+        case .completed:
+            OnboardingCompletedView(viewModel: viewModel)
         default:
             Text("Coming soon: \(viewModel.currentStep.rawValue)")
                 .foregroundColor(Color.appTextPrimary)
@@ -62,7 +80,7 @@ struct OnboardingContainerView: View {
     
     private var backgroundColor: Color {
         switch viewModel.currentStep {
-        case .splash, .youreInRightPlace, .encouragement, .planReady:
+        case .splash, .youreInRightPlace, .encouragement, .planReady, .completed:
             return .appPrimary
         default:
             return .appSurface
@@ -70,11 +88,11 @@ struct OnboardingContainerView: View {
     }
     
     private var shouldShowProgressBar: Bool {
-        // Progress bar sadece 8. ekrandan (goalSelection1) itibaren gösterilir
+        // Progress bar sadece goalSelection1'den itibaren gösterilir
         switch viewModel.currentStep {
         case .splash, .problemFraming, .productPromise, .nameInput, .transition, .ageRange, .phoneUsage, .phoneImpact, .timeIntro:
             return false
-        case .howItWorksModal, .ratingPrompt:
+        case .hadithScreen, .howItWorksModal, .ratingPrompt:
             return false
         default:
             return true

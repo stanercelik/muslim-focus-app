@@ -45,162 +45,124 @@ enum AgeRange: String, Codable, CaseIterable {
 }
 
 enum UserGoal: String, Codable, CaseIterable {
-    // Set 1 (E08)
-    case prioritizeAllah = "prioritize_allah"
-    case regularWorship = "regular_worship"
-    case strengthenConnection = "strengthen_connection"
+    // Hedef Belirleme (Achieve)
+    case putGodFirst = "put_god_first"
+    case buildPrayerHabit = "build_prayer_habit"
+    case deepenRelationship = "deepen_relationship"
     case findPeace = "find_peace"
     case startWithIntention = "start_with_intention"
-    case calmMind = "calm_mind"
-    
-    // Set 2 (E09)
-    case readQuran = "read_quran"
-    case keepHeartAlive = "keep_heart_alive"
-    case strengthenIstikamet = "strengthen_istikamet"
-    case prayForGuidance = "pray_for_guidance"
-    case trustAllah = "trust_allah"
-    case fightSins = "fight_sins"
-    case morningEveningRoutine = "morning_evening_routine"
+    case centerQuran = "center_quran"
+    case liveSunnah = "live_sunnah"
+    case avoidWaste = "avoid_waste"
     
     var displayText: String {
         switch self {
-        case .prioritizeAllah: return "Allah'ı öncelemek, telefonu değil"
-        case .regularWorship: return "düzenli ibadet alışkanlığı"
-        case .strengthenConnection: return "Allah ile bağımı güçlendirmek"
-        case .findPeace: return "kaotik bir dünyada huzur bulmak"
-        case .startWithIntention: return "güne niyetle başlamak"
-        case .calmMind: return "zihnimi sakinleştirmek"
-        case .readQuran: return "Kur'an'ı daha düzenli okumak"
-        case .keepHeartAlive: return "zikirle kalbimi diri tutmak"
-        case .strengthenIstikamet: return "istikametimi güçlendirmek"
-        case .prayForGuidance: return "büyük bir karar için dua ile yön bulmak"
-        case .trustAllah: return "Allah'a daha çok güvenmek (tevekkül)"
-        case .fightSins: return "günahlarla mücadelede daha güçlü olmak"
-        case .morningEveningRoutine: return "sabah/akşam rutinini oturtmak"
-        }
-    }
-    
-    var iconName: String {
-        switch self {
-        case .prioritizeAllah: return "star.fill"
-        case .regularWorship: return "calendar"
-        case .strengthenConnection: return "heart.fill"
-        case .findPeace: return "leaf.fill"
-        case .startWithIntention: return "sunrise.fill"
-        case .calmMind: return "brain.head.profile"
-        case .readQuran: return "book.fill"
-        case .keepHeartAlive: return "sparkles"
-        case .strengthenIstikamet: return "arrow.up.right"
-        case .prayForGuidance: return "signpost.right.fill"
-        case .trustAllah: return "hand.raised.fill"
-        case .fightSins: return "shield.fill"
-        case .morningEveningRoutine: return "clock.fill"
+        case .putGodFirst: return "🤲 Allah'ı (cc) her şeyin önüne koymak, telefonun değil."
+        case .buildPrayerHabit: return "🕌 5 vakit namazda sarsılmaz bir istikrar kazanmak."
+        case .deepenRelationship: return "❤️ Rabbimle olan bağımı ve muhabbetimi artırmak."
+        case .findPeace: return "✨ Dünyalık telaşlar içinde sekine (huzur) bulmak."
+        case .startWithIntention: return "🎯 Güne niyetle ve sabah zikriyle başlamak."
+        case .centerQuran: return "📖 Kur'an-ı Kerim'i hayatımın merkezine almak."
+        case .liveSunnah: return "🌙 Sünnet-i Seniyye üzere bir yaşam sürmek."
+        case .avoidWaste: return "🚫 Gıybet ve malayani (faydasız) işlerden uzaklaşmak."
         }
     }
 }
 
 enum BiggerVision: String, Codable, CaseIterable {
-    case patienceAndTrust = "patience_trust"
-    case liveWithIstikamet = "live_istikamet"
-    case beUseful = "be_useful"
-    case centerQuran = "center_quran"
-    case peacefulHeart = "peaceful_heart"
+    case tevekkul = "tevekkul"
+    case istikamet = "istikamet"
+    case infak = "infak"
+    case nefsMucadelesi = "nefs_mucadelesi"
+    case prophetCharacter = "prophet_character"
     
     var displayText: String {
         switch self {
-        case .patienceAndTrust: return "zor zamanlarda sabır ve tevekkül"
-        case .liveWithIstikamet: return "imanımı davranışımla yaşamak (istikamet)"
-        case .beUseful: return "Allah'ın verdikleriyle faydalı olmak"
-        case .centerQuran: return "Kur'an'ı merkeze almak"
-        case .peacefulHeart: return "kalbimde huzur ve sükunet"
+        case .tevekkul: return "🤝 Zorluklarda tam bir tevekkül ve rıza göstermek."
+        case .istikamet: return "💯 Özü sözü bir, dosdoğru bir Müslüman olmak (İstikamet)."
+        case .infak: return "🙌 Allah'ın verdiği nimetleri O'nun rızası için infak etmek."
+        case .nefsMucadelesi: return "🛡️ Nefsimle mücadelede irademi güçlendirmek."
+        case .prophetCharacter: return "🌟 Ahlakımı Peygamber Efendimiz'in (sav) ahlakıyla güzelleştirmek."
         }
     }
 }
 
 enum SpiritualState: String, Codable, CaseIterable {
-    case upAndDown = "up_down"
+    case fluctuating = "fluctuating"
     case distant = "distant"
-    case restarting = "restarting"
-    case closeAndRegular = "close_regular"
+    case newStart = "new_start"
+    case close = "close"
     
     var displayText: String {
         switch self {
-        case .upAndDown: return "inişli çıkışlı"
-        case .distant: return "son zamanlarda biraz uzak"
-        case .restarting: return "yeniden başlıyorum / toparlıyorum"
-        case .closeAndRegular: return "yakın ve düzenli"
+        case .fluctuating: return "🎢 İmanım bazen artıyor, bazen azalıyor."
+        case .distant: return "😔 Son zamanlarda kendimi Rabbimden uzak hissediyorum."
+        case .newStart: return "🌱 Tövbe ile yeni bir başlangıç yapıyorum."
+        case .close: return "🙏 Hamdolsun, yakın ve istikrarlı bir bağım var."
         }
     }
 }
 
 enum Blocker: String, Codable, CaseIterable {
-    case phoneSocialMedia = "phone_social"
-    case lossOfFocus = "loss_focus"
-    case lowMotivation = "low_motivation"
-    case noTime = "no_time"
-    case procrastination = "procrastination"
-    case anxiety = "anxiety"
+    case phoneDistraction = "phone_distraction"
+    case lossOfKhushu = "loss_of_khushu"
+    case spiritualEmptiness = "spiritual_emptiness"
+    case worldlyBusyness = "worldly_busyness"
+    case fajrDifficulty = "fajr_difficulty"
     
     var displayText: String {
         switch self {
-        case .phoneSocialMedia: return "telefon & sosyal medya"
-        case .lossOfFocus: return "odak kaybı / dalgınlık"
-        case .lowMotivation: return "motivasyon düşük"
-        case .noTime: return "yoğunluk & zaman yok"
-        case .procrastination: return "ertelemek"
-        case .anxiety: return "kaygı / zihnim susmuyor"
+        case .phoneDistraction: return "📱 Telefon ve sosyal medya dağınıklığı."
+        case .lossOfKhushu: return "🧠 Namazda huşu kaybı ve zihnin dağılması."
+        case .spiritualEmptiness: return "😥 Manevi boşluk veya motivasyon düşüklüğü (Gaflet)."
+        case .worldlyBusyness: return "⏰ Dünya işleri ve vakit darlığı."
+        case .fajrDifficulty: return "💤 Sabah namazına uyanmakta zorlanmak."
         }
     }
 }
 
 enum RootStruggle: String, Codable, CaseIterable {
-    case obsessiveThoughts = "obsessive_thoughts"
-    case constantWorry = "constant_worry"
-    case loneliness = "loneliness"
-    case angerResentment = "anger_resentment"
-    case overconfidence = "overconfidence"
-    case cantBreakHabits = "cant_break_habits"
+    case nafsaniDesires = "nafsani_desires"
+    case futureAnxiety = "future_anxiety"
+    case heartHardness = "heart_hardness"
+    case arrogance = "arrogance"
+    case pastGuilt = "past_guilt"
     
     var displayText: String {
         switch self {
-        case .obsessiveThoughts: return "vesvese / zihinsel yük"
-        case .constantWorry: return "sürekli endişe"
-        case .loneliness: return "yalnızlık"
-        case .angerResentment: return "öfke / kırgınlık"
-        case .overconfidence: return "nefsime fazla güvenmek"
-        case .cantBreakHabits: return "alışkanlıklarımı bırakamamak"
+        case .nafsaniDesires: return "🔥 Nefsi arzular ve harama bakmak."
+        case .futureAnxiety: return "😥 Gelecek kaygısı ve yersiz vesveseler."
+        case .heartHardness: return "😔 Kalp katılığı ve manevi yalnızlık."
+        case .arrogance: return "💪 Kibir veya kendine aşırı güvenme."
+        case .pastGuilt: return "🌑 Geçmiş hataların verdiği suçluluk duygusu."
         }
     }
 }
 
 enum Madhhab: String, Codable, CaseIterable {
-    case general = "general"
     case hanafi = "hanafi"
     case shafii = "shafii"
-    case maliki = "maliki"
-    case hanbali = "hanbali"
-    case other = "other"
+    case malikiHanbali = "maliki_hanbali"
+    case general = "general"
     
     var displayText: String {
         switch self {
-        case .general: return "genel (mezhep belirtmek istemiyorum)"
-        case .hanafi: return "hanefi"
-        case .shafii: return "şafii"
-        case .maliki: return "maliki"
-        case .hanbali: return "hanbeli"
-        case .other: return "diğer / emin değilim"
+        case .hanafi: return "Hanefi"
+        case .shafii: return "Şafii"
+        case .malikiHanbali: return "Maliki / Hanbeli"
+        case .general: return "Genel / Mezhep Belirtmek İstemiyorum"
         }
     }
 }
 
-enum Sex: String, Codable {
+enum Sex: String, Codable, CaseIterable {
     case male = "male"
     case female = "female"
     
     var displayText: String {
         switch self {
-        case .male: return "erkek"
-        case .female: return "kadın"
+        case .male: return "Erkek"
+        case .female: return "Kadın"
         }
     }
 }

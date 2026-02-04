@@ -28,6 +28,30 @@ struct OnboardingSplashView: View {
             )
             .ignoresSafeArea()
             
+            // [DEV] Button - Sol üst köşe
+            VStack {
+                HStack {
+                    Button(action: {
+                        viewModel.currentStep = .goalSelection1
+                    }) {
+                        Text("[DEV]")
+                            .font(.system(size: 12, weight: .bold, design: .rounded))
+                            .foregroundColor(Color.appTextOnPrimary)
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 6)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(Color.black.opacity(0.2))
+                            )
+                    }
+                    .padding(.leading, 16)
+                    .padding(.top, 50)
+                    
+                    Spacer()
+                }
+                Spacer()
+            }
+            
             VStack {
                 Spacer()
                 

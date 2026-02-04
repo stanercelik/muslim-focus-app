@@ -25,7 +25,7 @@ struct OnboardingTimeIntroView: View {
                 Spacer()
                 
                 // Metin
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: 32) {
                     Text("Bu döngüyü berekete çevirebiliriz.")
                         .font(.system(size: 28, weight: .semibold, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
@@ -35,12 +35,14 @@ struct OnboardingTimeIntroView: View {
                     // Rabbimize (cc) ile
                     VStack(alignment: .leading, spacing: 4) {
                         (Text("Günde sadece ")
-                            .foregroundColor(Color.appTextPrimary) +
+                            .foregroundColor(Color.appTextPrimary)
+                            .font(.system(size: 28, weight: .semibold, design: .rounded)) +
                         Text("5 dakikanı")
                             .foregroundColor(Color.appPrimary)
+                            .font(.system(size: 28, weight: .semibold, design: .rounded))
                             .fontWeight(.bold) +
                         Text(" Rabbimize ")
-                            .foregroundColor(Color.appTextPrimary) +
+                            .foregroundColor(Color.appTextPrimary).font(.system(size: 28, weight: .semibold, design: .rounded)) +
                         Text("(cc)")
                             .font(.system(size: 22))
                             .foregroundColor(Color.appTextPrimary.opacity(0.6))
@@ -53,7 +55,7 @@ struct OnboardingTimeIntroView: View {
                     .offset(y: showLine2 ? 0 : 20)
                     
                     Spacer()
-                        .frame(height: 20)
+                        .frame(height: 32)
                     
                     Text("Şimdi senin için manevi bir plan yapalım.")
                         .font(.system(size: 17, weight: .medium, design: .rounded))

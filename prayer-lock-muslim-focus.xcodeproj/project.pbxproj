@@ -16,6 +16,11 @@
 			path = "prayer-lock-muslim-focus";
 			sourceTree = "<group>";
 		};
+		204D1C7A2F32BC290001C05A /* Documents */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Documents;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +39,7 @@
 			children = (
 				204D1C6B2F32BC150001C05A /* prayer-lock-muslim-focus */,
 				204D1C6A2F32BC150001C05A /* Products */,
+				204D1C7A2F32BC290001C05A /* Documents */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +68,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				204D1C6B2F32BC150001C05A /* prayer-lock-muslim-focus */,
+				204D1C7A2F32BC290001C05A /* Documents */,
 			);
 			name = "prayer-lock-muslim-focus";
 			packageProductDependencies = (

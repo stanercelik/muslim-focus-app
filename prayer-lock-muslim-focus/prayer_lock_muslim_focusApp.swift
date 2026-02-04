@@ -25,7 +25,7 @@ struct prayer_lock_muslim_focusApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingContainerView()
         }
         .modelContainer(sharedModelContainer)
     }

@@ -1,0 +1,117 @@
+---
+description: Animation timing standards for onboarding screens
+globs: **/Views/Onboarding/**/*.swift
+alwaysApply: false
+---
+
+# Animation Standards
+
+## Timing Pattern
+
+Tüm onboarding ekranlarında tutarlı, rahat ve yavaş bir animasyon deneyimi için standart timing değerleri.
+**Minimum delay aralığı: 1.5 saniye**
+
+### Duration
+- **Normal animasyonlar**: `1.0s`
+- **Tap to continue**: `1.5s` (daha yavaş fade in)
+
+### Delay Pattern
+
+#### İlk Grup (Başlık/Ana İçerik)
+```swift
+0.5s  // İlk element
+2.0s  // İkinci element (1.5s gap)
+3.5s  // Üçüncü element (1.5s gap)
+5.0s  // Dördüncü element (eğer varsa, 1.5s gap)
+```
+
+#### İkinci Grup (Alt içerik/Detaylar)
+```swift
+6.5s   // İlk element (büyük gap sonrası)
+8.0s   // İkinci element (1.5s gap)
+9.5s   // Üçüncü element (1.5s gap)
+11.0s  // Dördüncü element (1.5s gap)
+// Her element arasında 1.5s gap
+```
+
+#### Final
+```swift
+13.0s  // Tap to continue (duration: 1.5s)
+```
+
+## Usage Examples
+
+### 3 Satırlık Başlık
+```swift
+withAnimation(.easeOut(duration: 1.0).delay(0.5)) {
+    showTitle1 = true
+}
+
+withAnimation(.easeOut(duration: 1.0).delay(2.0)) {
+    showTitle2 = true
+}
+
+withAnimation(.easeOut(duration: 1.0).delay(3.5)) {
+    showTitle3 = true
+}
+```
+
+### Alt İçerik (4 satır)
+```swift
+withAnimation(.easeOut(duration: 1.0).delay(6.5)) {
+    showLine1 = true
+}
+
+withAnimation(.easeOut(duration: 1.0).delay(8.0)) {
+    showLine2 = true
+}
+
+withAnimation(.easeOut(duration: 1.0).delay(9.5)) {
+    showLine3 = true
+}
+
+withAnimation(.easeOut(duration: 1.0).delay(11.0)) {
+    showLine4 = true
+}
+```
+
+### Tap to Continue
+```swift
+withAnimation(.easeOut(duration: 1.5).delay(13.0)) {
+    showTapToContinue = true
+}
+```
+
+## AnimationConstants Helper
+
+Use the `AnimationConstants` utility for cleaner code:
+
+```swift
+import AnimationConstants
+
+withAnimation(.easeOut(duration: AnimationConstants.standardDuration)
+              .delay(AnimationConstants.firstElementDelay)) {
+    showTitle1 = true
+}
+
+withAnimation(.easeOut(duration: AnimationConstants.standardDuration)
+              .delay(AnimationConstants.secondGroupDelay(at: 0))) {
+    showFeature1 = true
+}
+```
+
+## Offset Pattern
+
+Tüm animasyonlarda aynı offset kullan:
+
+```swift
+.opacity(showElement ? 1.0 : 0.0)
+.offset(y: showElement ? 0 : 20)  // 20pt yukarıdan
+```
+
+## Easing
+
+Tüm animasyonlar için:
+```swift
+.easeOut  // Smooth, natural feeling
+```

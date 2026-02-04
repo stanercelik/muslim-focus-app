@@ -1,0 +1,220 @@
+---
+description: ViewModel patterns and best practices
+globs: **/*ViewModel.swift
+alwaysApply: false
+---
+
+# ViewModel Best Practices
+
+## Structure
+
+### Basic ViewModel Template
+```swift
+@MainActor
+final class OnboardingViewModel: ObservableObject {
+    // MARK: - Published Properties
+    @Published var currentStep: OnboardingStep = .welcome
+    @Published var isLoading: Bool = false
+    @Published var errorMessage: String?
+    
+    // MARK: - Dependencies
+    private let analyticsService: AnalyticsService
+    private let dataStore: DataStore
+    
+    // MARK: - Initialization
+    init(
+        analyticsService: AnalyticsService = .shared,
+        dataStore: DataStore = .shared
+    ) {
+        self.analyticsService = analyticsService
+        self.dataStore = dataStore
+    }
+    
+    // MARK: - Public Methods
+    func nextStep() {
+        // Implementation
+    }
+    
+    // MARK: - Private Methods
+    private func validateInput() -> Bool {
+        // Implementation
+    }
+}
+```
+
+## Published Properties
+
+### Use @Published for UI State
+```swift
+// ✅ GOOD
+@Published var userName: String = ""
+@Published var selectedGoals: [UserGoal] = []
+@Published var isNextButtonEnabled: Bool = false
+
+// ❌ BAD - Don't use @Published for constants or computed
+@Published let maxGoals = 3  // Use regular let
+```
+
+## Async Operations
+
+### Proper Async/Await Handling
+```swift
+// ✅ GOOD
+func saveOnboardingData() async {
+    isLoading = true
+    defer { isLoading = false }
+    
+    do {
+        try await dataStore.save(onboardingData)
+        analyticsService.track(.onboardingCompleted)
+        await showSuccessMessage()
+    } catch {
+        errorMessage = "Veri kaydedilemedi: \(error.localizedDescription)"
+    }
+}
+
+// Usage in view
+Button("Kaydet") {
+    Task {
+        await viewModel.saveOnboardingData()
+    }
+}
+```
+
+## Input Validation
+
+### Computed Properties for Validation
+```swift
+// ✅ GOOD
+var isNameValid: Bool {
+    !userName.trimmingCharacters(in: .whitespaces).isEmpty
+}
+
+var canProceed: Bool {
+    isNameValid && selectedGoals.count <= 3 && !isLoading
+}
+
+// Use in view
+Button("Devam") {
+    viewModel.nextStep()
+}
+.disabled(!viewModel.canProceed)
+```
+
+## Dependency Injection
+
+### Constructor Injection
+```swift
+// ✅ GOOD - Testable
+protocol AnalyticsServiceProtocol {
+    func track(_ event: AnalyticsEvent)
+}
+
+@MainActor
+final class OnboardingViewModel: ObservableObject {
+    private let analyticsService: AnalyticsServiceProtocol
+    
+    init(analyticsService: AnalyticsServiceProtocol = AnalyticsService.shared) {
+        self.analyticsService = analyticsService
+    }
+}
+
+// Easy to test with mock
+let mockAnalytics = MockAnalyticsService()
+let viewModel = OnboardingViewModel(analyticsService: mockAnalytics)
+```
+
+## State Management
+
+### Use Enums for Complex State
+```swift
+// ✅ GOOD
+enum OnboardingState {
+    case idle
+    case loading
+    case success
+    case error(String)
+}
+
+@Published var state: OnboardingState = .idle
+
+// Usage
+switch state {
+case .idle:
+    // Show initial state
+case .loading:
+    // Show loading indicator
+case .success:
+    // Show success
+case .error(let message):
+    // Show error message
+}
+```
+
+## Navigation
+
+### ViewModel Handles Navigation Logic
+```swift
+// ✅ GOOD
+@Published var navigationPath: [OnboardingStep] = []
+
+func navigateToNext() {
+    switch currentStep {
+    case .welcome:
+        navigationPath.append(.nameInput)
+    case .nameInput where isNameValid:
+        navigationPath.append(.goalSelection)
+    default:
+        break
+    }
+}
+
+func navigateBack() {
+    _ = navigationPath.popLast()
+}
+```
+
+## Analytics Integration
+
+### Track User Actions
+```swift
+// ✅ GOOD
+func selectGoal(_ goal: UserGoal) {
+    selectedGoals.append(goal)
+    analyticsService.track(.goalSelected(goal.id))
+}
+
+func completeStep(_ step: OnboardingStep) {
+    analyticsService.track(.onboardingStepCompleted(step.rawValue))
+}
+```
+
+## Memory Management
+
+### Avoid Retain Cycles
+```swift
+// ✅ GOOD
+func loadData() {
+    Task { [weak self] in
+        guard let self else { return }
+        let data = await fetchData()
+        await self.updateUI(with: data)
+    }
+}
+```
+
+## Testing Considerations
+
+### Keep Logic Testable
+```swift
+// ✅ GOOD - Pure, testable logic
+func validateAge(_ age: Int) -> Bool {
+    age >= 14 && age <= 120
+}
+
+// Can be tested easily
+func testAgeValidation() {
+    XCTAssertTrue(viewModel.validateAge(25))
+    XCTAssertFalse(viewModel.validateAge(10))
+}
+```

@@ -1,0 +1,155 @@
+---
+description: SwiftUI view best practices and patterns
+globs: **/Views/**/*.swift
+alwaysApply: false
+---
+
+# SwiftUI View Guidelines
+
+## View Structure
+
+### Clean Body
+```swift
+// ❌ BAD - Too much logic in body
+var body: some View {
+    if condition1 {
+        if condition2 {
+            // Complex nested views
+        }
+    }
+}
+
+// ✅ GOOD - Extract subviews
+var body: some View {
+    contentView
+}
+
+@ViewBuilder
+private var contentView: some View {
+    if shouldShowWelcome {
+        welcomeView
+    } else {
+        mainContentView
+    }
+}
+```
+
+## State Management
+
+### Use Correct Property Wrappers
+```swift
+// ✅ GOOD
+struct OnboardingView: View {
+    @StateObject private var viewModel = OnboardingViewModel()  // Owns the ViewModel
+    @State private var isAnimating = false                       // Local UI state
+    @Environment(\.dismiss) private var dismiss                  // Environment
+}
+
+struct OnboardingChildView: View {
+    @ObservedObject var viewModel: OnboardingViewModel          // Passed from parent
+}
+```
+
+## Composition
+
+### Extract Reusable Components
+```swift
+// ✅ GOOD - Reusable button component
+struct PrimaryButton: View {
+    let title: String
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(.headline)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.accentColor)
+                .cornerRadius(12)
+        }
+    }
+}
+```
+
+## Modifiers
+
+### Order Matters
+```swift
+// ✅ GOOD - Modifiers in logical order
+Text("Hello")
+    .font(.headline)           // Typography
+    .foregroundColor(.primary) // Color
+    .padding()                 // Spacing
+    .background(Color.gray)    // Background
+    .cornerRadius(8)           // Shape
+    .shadow(radius: 2)         // Effects
+```
+
+## Animations
+
+### Explicit Animations
+```swift
+// ✅ GOOD
+withAnimation(.easeInOut(duration: 0.3)) {
+    viewModel.currentStep = .next
+}
+
+// Also good for view-specific animations
+Text("Hello")
+    .opacity(isVisible ? 1 : 0)
+    .animation(.easeIn, value: isVisible)
+```
+
+## Previews
+
+### Provide Multiple Preview States
+```swift
+#Preview("Default") {
+    OnboardingWelcomeView()
+}
+
+#Preview("With Data") {
+    let viewModel = OnboardingViewModel()
+    viewModel.userName = "Ali"
+    return OnboardingWelcomeView(viewModel: viewModel)
+}
+
+#Preview("Dark Mode") {
+    OnboardingWelcomeView()
+        .preferredColorScheme(.dark)
+}
+```
+
+## Accessibility
+
+### Always Include Accessibility
+```swift
+// ✅ GOOD
+Button("Continue") {
+    viewModel.nextStep()
+}
+.accessibilityLabel("Devam et")
+.accessibilityHint("Bir sonraki adıma geç")
+```
+
+## Performance
+
+### Avoid Heavy Computations in Body
+```swift
+// ❌ BAD
+var body: some View {
+    let processedData = heavyComputation(data) // Runs on every render
+    return Text(processedData)
+}
+
+// ✅ GOOD
+var body: some View {
+    Text(processedData)
+}
+
+private var processedData: String {
+    heavyComputation(data)
+}
+```

@@ -1,0 +1,103 @@
+---
+description: MVVM Architecture standards for SwiftUI project
+alwaysApply: true
+---
+
+# MVVM Architecture Guidelines
+
+## Folder Structure
+
+```
+prayer-lock-muslim-focus/
+├── Models/              # Data models and entities
+│   └── Onboarding/     # Feature-specific models
+├── ViewModels/          # Business logic and state management
+│   └── Onboarding/     # Feature-specific ViewModels
+├── Views/               # SwiftUI views
+│   └── Onboarding/     # Feature-specific views
+├── Services/            # API, Database, External services
+├── Utilities/           # Helper functions, extensions
+└── Resources/           # Assets, localization files
+```
+
+## Core Principles
+
+### 1. Separation of Concerns
+- **Models**: Pure data structures, no business logic
+- **Views**: UI only, delegate user actions to ViewModel
+- **ViewModels**: Business logic, state management, data transformation
+- **Services**: External interactions (API, database, analytics)
+
+### 2. Data Flow
+```
+User Action → View → ViewModel → Service → ViewModel → View Update
+```
+
+## Naming Conventions
+
+### Files
+- Views: `OnboardingWelcomeView.swift`
+- ViewModels: `OnboardingViewModel.swift`
+- Models: `OnboardingData.swift`
+- Services: `AnalyticsService.swift`
+
+### Classes/Structs
+- Views: `OnboardingWelcomeView`
+- ViewModels: `OnboardingViewModel`
+- Models: `OnboardingData`, `UserGoal`
+- Services: `AnalyticsService`
+
+## Best Practices
+
+### ViewModels
+- Use `@MainActor` for UI updates
+- Conform to `ObservableObject`
+- Use `@Published` for state that triggers UI updates
+- Keep business logic testable
+
+```swift
+@MainActor
+final class OnboardingViewModel: ObservableObject {
+    @Published var currentStep: OnboardingStep = .welcome
+    @Published var userName: String = ""
+    @Published var isLoading: Bool = false
+    
+    func nextStep() {
+        // Business logic here
+    }
+}
+```
+
+### Views
+- Keep views small and focused
+- Extract subviews when complexity grows
+- Use `@StateObject` for ViewModel ownership
+- Use `@ObservedObject` when passing ViewModel
+
+```swift
+struct OnboardingView: View {
+    @StateObject private var viewModel = OnboardingViewModel()
+    
+    var body: some View {
+        // UI only
+    }
+}
+```
+
+### Models
+- Use `Codable` for JSON serialization
+- Use `Equatable` and `Hashable` when needed
+- Keep models immutable when possible
+
+```swift
+struct OnboardingData: Codable, Equatable {
+    let name: String
+    let goals: [UserGoal]
+    let ageRange: AgeRange
+}
+```
+
+## Turkish Language
+- All user-facing text must be in Turkish
+- Use localization from the start (`NSLocalizedString`)
+- Comments and code can be in English

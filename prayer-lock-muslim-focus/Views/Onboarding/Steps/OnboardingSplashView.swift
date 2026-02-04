@@ -10,15 +10,18 @@ import SwiftUI
 struct OnboardingSplashView: View {
     @ObservedObject var viewModel: OnboardingViewModel
     @State private var showGreeting = false
+    @State private var showSubtext = false
     @State private var showTapToContinue = false
+    @State private var currentAnimationStep = 0
+    @State private var buttonDelayTask: Task<Void, Never>?
     
     var body: some View {
         ZStack {
-            // Turuncu gradient arka plan
+            // Yeşil gradient arka plan
             LinearGradient(
                 gradient: Gradient(colors: [
-                    Color(red: 1.0, green: 0.52, blue: 0.27),  // #FF8545 (açık turuncu)
-                    Color(red: 1.0, green: 0.416, blue: 0.169)  // #FF6A2B (koyu turuncu)
+                    Color.appPrimary,
+                    Color.appPrimaryPressed
                 ]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -28,11 +31,23 @@ struct OnboardingSplashView: View {
             VStack {
                 Spacer()
                 
-                // "selam" yazısı - merkeze yakın
-                Text("selam")
-                    .font(.system(size: 56, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                    .opacity(showGreeting ? 1.0 : 0.0)
+                VStack(spacing: 16) {
+                    // "Selamun Aleyküm" yazısı
+                    Text("Selamun Aleyküm")
+                        .font(.system(size: 48, weight: .bold, design: .rounded))
+                        .foregroundColor(Color.appTextOnPrimary)
+                        .opacity(showGreeting ? 1.0 : 0.0)
+                    
+                    Spacer()
+                        .frame(height: 4)
+                    
+                    // Alt metin
+                    Text("Yolculuğuna bismillah diyelim mi?")
+                        .font(.system(size: 17, weight: .bold, design: .rounded))
+                        .foregroundColor(Color.appTextOnPrimary.opacity(0.8))
+                        .multilineTextAlignment(.center)
+                        .opacity(showSubtext ? 1.0 : 0.0)
+                }
                 
                 Spacer()
                 
@@ -44,12 +59,12 @@ struct OnboardingSplashView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("tap to continue")
+                            Text("devam etmek için dokun")
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))
                         }
-                        .foregroundColor(.white)
+                        .foregroundColor(Color.appTextOnPrimary)
                     }
                     .opacity(showTapToContinue ? 1.0 : 0.0)
                     .padding(.trailing, 24)
@@ -57,21 +72,78 @@ struct OnboardingSplashView: View {
                 }
             }
         }
+        .onTapGesture {
+            handleTapToSkip()
+        }
         .onAppear {
-            // "selam" yazısı yavaşça fade in - daha uzun bekleme
-            withAnimation(.easeOut(duration: 1.2).delay(0.5)) {
-                showGreeting = true
-            }
-            
-            // "tap to continue" daha sonra fade in - daha uzun bekleme
-            withAnimation(.easeOut(duration: 1.0).delay(2.5)) {
-                showTapToContinue = true
+            startAnimationSequence()
+        }
+    }
+    
+    private func startAnimationSequence() {
+        // Greeting
+        withAnimation(.easeOut(duration: 1.2).delay(0.5)) {
+            showGreeting = true
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+            if currentAnimationStep == 0 {
+                currentAnimationStep = 1
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showSubtext = true
+                }
             }
         }
-        .onTapGesture {
-            // Ekrana tap'te de geçiş yap
-            HapticManager.shared.impact(style: .medium)
-            viewModel.nextStep()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.8) {
+            if currentAnimationStep == 1 {
+                currentAnimationStep = 2
+                startButtonDelay()
+            }
+        }
+    }
+    
+    private func startButtonDelay() {
+        buttonDelayTask?.cancel()
+        buttonDelayTask = Task {
+            try? await Task.sleep(nanoseconds: 700_000_000)
+            await MainActor.run {
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showTapToContinue = true
+                }
+            }
+        }
+    }
+    
+    private func handleTapToSkip() {
+        switch currentAnimationStep {
+        case 0:
+            withAnimation(.easeOut(duration: 0.3)) {
+                showGreeting = true
+            }
+            currentAnimationStep = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showSubtext = true
+                }
+            }
+            
+        case 1:
+            withAnimation(.easeOut(duration: 0.3)) {
+                showSubtext = true
+            }
+            currentAnimationStep = 2
+            startButtonDelay()
+            
+        case 2:
+            // Buton delay sürecindeyse hiçbir şey yapma
+            if showTapToContinue {
+                HapticManager.shared.impact(style: .medium)
+                viewModel.nextStep()
+            }
+            
+        default:
+            break
         }
     }
 }

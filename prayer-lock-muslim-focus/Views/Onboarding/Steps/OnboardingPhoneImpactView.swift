@@ -14,10 +14,27 @@ struct OnboardingPhoneImpactView: View {
     @State private var showLine3 = false
     @State private var showLine4 = false
     @State private var showTapToContinue = false
+    @State private var currentAnimationStep = 0
+    @State private var buttonDelayTask: Task<Void, Never>?
+    
+    // Hesaplamalar
+    private var yearlyHours: Int {
+        guard let usage = viewModel.onboardingData.phoneUsageHours else { return 0 }
+        return Int(usage.averageHours * 365)
+    }
+    
+    private var daysEquivalent: Int {
+        return yearlyHours / 24
+    }
+    
+    private var lifetimeYears: Int {
+        // Ortalama 60 yıl telefon kullanımı varsayımı
+        return (yearlyHours * 60) / 8760 // 8760 saat = 1 yıl
+    }
     
     var body: some View {
         ZStack {
-            Color.white
+            Color.appSurface
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
@@ -26,39 +43,68 @@ struct OnboardingPhoneImpactView: View {
                 // Hesaplama sonuçları
                 VStack(alignment: .leading, spacing: 16) {
                     // Yıllık saat
-                    Text("\(viewModel.onboardingData.name), bu yıl \(Text("\(yearlyHours) saat").foregroundColor(Color("AccentColor")).fontWeight(.bold)) telefonunda geçireceksin")
-                        .font(.system(size: 28, weight: .semibold, design: .rounded))
-                        .foregroundColor(.black)
-                        .opacity(showLine1 ? 1.0 : 0.0)
-                        .offset(y: showLine1 ? 0 : 20)
+                    (Text("\(viewModel.onboardingData.name), bu yıl ")
+                        .foregroundColor(Color.appTextPrimary) +
+                    Text("\(yearlyHours) saatini")
+                        .foregroundColor(Color.appPrimary)
+                        .fontWeight(.bold) +
+                    Text(" telefon başında geçireceksin.")
+                        .foregroundColor(Color.appTextPrimary))
+                    .font(.system(size: 28, weight: .semibold, design: .rounded))
+                    .opacity(showLine1 ? 1.0 : 0.0)
+                    .offset(y: showLine1 ? 0 : 20)
+                    
+                    Spacer()
+                        .frame(height: 32)
+                    
+                    // Günlük eşdeğer
+                    (Text("Bu tam ")
+                        .foregroundColor(Color.appTextPrimary) +
+                    Text("\(daysEquivalent) koca gün")
+                        .foregroundColor(Color.appPrimary)
+                        .fontWeight(.bold) +
+                    Text(" demek.")
+                        .foregroundColor(Color.appTextPrimary))
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .opacity(showLine2 ? 1.0 : 0.0)
+                    .offset(y: showLine2 ? 0 : 20)
+                    
+                    Spacer()
+                        .frame(height: 16)
+                    
+                    // Ömür boyu
+                    (Text("Yani ömründen koca bir ")
+                        .foregroundColor(Color.appTextPrimary) +
+                    Text("\(lifetimeYears) yılı")
+                        .foregroundColor(Color.appPrimary)
+                        .fontWeight(.bold) +
+                    Text(" buraya verdin...")
+                        .foregroundColor(Color.appTextPrimary))
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .opacity(showLine3 ? 1.0 : 0.0)
+                    .offset(y: showLine3 ? 0 : 20)
                     
                     Spacer()
                         .frame(height: 24)
                     
-                    // Günlük eşdeğer
-                    Text("bu yılda \(Text("\(daysEquivalent) gün").foregroundColor(Color("AccentColor")).fontWeight(.bold))")
+                    // Soru - Allah (cc) ile
+                    VStack(alignment: .leading, spacing: 4) {
+                        (Text("Peki, bu vaktin ne kadarı seni ")
+                            .foregroundColor(Color.appTextPrimary) +
+                        Text("Allah'a")
+                            .foregroundColor(Color.appPrimary)
+                            .fontWeight(.bold) +
+                        Text(" ")
+                            .foregroundColor(Color.appTextPrimary) +
+                        Text("(cc)")
+                            .font(.system(size: 16))
+                            .foregroundColor(Color.appTextPrimary.opacity(0.6)).fontWeight(.medium) +
+                        Text(" yaklaştırıyor?")
+                            .foregroundColor(Color.appTextPrimary))
                         .font(.system(size: 20, weight: .medium, design: .rounded))
-                        .foregroundColor(.black)
-                        .opacity(showLine2 ? 1.0 : 0.0)
-                        .offset(y: showLine2 ? 0 : 20)
-                    
-                    
-                    // Ömür boyu
-                    Text("ya da ömrün boyunca \(Text("\(lifetimeYears) yıl ediyor").foregroundColor(Color("AccentColor")).fontWeight(.bold))...")
-                        .font(.system(size: 20, weight: .medium, design: .rounded))
-                        .foregroundColor(.black)
-                        .opacity(showLine3 ? 1.0 : 0.0)
-                        .offset(y: showLine3 ? 0 : 20)
-                    
-                    Spacer()
-                        .frame(height: 8)
-                    
-                    // Soru
-                    Text("bunun ne kadarı seni \(Text("Allah'a").foregroundColor(Color("AccentColor")).fontWeight(.bold)) yaklaştırıyor?")
-                        .font(.system(size: 20, weight: .medium, design: .rounded))
-                        .foregroundColor(.black)
-                        .opacity(showLine4 ? 1.0 : 0.0)
-                        .offset(y: showLine4 ? 0 : 20)
+                    }
+                    .opacity(showLine4 ? 1.0 : 0.0)
+                    .offset(y: showLine4 ? 0 : 20)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 32)
@@ -73,12 +119,12 @@ struct OnboardingPhoneImpactView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("tap to continue")
+                            Text("devam etmek için dokun")
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))
                         }
-                        .foregroundColor(Color("AccentColor"))
+                        .foregroundColor(Color.appPrimary)
                     }
                     .opacity(showTapToContinue ? 1.0 : 0.0)
                     .padding(.trailing, 24)
@@ -86,62 +132,120 @@ struct OnboardingPhoneImpactView: View {
                 }
             }
         }
+        .onTapGesture {
+            handleTapToSkip()
+        }
         .onAppear {
-            withAnimation(.easeOut(duration: 1.0).delay(0.5)) {
+            startAnimationSequence()
+        }
+    }
+    
+    private func startAnimationSequence() {
+        withAnimation(.easeOut(duration: 1.0).delay(0.5)) {
+            showLine1 = true
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            if currentAnimationStep == 0 {
+                currentAnimationStep = 1
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showLine2 = true
+                }
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            if currentAnimationStep == 1 {
+                currentAnimationStep = 2
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showLine3 = true
+                }
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
+            if currentAnimationStep == 2 {
+                currentAnimationStep = 3
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showLine4 = true
+                }
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7.5) {
+            if currentAnimationStep == 3 {
+                currentAnimationStep = 4
+                startButtonDelay()
+            }
+        }
+    }
+    
+    private func startButtonDelay() {
+        buttonDelayTask?.cancel()
+        buttonDelayTask = Task {
+            try? await Task.sleep(nanoseconds: 2_500_000_000)
+            await MainActor.run {
+                withAnimation(.easeOut(duration: 1.5)) {
+                    showTapToContinue = true
+                }
+            }
+        }
+    }
+    
+    private func handleTapToSkip() {
+        switch currentAnimationStep {
+        case 0:
+            withAnimation(.easeOut(duration: 0.3)) {
                 showLine1 = true
             }
+            currentAnimationStep = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showLine2 = true
+                }
+            }
             
-            withAnimation(.easeOut(duration: 1.0).delay(3.5)) {
+        case 1:
+            withAnimation(.easeOut(duration: 0.3)) {
                 showLine2 = true
             }
+            currentAnimationStep = 2
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showLine3 = true
+                }
+            }
             
-            withAnimation(.easeOut(duration: 1.0).delay(5.0)) {
+        case 2:
+            withAnimation(.easeOut(duration: 0.3)) {
                 showLine3 = true
             }
+            currentAnimationStep = 3
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showLine4 = true
+                }
+            }
             
-            withAnimation(.easeOut(duration: 1.0).delay(6.5)) {
+        case 3:
+            withAnimation(.easeOut(duration: 0.3)) {
                 showLine4 = true
             }
+            currentAnimationStep = 4
+            startButtonDelay()
             
-            withAnimation(.easeOut(duration: 1.5).delay(9.0)) {
-                showTapToContinue = true
+        case 4:
+            if showTapToContinue {
+                HapticManager.shared.impact(style: .medium)
+                viewModel.nextStep()
             }
+            
+        default:
+            break
         }
-        .onTapGesture {
-            HapticManager.shared.impact(style: .medium)
-            viewModel.nextStep()
-        }
-    }
-    
-    // MARK: - Computed Properties
-    
-    private var yearlyHours: String {
-        guard let usage = viewModel.onboardingData.phoneUsageHours else { return "0" }
-        let hours = usage.averageHours * 365
-        return String(format: "%.0f", hours)
-    }
-    
-    private var daysEquivalent: String {
-        guard let usage = viewModel.onboardingData.phoneUsageHours else { return "0" }
-        let hours = usage.averageHours * 365
-        let days = hours / 24
-        return String(format: "%.0f", days)
-    }
-    
-    private var lifetimeYears: String {
-        guard let usage = viewModel.onboardingData.phoneUsageHours else { return "0" }
-        let dailyHours = usage.averageHours
-        let yearlyDays = (dailyHours * 365) / 24
-        let averageLifespanYears = 75.0
-        let lifetimeDays = yearlyDays * averageLifespanYears
-        let lifetimeYears = lifetimeDays / 365
-        return String(format: "%.0f", lifetimeYears)
     }
 }
 
 #Preview {
-    let viewModel = OnboardingViewModel()
-    viewModel.onboardingData.name = "Taner"
-    viewModel.onboardingData.phoneUsageHours = .fourToFive
-    return OnboardingPhoneImpactView(viewModel: viewModel)
+    OnboardingPhoneImpactView(viewModel: OnboardingViewModel())
 }

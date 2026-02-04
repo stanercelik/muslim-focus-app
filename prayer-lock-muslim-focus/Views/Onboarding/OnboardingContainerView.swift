@@ -19,7 +19,7 @@ struct OnboardingContainerView: View {
                 // Progress bar
                 if shouldShowProgressBar {
                     ProgressView(value: viewModel.progressValue)
-                        .progressViewStyle(LinearProgressViewStyle(tint: Color.accentColor))
+                        .progressViewStyle(LinearProgressViewStyle(tint: Color.appPrimary))
                         .frame(height: 2)
                 }
                 
@@ -28,7 +28,7 @@ struct OnboardingContainerView: View {
                     .transition(.opacity)
             }
         }
-        .preferredColorScheme(.dark)
+        .preferredColorScheme(.medium)
     }
     
     // MARK: - Computed Views
@@ -56,16 +56,16 @@ struct OnboardingContainerView: View {
             OnboardingTimeIntroView(viewModel: viewModel)
         default:
             Text("Coming soon: \(viewModel.currentStep.rawValue)")
-                .foregroundColor(.black)
+                .foregroundColor(Color.appTextPrimary)
         }
     }
     
     private var backgroundColor: Color {
         switch viewModel.currentStep {
         case .splash, .youreInRightPlace, .encouragement, .planReady:
-            return Color("AccentColor")
+            return .appPrimary
         default:
-            return Color.white
+            return .appSurface
         }
     }
     

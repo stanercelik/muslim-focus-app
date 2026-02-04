@@ -17,8 +17,7 @@ struct OnboardingNameInputView: View {
     
     var body: some View {
         ZStack {
-            // Beyaz arka plan
-            Color.white
+            Color.appSurface
                 .ignoresSafeArea()
             
             VStack(spacing: 32) {
@@ -26,17 +25,17 @@ struct OnboardingNameInputView: View {
                 
                 // Header
                 VStack(spacing: 12) {
-                    Text("first things first")
-                        .font(.system(size: 14, weight: .medium, design: .rounded))
-                        .foregroundColor(.black.opacity(0.4))
+                    Text("önce seni tanıyalım")
+                        .font(.system(size: 14, weight: .bold, design: .rounded))
+                        .foregroundColor(Color.appTextPrimary.opacity(0.5))
                         .textCase(.uppercase)
                         .tracking(2)
                         .opacity(showHeader ? 1.0 : 0.0)
                         .offset(y: showHeader ? 0 : 20)
                     
-                    Text("sana nasıl hitap edelim?")
+                    Text("Sana nasıl hitap etmemizi istersin?")
                         .font(.system(size: 28, weight: .bold, design: .rounded))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color.appTextPrimary)
                         .multilineTextAlignment(.center)
                         .opacity(showTitle ? 1.0 : 0.0)
                         .offset(y: showTitle ? 0 : 20)
@@ -48,15 +47,19 @@ struct OnboardingNameInputView: View {
                     TextField("", text: Binding(
                         get: { viewModel.onboardingData.name },
                         set: { viewModel.updateName($0) }
-                    ), prompt: Text("adın").font(.system(size: 22, weight: .medium, design: .rounded)).foregroundColor(.black.opacity(0.3)))
-                    .font(.system(size: 22, weight: .semibold, design: .rounded))
-                    .foregroundColor(.black)
+                    ), prompt: Text("adın").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.appTextPrimary.opacity(0.3)))
+                    .font(.system(size: 22, weight: .bold, design: .rounded))
+                    .foregroundColor(Color.appTextPrimary)
                     .multilineTextAlignment(.center)
                     .focused($isTextFieldFocused)
                     .padding()
                     .background(
                         RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color.black.opacity(0.2), lineWidth: 1)
+                            .fill(Color.appInputBG)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke(Color.appStroke, lineWidth: 1)
+                            )
                     )
                     .padding(.horizontal, 32)
                 }
@@ -67,7 +70,7 @@ struct OnboardingNameInputView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "continue",
+                    title: "Devam Et",
                     isEnabled: viewModel.canProceedFromNameInput,
                     action: {
                         HapticManager.shared.impact(style: .medium)
@@ -99,7 +102,7 @@ struct OnboardingNameInputView: View {
             }
             
             // Auto-focus the text field
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 isTextFieldFocused = true
             }
         }

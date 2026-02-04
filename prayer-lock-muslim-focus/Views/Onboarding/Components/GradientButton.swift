@@ -28,7 +28,7 @@ struct GradientButton: View {
         }) {
             Text(title)
                 .font(.system(size: 18, weight: .bold, design: .rounded))
-                .foregroundColor(.white)
+                .foregroundColor(Color.appTextOnPrimary)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 18)
                 .background(
@@ -36,8 +36,8 @@ struct GradientButton: View {
                         if isEnabled {
                             LinearGradient(
                                 gradient: Gradient(colors: [
-                                    Color(red: 1.0, green: 0.52, blue: 0.27),  // #FF8545 (açık turuncu)
-                                    Color(red: 1.0, green: 0.416, blue: 0.169)  // #FF6A2B (koyu turuncu)
+                                    Color.appPrimary,
+                                    Color.appPrimaryPressed
                                 ]),
                                 startPoint: .leading,
                                 endPoint: .trailing
@@ -45,8 +45,8 @@ struct GradientButton: View {
                         } else {
                             LinearGradient(
                                 gradient: Gradient(colors: [
-                                    Color.gray.opacity(0.3),
-                                    Color.gray.opacity(0.3)
+                                    Color.appStroke,
+                                    Color.appStroke
                                 ]),
                                 startPoint: .leading,
                                 endPoint: .trailing

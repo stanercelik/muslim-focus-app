@@ -1,0 +1,85 @@
+---
+description: Kullanıcının stil ve timing tercihlerine saygı göster
+alwaysApply: true
+---
+
+# Kullanıcı Tercihleri - DEĞİŞTİRME Kuralı
+
+## ❌ KEsinlikle Değiştirme
+
+Aşağıdaki değerlere **asla** kendin karar verip değiştirme. Sadece kullanıcı **açıkça "değiştir"** derse değiştir:
+
+### Font Özellikleri
+- `weight:` (.bold, .semibold, .medium, .regular, .heavy, .medium)
+- `size:` (font boyutları)
+- `design:` (.rounded, .serif, .monospaced, .default)
+
+### Animasyon Timing
+- `delay:` değerleri (örn: `.delay(0.5)`, `.delay(2.0)`)
+- `duration:` değerleri (örn: `duration: 1.0`)
+- Animasyon easing (`.easeOut`, `.easeIn`, `.spring`, `.linear`)
+
+### Haptic Feedback
+- `HapticManager.shared.impact(style:)` parametreleri
+- `.medium`, `.medium`, `.heavy`, `.soft`, `.rigid` değerleri
+
+### Spacing & Layout
+- `.padding()` değerleri
+- `.frame()` boyutları
+- `Spacer().frame(height:)` değerleri
+- VStack/HStack spacing değerleri
+
+### Opacity & Colors
+- `.opacity()` değerleri
+- Renk seçimleri (kullanıcı kendi paletini belirlemiş)
+
+## ✅ Ne Zaman Değiştirebilirsin
+
+Sadece şu durumlarda değişiklik yap:
+
+1. **Kullanıcı açıkça "değiştir" derse:**
+   - "Bu delay'i değiştir"
+   - "Font weight'i bold yap"
+   - "Bu animasyon daha hızlı olsun"
+
+2. **Bug/Hata düzeltme:**
+   - Kod çalışmıyorsa
+   - Syntax hatası varsa
+   - Mantık hatası varsa
+
+3. **Yeni özellik ekleme:**
+   - Kullanıcı yeni bir özellik istediğinde
+   - Yeni bir view oluştururken (o zaman da mevcut dosyalardan stil al)
+
+## 🎯 Doğru Yaklaşım
+
+### ❌ Yanlış:
+```swift
+// Kullanıcının kodunda:
+.delay(2.0)
+
+// Sen değiştiriyorsun:
+.delay(0.5)  // ❌ YAPMA!
+```
+
+### ✅ Doğru:
+```swift
+// Kullanıcının kodunda:
+.delay(2.0)
+
+// Sen dokunmuyorsun, olduğu gibi bırakıyorsun:
+.delay(2.0)  // ✅ DOĞRU!
+```
+
+## 📝 Önemli Notlar
+
+1. Kullanıcı kendi timing'lerini, font ağırlıklarını ve stil tercihlerini dikkatlice ayarlamış
+2. Senin "best practice" dediğin şey, kullanıcının tercihinden daha az önemli
+3. Eğer bir değeri değiştirmen gerekiyorsa, **ÖNCE SOR**: "Bu değeri X'ten Y'ye değiştirmemi ister misin?"
+4. Kullanıcı "hayır" derse veya bir şey söylemezse → **DEĞİŞTİRME**
+
+## 🚫 Özet
+
+**Kuralın Özü:** Kullanıcının stil ve timing tercihlerine dokunma. Sadece açıkça isterse değiştir.
+
+**Mantra:** "Ben değiştir demedikçe, sen değiştirme!"

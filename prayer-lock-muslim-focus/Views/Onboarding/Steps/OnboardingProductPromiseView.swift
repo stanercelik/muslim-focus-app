@@ -14,45 +14,46 @@ struct OnboardingProductPromiseView: View {
     @State private var showFeature2 = false
     @State private var showFeature3 = false
     @State private var showTapToContinue = false
+    @State private var currentAnimationStep = 0
+    @State private var buttonDelayTask: Task<Void, Never>?
     
     var body: some View {
         ZStack {
-            // Beyaz arka plan
-            Color.white
+            Color.appSurface
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
                 Spacer()
                 
-                // Ana başlık - tek Text ile çok satırlı
-                Text("muslim focus sana \(Text("Allah'ı önce").foregroundColor(Color("AccentColor")).fontWeight(.bold)) koymanda yardım eder")
+                // Ana başlık
+                Text("Muslim Focus, dünyalık işler arasına ahiret durakları yerleştirir.")
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
-                    .foregroundColor(.black)
+                    .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 32)
                     .opacity(showTitle1 ? 1.0 : 0.0)
                     .offset(y: showTitle1 ? 0 : 20)
                 
                 Spacer()
-                    .frame(height: 50)
+                    .frame(height: 40)
                 
-                // Özellikler - her biri ayrı fade in
-                VStack(alignment: .leading, spacing: 20) {
-                    Text("bu \(Text("çok basit").foregroundColor(Color("AccentColor")).fontWeight(.bold))")
+                // Özellikler
+                VStack(alignment: .leading, spacing: 16) {
+                    Text("Zorlamadan, sevdirerek.")
                         .font(.system(size: 17, weight: .medium, design: .rounded))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color.appTextPrimary)
                         .opacity(showFeature1 ? 1.0 : 0.0)
                         .offset(y: showFeature1 ? 0 : 20)
                     
-                    Text("her gün")
+                    Text("Her kilit açılışında,")
                         .font(.system(size: 17, weight: .medium, design: .rounded))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color.appTextPrimary)
                         .opacity(showFeature2 ? 1.0 : 0.0)
                         .offset(y: showFeature2 ? 0 : 20)
                     
-                    Text("\(Text("ibadet ederek").foregroundColor(Color("AccentColor")).fontWeight(.bold)) uygulamalarını açarsın")
+                    Text("Kısa bir zikir veya dua ile nefes alıp öyle devam edersin.")
                         .font(.system(size: 17, weight: .medium, design: .rounded))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color.appTextPrimary)
                         .opacity(showFeature3 ? 1.0 : 0.0)
                         .offset(y: showFeature3 ? 0 : 20)
                 }
@@ -69,12 +70,12 @@ struct OnboardingProductPromiseView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("tap to continue")
+                            Text("devam etmek için dokun")
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))
                         }
-                        .foregroundColor(Color("AccentColor"))
+                        .foregroundColor(Color.appPrimary)
                     }
                     .opacity(showTapToContinue ? 1.0 : 0.0)
                     .padding(.trailing, 24)
@@ -82,33 +83,116 @@ struct OnboardingProductPromiseView: View {
                 }
             }
         }
+        .onTapGesture {
+            handleTapToSkip()
+        }
         .onAppear {
-            // Ana başlık
-            withAnimation(.easeOut(duration: 1.0).delay(0.5)) {
-                showTitle1 = true
-            }
-            
-            // Özellikler
-            withAnimation(.easeOut(duration: 1.0).delay(3.5)) {
-                showFeature1 = true
-            }
-            
-            withAnimation(.easeOut(duration: 1.0).delay(5.0)) {
-                showFeature2 = true
-            }
-            
-            withAnimation(.easeOut(duration: 1.0).delay(6.5)) {
-                showFeature3 = true
-            }
-            
-            // Tap to continue en son
-            withAnimation(.easeOut(duration: 1.5).delay(8.0)) {
-                showTapToContinue = true
+            startAnimationSequence()
+        }
+    }
+    
+    private func startAnimationSequence() {
+        withAnimation(.easeOut(duration: 1.0).delay(0.5)) {
+            showTitle1 = true
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            if currentAnimationStep == 0 {
+                currentAnimationStep = 1
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showFeature1 = true
+                }
             }
         }
-        .onTapGesture {
-            HapticManager.shared.impact(style: .medium)
-            viewModel.nextStep()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+            if currentAnimationStep == 1 {
+                currentAnimationStep = 2
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showFeature2 = true
+                }
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
+            if currentAnimationStep == 2 {
+                currentAnimationStep = 3
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showFeature3 = true
+                }
+            }
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7.5) {
+            if currentAnimationStep == 3 {
+                currentAnimationStep = 4
+                startButtonDelay()
+            }
+        }
+    }
+    
+    private func startButtonDelay() {
+        buttonDelayTask?.cancel()
+        buttonDelayTask = Task {
+            try? await Task.sleep(nanoseconds: 2_500_000_000)
+            await MainActor.run {
+                withAnimation(.easeOut(duration: 1.5)) {
+                    showTapToContinue = true
+                }
+            }
+        }
+    }
+    
+    private func handleTapToSkip() {
+        switch currentAnimationStep {
+        case 0:
+            withAnimation(.easeOut(duration: 0.3)) {
+                showTitle1 = true
+            }
+            currentAnimationStep = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showFeature1 = true
+                }
+            }
+            
+        case 1:
+            withAnimation(.easeOut(duration: 0.3)) {
+                showFeature1 = true
+            }
+            currentAnimationStep = 2
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showFeature2 = true
+                }
+            }
+            
+        case 2:
+            withAnimation(.easeOut(duration: 0.3)) {
+                showFeature2 = true
+            }
+            currentAnimationStep = 3
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                withAnimation(.easeOut(duration: 1.0)) {
+                    showFeature3 = true
+                }
+            }
+            
+        case 3:
+            withAnimation(.easeOut(duration: 0.3)) {
+                showFeature3 = true
+            }
+            currentAnimationStep = 4
+            startButtonDelay()
+            
+        case 4:
+            if showTapToContinue {
+                HapticManager.shared.impact(style: .medium)
+                viewModel.nextStep()
+            }
+            
+        default:
+            break
         }
     }
 }

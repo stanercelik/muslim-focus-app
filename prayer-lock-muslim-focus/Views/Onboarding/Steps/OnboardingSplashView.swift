@@ -40,7 +40,7 @@ struct OnboardingSplashView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        HapticManager.shared.impact(style: .light)
+                        HapticManager.shared.impact(style: .medium)
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
@@ -70,7 +70,7 @@ struct OnboardingSplashView: View {
         }
         .onTapGesture {
             // Ekrana tap'te de geçiş yap
-            HapticManager.shared.impact(style: .light)
+            HapticManager.shared.impact(style: .medium)
             viewModel.nextStep()
         }
     }

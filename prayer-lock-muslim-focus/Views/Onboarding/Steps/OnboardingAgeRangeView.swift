@@ -39,7 +39,7 @@ struct OnboardingAgeRangeView: View {
                             title: range.displayText,
                             isSelected: viewModel.onboardingData.ageRange == range,
                             action: {
-                                HapticManager.shared.impact(style: .light)
+                                HapticManager.shared.impact(style: .medium)
                                 viewModel.selectAgeRange(range)
                             }
                         )

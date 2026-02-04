@@ -40,7 +40,7 @@ struct OnboardingPhoneUsageView: View {
                             title: range.displayText,
                             isSelected: viewModel.onboardingData.phoneUsageHours == range,
                             action: {
-                                HapticManager.shared.impact(style: .light)
+                                HapticManager.shared.impact(style: .medium)
                                 viewModel.selectPhoneUsage(range)
                             }
                         )

@@ -75,7 +75,7 @@ struct OnboardingTransitionView: View {
             }
         }
         .onTapGesture {
-            HapticManager.shared.impact(style: .light)
+            HapticManager.shared.impact(style: .medium)
             viewModel.nextStep()
         }
     }

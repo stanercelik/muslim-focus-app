@@ -72,7 +72,7 @@ struct OnboardingProblemFramingView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        HapticManager.shared.impact(style: .light)
+                        HapticManager.shared.impact(style: .medium)
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
@@ -118,7 +118,7 @@ struct OnboardingProblemFramingView: View {
             }
         }
         .onTapGesture {
-            HapticManager.shared.impact(style: .light)
+            HapticManager.shared.impact(style: .medium)
             viewModel.nextStep()
         }
     }

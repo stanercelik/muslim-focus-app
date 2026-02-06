@@ -17,6 +17,7 @@ final class OnboardingViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     @Published var showHowItWorksModal: Bool = false
+    private let onboardingStorageKey = "onboarding_data_v1"
     
     // MARK: - Computed Properties
     var progressValue: Double {
@@ -100,6 +101,8 @@ final class OnboardingViewModel: ObservableObject {
         case .madhhabSelection:
             currentStep = .sexSelection
         case .sexSelection:
+            currentStep = .onboardingSummary
+        case .onboardingSummary:
             currentStep = .prayerIsPowerful
         case .howItWorksModal:
             currentStep = .prayerIsPowerful
@@ -222,11 +225,19 @@ final class OnboardingViewModel: ObservableObject {
         
         do {
             onboardingData.hasCompletedOnboarding = true
-            // TODO: Save to UserDefaults or DataStore
-            // await dataStore.save(onboardingData)
+            saveOnboardingSnapshot()
             
             // TODO: Track analytics event
             // analyticsService.track(.onboardingCompleted)
+        } catch {
+            errorMessage = "Veri kaydedilemedi: \(error.localizedDescription)"
+        }
+    }
+
+    func saveOnboardingSnapshot() {
+        do {
+            let data = try JSONEncoder().encode(onboardingData)
+            UserDefaults.standard.set(data, forKey: onboardingStorageKey)
         } catch {
             errorMessage = "Veri kaydedilemedi: \(error.localizedDescription)"
         }

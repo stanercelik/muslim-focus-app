@@ -10,6 +10,7 @@ import SwiftUI
 struct OnboardingPrayerIsPowerfulView: View {
     @ObservedObject var viewModel: OnboardingViewModel
     @State private var progress: CGFloat = 0
+    @State private var showHowItWorksDialog = false
 
     var body: some View {
         ZStack {
@@ -46,17 +47,41 @@ struct OnboardingPrayerIsPowerfulView: View {
                 }) {
                     Text(.phoneImpactHowItWorks)
                         .font(.system(size: 16, weight: .bold, design: .rounded))
-                        .foregroundColor(Color.appTextOnPrimary.opacity(0.85))
+                        .foregroundColor(Color.appTextOnPrimary.opacity(0.55))
                 }
                 .padding(.top, 8)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .padding(.trailing, 28)
 
                 Spacer(minLength: 24)
             }
         }
+        .overlay {
+            if showHowItWorksDialog {
+                Color.black.opacity(0.65)
+                    .ignoresSafeArea()
+                    .transition(.opacity)
+
+                HowItWorksDialog(isPresented: $showHowItWorksDialog)
+                    .padding(.horizontal, 28)
+                    .transition(.scale(scale: 0.96).combined(with: .opacity))
+            }
+        }
+        .animation(.easeInOut(duration: 0.3), value: showHowItWorksDialog)
         .onAppear {
             progress = 0
-            withAnimation(.easeInOut(duration: 3.6)) {
-                progress = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                withAnimation(.easeInOut(duration: 0.35)) {
+                    showHowItWorksDialog = true
+                }
+            }
+        }
+        .onChange(of: showHowItWorksDialog) { _, isPresented in
+            guard isPresented == false else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                withAnimation(.easeInOut(duration: 3.6)) {
+                    progress = 1
+                }
             }
         }
     }
@@ -364,6 +389,101 @@ private struct WeekLabels: View {
                 .foregroundColor(Color.appTextPrimary.opacity(0.6))
         }
         .padding(.horizontal, 8)
+    }
+}
+
+private struct HowItWorksDialog: View {
+    @Binding var isPresented: Bool
+
+    var body: some View {
+        VStack(spacing: 18) {
+            HStack {
+                Spacer()
+                Button(action: {
+                    withAnimation(.easeInOut(duration: 0.35)) {
+                        isPresented = false
+                    }
+                }) {
+                    Image(systemName: "xmark")
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundColor(Color.appTextPrimary.opacity(0.6))
+                        .frame(width: 28, height: 28)
+                        .background(
+                            Circle()
+                                .fill(Color.appSurface2)
+                        )
+                }
+            }
+
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .fill(Color.appPrimary.opacity(0.1))
+                .frame(width: 56, height: 56)
+                .overlay(
+                    Image(systemName: "lock.fill")
+                        .font(.system(size: 22, weight: .bold))
+                        .foregroundColor(Color.appPrimary)
+                )
+
+            Text(.prayerIsPowerfulDialogTitle)
+                .font(.system(size: 22, weight: .bold, design: .rounded))
+                .foregroundColor(Color.appTextPrimary)
+
+            VStack(alignment: .leading, spacing: 14) {
+                HowItWorksStep(index: 1, text: .prayerIsPowerfulDialogStep1)
+                HowItWorksStep(index: 2, text: .prayerIsPowerfulDialogStep2)
+                HowItWorksStep(index: 3, text: .prayerIsPowerfulDialogStep3)
+            }
+
+            Text(.prayerIsPowerfulDialogFooter)
+                .font(.system(size: 14, weight: .semibold, design: .rounded))
+                .foregroundColor(Color.appTextPrimary.opacity(0.6))
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, 6)
+
+            Button(action: {}) {
+                Text(.prayerIsPowerfulDialogButton)
+                    .font(.system(size: 16, weight: .bold, design: .rounded))
+                    .foregroundColor(Color.appTextOnPrimary)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 14)
+                    .background(
+                        RoundedRectangle(cornerRadius: 16, style: .continuous)
+                            .fill(Color.appPrimary)
+                    )
+            }
+        }
+        .padding(.horizontal, 22)
+        .padding(.vertical, 24)
+        .background(
+            RoundedRectangle(cornerRadius: 24, style: .continuous)
+                .fill(Color.appSurface)
+                .shadow(color: Color.appPrimary.opacity(0.2), radius: 18, x: 0, y: 10)
+        )
+    }
+}
+
+private struct HowItWorksStep: View {
+    let index: Int
+    let text: LocalizedStringKey
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Text("\(index)")
+                .font(.system(size: 14, weight: .bold, design: .rounded))
+                .foregroundColor(Color.appTextOnPrimary)
+                .frame(width: 28, height: 28)
+                .background(
+                    Circle()
+                        .fill(Color.appPrimary)
+                )
+
+            Text(text)
+                .font(.system(size: 16, weight: .semibold, design: .rounded))
+                .foregroundColor(Color.appTextPrimary)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Spacer()
+        }
     }
 }
 

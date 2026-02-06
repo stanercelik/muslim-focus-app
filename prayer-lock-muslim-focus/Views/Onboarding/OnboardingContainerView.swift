@@ -72,6 +72,8 @@ struct OnboardingContainerView: View {
             OnboardingMadhhabView(viewModel: viewModel)
         case .sexSelection:
             OnboardingSexView(viewModel: viewModel)
+        case .onboardingSummary:
+            OnboardingSummaryView(viewModel: viewModel)
         case .prayerIsPowerful:
             OnboardingPrayerIsPowerfulView(viewModel: viewModel)
         case .completed:
@@ -84,7 +86,7 @@ struct OnboardingContainerView: View {
     
     private var backgroundColor: Color {
         switch viewModel.currentStep {
-        case .splash, .youreInRightPlace, .encouragement, .planReady, .completed:
+        case .splash, .youreInRightPlace, .encouragement, .planReady, .completed, .onboardingSummary:
             return .appPrimary
         default:
             return .appSurface
@@ -96,7 +98,7 @@ struct OnboardingContainerView: View {
         switch viewModel.currentStep {
         case .splash, .problemFraming, .productPromise, .nameInput, .transition, .ageRange, .phoneUsage, .phoneImpact, .timeIntro, .youreInRightPlace:
             return false
-        case .hadithScreen, .howItWorksModal, .ratingPrompt, .prayerIsPowerful:
+        case .hadithScreen, .howItWorksModal, .ratingPrompt, .prayerIsPowerful, .onboardingSummary:
             return false
         default:
             return true

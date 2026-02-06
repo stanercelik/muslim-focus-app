@@ -92,19 +92,21 @@ struct OnboardingPrayerFrequencyView: View {
                                     .shadow(color: Color.appPrimary.opacity(0.3), radius: 8, x: 0, y: 4)
                                     .offset(x: CGFloat(sliderValue / 7) * totalWidth - 12)
                                 
-                                // Slider (invisible)
-                                Slider(
-                                    value: $sliderValue,
-                                    in: 0...7,
-                                    step: 1
-                                )
-                                .accentColor(.clear)
-                                .onChange(of: sliderValue) { _, newValue in
-                                    HapticManager.shared.impact(style: .medium)
-                                    viewModel.updateIbadahFrequency(Int(newValue))
-                                }
-                                .opacity(0.01)
                             }
+                            .contentShape(Rectangle())
+                            .gesture(
+                                DragGesture(minimumDistance: 0)
+                                    .onChanged { value in
+                                        let clamped = min(max(0, value.location.x), totalWidth)
+                                        let raw = (clamped / totalWidth) * 7.0
+                                        let stepped = round(raw)
+                                        if sliderValue != stepped {
+                                            sliderValue = stepped
+                                            HapticManager.shared.impact(style: .medium)
+                                            viewModel.updateIbadahFrequency(Int(stepped))
+                                        }
+                                    }
+                            )
                         }
                         .frame(height: 44)
                         

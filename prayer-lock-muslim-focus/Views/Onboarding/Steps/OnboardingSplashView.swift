@@ -32,7 +32,7 @@ struct OnboardingSplashView: View {
             VStack {
                 HStack {
                     Button(action: {
-                        viewModel.currentStep = .prayerIsPowerful
+                        viewModel.currentStep = .onboardingSummary
                     }) {
                         Text(.devBadge)
                             .font(.system(size: 12, weight: .bold, design: .rounded))

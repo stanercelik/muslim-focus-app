@@ -31,6 +31,7 @@ enum OnboardingStep: String, Codable, CaseIterable {
     case thankYou3                 // E18
     case madhhabSelection          // E19
     case sexSelection              // E20
+    case onboardingSummary         // E20.5
     case howItWorksModal           // E21
     case prayerIsPowerful          // E22
     case planSummary               // E23

@@ -96,7 +96,7 @@ struct OnboardingProductPromiseView: View {
             showTitle1 = true
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             if currentAnimationStep == 0 {
                 currentAnimationStep = 1
                 withAnimation(.easeOut(duration: 1.0)) {
@@ -105,7 +105,7 @@ struct OnboardingProductPromiseView: View {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             if currentAnimationStep == 1 {
                 currentAnimationStep = 2
                 withAnimation(.easeOut(duration: 1.0)) {
@@ -114,7 +114,7 @@ struct OnboardingProductPromiseView: View {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
             if currentAnimationStep == 2 {
                 currentAnimationStep = 3
                 withAnimation(.easeOut(duration: 1.0)) {
@@ -123,7 +123,7 @@ struct OnboardingProductPromiseView: View {
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             if currentAnimationStep == 3 {
                 currentAnimationStep = 4
                 startButtonDelay()
@@ -134,7 +134,7 @@ struct OnboardingProductPromiseView: View {
     private func startButtonDelay() {
         buttonDelayTask?.cancel()
         buttonDelayTask = Task {
-            try? await Task.sleep(nanoseconds: 2_000_000_000)
+            try? await Task.sleep(nanoseconds: 1_000_000_000)
             await MainActor.run {
                 withAnimation(.easeOut(duration: 1.5)) {
                     showTapToContinue = true

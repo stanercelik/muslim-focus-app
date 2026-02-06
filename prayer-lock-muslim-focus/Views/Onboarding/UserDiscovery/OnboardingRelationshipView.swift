@@ -21,16 +21,16 @@ struct OnboardingRelationshipView: View {
             VStack(spacing: 0) {
                 // Başlık
                 VStack(alignment: .leading, spacing: 4) {
-                    (Text("Şu an ")
+                    (Text(.userDiscoveryRelationshipPrefix)
                         .foregroundColor(Color.appTextPrimary) +
-                    Text("Allah ")
+                    Text(.userDiscoveryRelationshipAllah)
                         .foregroundColor(Color.appPrimary)
                         .fontWeight(.bold) +
-                    Text("(cc)")
+                    Text(.userDiscoveryRelationshipCc)
                         .font(.system(size: 26))
                         .foregroundColor(Color.appTextPrimary.opacity(0.6))
                         .fontWeight(.medium) +
-                    Text(" ile olan bağını nasıl tarif edersin?")
+                    Text(.userDiscoveryRelationshipSuffix)
                         .foregroundColor(Color.appTextPrimary))
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -51,7 +51,7 @@ struct OnboardingRelationshipView: View {
                     VStack(spacing: 12) {
                         ForEach(SpiritualState.allCases, id: \.self) { state in
                             SpiritualStateOptionButton(
-                                title: state.displayText,
+                                title: state.localizedDisplayText,
                                 isSelected: viewModel.onboardingData.spiritualState == state,
                                 action: {
                                     HapticManager.shared.impact(style: .medium)
@@ -67,7 +67,7 @@ struct OnboardingRelationshipView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: viewModel.onboardingData.spiritualState != nil,
                     action: {
                         HapticManager.shared.impact(style: .medium)

@@ -59,10 +59,10 @@ enum OnboardingStep: String, Codable, CaseIterable {
         // Progress bar'da gösterilen step'ler
         let progressSteps: [OnboardingStep] = [
             .goalSelection1,
-            .thinkingBigger,
-            .prayerFrequency,
-            .relationshipWithAllah,
             .mainBlockers,
+            .thinkingBigger,
+            .relationshipWithAllah,
+            .prayerFrequency,
             .deeperStruggles,
             .madhhabSelection,
             .sexSelection

@@ -73,22 +73,22 @@ final class OnboardingViewModel: ObservableObject {
             currentStep = .goalSelection1
         case .goalSelection1:
             guard canProceedFromGoalSelection else { return }
-            currentStep = .thinkingBigger
+            currentStep = .mainBlockers
         case .goalSelection2:
-            currentStep = .thinkingBigger
-        case .thinkingBigger:
-            currentStep = .prayerFrequency
-        case .youreInRightPlace:
-            currentStep = .prayerFrequency
-        case .hadithScreen:
-            currentStep = .madhhabSelection
-        case .prayerFrequency:
-            currentStep = .relationshipWithAllah
-        case .relationshipWithAllah:
             currentStep = .mainBlockers
         case .mainBlockers:
             guard canProceedFromBlockerSelection else { return }
+            currentStep = .thinkingBigger
+        case .thinkingBigger:
+            currentStep = .youreInRightPlace
+        case .youreInRightPlace:
+            currentStep = .relationshipWithAllah
+        case .hadithScreen:
+            currentStep = .madhhabSelection
+        case .prayerFrequency:
             currentStep = .deeperStruggles
+        case .relationshipWithAllah:
+            currentStep = .prayerFrequency
         case .deeperStruggles:
             currentStep = .hadithScreen
         case .thankYou1:
@@ -100,7 +100,7 @@ final class OnboardingViewModel: ObservableObject {
         case .madhhabSelection:
             currentStep = .sexSelection
         case .sexSelection:
-            currentStep = .completed
+            currentStep = .prayerIsPowerful
         case .howItWorksModal:
             currentStep = .prayerIsPowerful
         case .prayerIsPowerful:

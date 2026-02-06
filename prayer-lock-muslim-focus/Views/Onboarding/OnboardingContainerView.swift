@@ -56,6 +56,8 @@ struct OnboardingContainerView: View {
             OnboardingGoalSelectionView(viewModel: viewModel)
         case .thinkingBigger:
             OnboardingBiggerVisionView(viewModel: viewModel)
+        case .youreInRightPlace:
+            OnboardingYoureInRightPlaceView(viewModel: viewModel)
         case .hadithScreen:
             OnboardingHadithView(viewModel: viewModel)
         case .prayerFrequency:
@@ -70,10 +72,12 @@ struct OnboardingContainerView: View {
             OnboardingMadhhabView(viewModel: viewModel)
         case .sexSelection:
             OnboardingSexView(viewModel: viewModel)
+        case .prayerIsPowerful:
+            OnboardingPrayerIsPowerfulView(viewModel: viewModel)
         case .completed:
             OnboardingCompletedView(viewModel: viewModel)
         default:
-            Text("Coming soon: \(viewModel.currentStep.rawValue)")
+            Text(L10n.text("onboarding_coming_soon", viewModel.currentStep.rawValue))
                 .foregroundColor(Color.appTextPrimary)
         }
     }
@@ -90,9 +94,9 @@ struct OnboardingContainerView: View {
     private var shouldShowProgressBar: Bool {
         // Progress bar sadece goalSelection1'den itibaren gösterilir
         switch viewModel.currentStep {
-        case .splash, .problemFraming, .productPromise, .nameInput, .transition, .ageRange, .phoneUsage, .phoneImpact, .timeIntro:
+        case .splash, .problemFraming, .productPromise, .nameInput, .transition, .ageRange, .phoneUsage, .phoneImpact, .timeIntro, .youreInRightPlace:
             return false
-        case .hadithScreen, .howItWorksModal, .ratingPrompt:
+        case .hadithScreen, .howItWorksModal, .ratingPrompt, .prayerIsPowerful:
             return false
         default:
             return true

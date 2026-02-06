@@ -28,20 +28,8 @@ struct OnboardingProblemFramingView: View {
                 
                 // Ana soru - Allah (cc) özel formatla
                 VStack(alignment: .leading, spacing: 0) {
-                    (Text("Bazen telefonun, ")
-                        .foregroundColor(Color.appTextPrimary) +
-                    Text("Rabbimiz'den")
-                        .foregroundColor(Color.appPrimary)
-                        .fontWeight(.bold) +
-                    Text(" ")
-                        .foregroundColor(Color.appTextPrimary) +
-                    Text("(cc)")
-                        .font(.system(size: 24))
-                        .fontWeight(.medium)
-                        .foregroundColor(Color.appTextPrimary.opacity(0.6)) +
-                    Text(" daha fazla ilgi istediğini hissediyor musun?")
-                        .foregroundColor(Color.appTextPrimary))
-                    .font(.system(size: 32, weight: .semibold, design: .rounded))
+                    Text(L10n.markdown("problem_framing_title"))
+                        .font(.system(size: 32, weight: .semibold, design: .rounded))
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 32)
@@ -53,25 +41,25 @@ struct OnboardingProblemFramingView: View {
                 
                 // Alt metin - her satır ayrı fade in
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Yalnız değilsin, bu çağın en büyük imtihanı bu.")
+                    Text(.problemFramingLine1)
                         .font(.system(size: 17, weight: .medium, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showLine1 ? 1.0 : 0.0)
                         .offset(y: showLine1 ? 0 : 20)
                     
-                    Text("Bildirimler ve sonsuz kaydırmalar,")
+                    Text(.problemFramingLine2)
                         .font(.system(size: 17, weight: .medium, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showLine2 ? 1.0 : 0.0)
                         .offset(y: showLine2 ? 0 : 20)
                     
-                    Text("kalbindeki o asıl huzurdan seni")
+                    Text(.problemFramingLine3)
                         .font(.system(size: 17, weight: .medium, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showLine3 ? 1.0 : 0.0)
                         .offset(y: showLine3 ? 0 : 20)
                     
-                    Text("yavaşça uzaklaştırabiliyor.")
+                    Text(.problemFramingLine4)
                         .font(.system(size: 17, weight: .medium, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showLine4 ? 1.0 : 0.0)
@@ -90,7 +78,7 @@ struct OnboardingProblemFramingView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("devam etmek için dokun")
+                            Text(.tapToContinue)
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))

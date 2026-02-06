@@ -5,6 +5,7 @@
 //  Created by Taner Çelik on 4.02.2026.
 //
 
+import Foundation
 import SwiftUI
 
 /// Tüm localization key'lerini type-safe bir şekilde kullanmak için extension
@@ -15,6 +16,27 @@ extension LocalizedStringKey {
     static let journeyBismillah = LocalizedStringKey("journey_bismillah")
     static let tapToContinue = LocalizedStringKey("tap_to_continue")
     static let continueButton = LocalizedStringKey("continue_button")
+    static let devBadge = LocalizedStringKey("dev_badge")
+    static let devModeOnboardingCompleted = LocalizedStringKey("dev_mode_onboarding_completed")
+    static let onboardingCompletedTitle = LocalizedStringKey("onboarding_completed_title")
+    static let onboardingCompletedMessage = LocalizedStringKey("onboarding_completed_message")
+
+    // MARK: - Right Place
+    static let youreInRightPlaceCard1Title = LocalizedStringKey("youre_in_right_place_card1_title")
+    static let youreInRightPlaceCard1Body = LocalizedStringKey("youre_in_right_place_card1_body")
+    static let youreInRightPlaceCard2Title = LocalizedStringKey("youre_in_right_place_card2_title")
+    static let youreInRightPlaceCard2Body = LocalizedStringKey("youre_in_right_place_card2_body")
+    static let youreInRightPlaceCard3Title = LocalizedStringKey("youre_in_right_place_card3_title")
+    static let youreInRightPlaceCard3Body = LocalizedStringKey("youre_in_right_place_card3_body")
+    static let youreInRightPlaceSummaryLabel = LocalizedStringKey("youre_in_right_place_summary_label")
+    static let youreInRightPlaceSummaryTitle = LocalizedStringKey("youre_in_right_place_summary_title")
+    static let youreInRightPlaceSummaryStat = LocalizedStringKey("youre_in_right_place_summary_stat")
+    static let youreInRightPlaceFooterTitle = LocalizedStringKey("youre_in_right_place_footer_title")
+    static let youreInRightPlaceFooterBody = LocalizedStringKey("youre_in_right_place_footer_body")
+    
+    // MARK: - Content
+    static let contentAddItem = LocalizedStringKey("content_add_item")
+    static let contentSelectItem = LocalizedStringKey("content_select_item")
     
     // MARK: - Name Input
     static let getToKnowYou = LocalizedStringKey("get_to_know_you")
@@ -40,6 +62,16 @@ extension LocalizedStringKey {
     static let phoneImpactDaysEquivalent = LocalizedStringKey("phone_impact_days_equivalent")
     static let phoneImpactLifetime = LocalizedStringKey("phone_impact_lifetime")
     static let phoneImpactQuestion = LocalizedStringKey("phone_impact_question")
+    static let phoneImpactHeadline = LocalizedStringKey("phone_impact_headline")
+    static let phoneImpactCardTitle = LocalizedStringKey("phone_impact_card_title")
+    static let phoneImpactDescription = LocalizedStringKey("phone_impact_description")
+    static let phoneImpactHowItWorks = LocalizedStringKey("phone_impact_how_it_works")
+    static let phoneImpactSkippedPrayer = LocalizedStringKey("phone_impact_skipped_prayer")
+    static let phoneImpactPrayLater = LocalizedStringKey("phone_impact_pray_later")
+    static let phoneImpactDevilWon = LocalizedStringKey("phone_impact_devil_won")
+    static let phoneImpactWeek1 = LocalizedStringKey("phone_impact_week_1")
+    static let phoneImpactWeek2 = LocalizedStringKey("phone_impact_week_2")
+    static let phoneImpactWeek3 = LocalizedStringKey("phone_impact_week_3")
     
     // MARK: - Product Promise
     static let productPromiseTitle = LocalizedStringKey("product_promise_title")
@@ -55,6 +87,53 @@ extension LocalizedStringKey {
     // MARK: - Transition
     static let transitionGreeting = LocalizedStringKey("transition_greeting")
     static let transitionMessage = LocalizedStringKey("transition_message")
+
+    // MARK: - User Discovery
+    static let userDiscoveryMadhhabTitle = LocalizedStringKey("user_discovery_madhhab_title")
+    static let userDiscoveryBlockersTitle = LocalizedStringKey("user_discovery_blockers_title")
+    static let userDiscoveryBiggerVisionTitle = LocalizedStringKey("user_discovery_bigger_vision_title")
+    static let userDiscoverySexTitle = LocalizedStringKey("user_discovery_sex_title")
+    static let userDiscoveryPrayerFrequencyTitle = LocalizedStringKey("user_discovery_prayer_frequency_title")
+    static let userDiscoveryPrayerFrequencyDaySingular = LocalizedStringKey("user_discovery_prayer_frequency_day_singular")
+    static let userDiscoveryPrayerFrequencyDayPlural = LocalizedStringKey("user_discovery_prayer_frequency_day_plural")
+    static let userDiscoveryGoalTitle = LocalizedStringKey("user_discovery_goal_title")
+    static let userDiscoveryGoalSubtitle = LocalizedStringKey("user_discovery_goal_subtitle")
+    static let userDiscoveryRootStrugglesTitle = LocalizedStringKey("user_discovery_root_struggles_title")
+    static let userDiscoveryRootStrugglesSubtitle = LocalizedStringKey("user_discovery_root_struggles_subtitle")
+
+    static let userDiscoveryRelationshipPrefix = LocalizedStringKey("user_discovery_relationship_prefix")
+    static let userDiscoveryRelationshipAllah = LocalizedStringKey("user_discovery_relationship_allah")
+    static let userDiscoveryRelationshipCc = LocalizedStringKey("user_discovery_relationship_cc")
+    static let userDiscoveryRelationshipSuffix = LocalizedStringKey("user_discovery_relationship_suffix")
+
+    static let userDiscoveryHadithMessage1 = LocalizedStringKey("user_discovery_hadith_message1")
+    static let userDiscoveryHadithIntroPrefix = LocalizedStringKey("user_discovery_hadith_intro_prefix")
+    static let userDiscoveryHadithIntroSav = LocalizedStringKey("user_discovery_hadith_intro_sav")
+    static let userDiscoveryHadithIntroSuffix = LocalizedStringKey("user_discovery_hadith_intro_suffix")
+    static let userDiscoveryHadithArabic = LocalizedStringKey("user_discovery_hadith_arabic")
+    static let userDiscoveryHadithTranslationPrefix = LocalizedStringKey("user_discovery_hadith_translation_prefix")
+    static let userDiscoveryHadithTranslationHighlight1 = LocalizedStringKey("user_discovery_hadith_translation_highlight1")
+    static let userDiscoveryHadithTranslationMid = LocalizedStringKey("user_discovery_hadith_translation_mid")
+    static let userDiscoveryHadithTranslationHighlight2 = LocalizedStringKey("user_discovery_hadith_translation_highlight2")
+    static let userDiscoveryHadithTranslationSuffix = LocalizedStringKey("user_discovery_hadith_translation_suffix")
+    static let userDiscoveryHadithSource = LocalizedStringKey("user_discovery_hadith_source")
+    static let userDiscoveryHadithMessage2Prefix = LocalizedStringKey("user_discovery_hadith_message2_prefix")
+    static let userDiscoveryHadithMessage2Highlight1 = LocalizedStringKey("user_discovery_hadith_message2_highlight1")
+    static let userDiscoveryHadithMessage2Mid = LocalizedStringKey("user_discovery_hadith_message2_mid")
+    static let userDiscoveryHadithMessage2Highlight2 = LocalizedStringKey("user_discovery_hadith_message2_highlight2")
+    static let userDiscoveryHadithMessage2Suffix = LocalizedStringKey("user_discovery_hadith_message2_suffix")
+    static let userDiscoveryHadithMessage3Highlight1 = LocalizedStringKey("user_discovery_hadith_message3_highlight1")
+    static let userDiscoveryHadithMessage3Separator1 = LocalizedStringKey("user_discovery_hadith_message3_separator1")
+    static let userDiscoveryHadithMessage3Highlight2 = LocalizedStringKey("user_discovery_hadith_message3_highlight2")
+    static let userDiscoveryHadithMessage3Separator2 = LocalizedStringKey("user_discovery_hadith_message3_separator2")
+    static let userDiscoveryHadithMessage3Highlight3 = LocalizedStringKey("user_discovery_hadith_message3_highlight3")
+    static let userDiscoveryHadithMessage3Suffix = LocalizedStringKey("user_discovery_hadith_message3_suffix")
+}
+
+enum UserDiscoveryStrings {
+    static func hadithTitle(name: String) -> String {
+        L10n.text("user_discovery_hadith_title", name)
+    }
 }
 
 /// Enum displayText'leri için localization key'leri

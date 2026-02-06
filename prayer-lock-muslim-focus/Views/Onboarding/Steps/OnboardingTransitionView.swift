@@ -24,13 +24,13 @@ struct OnboardingTransitionView: View {
                 Spacer()
                 
                 VStack(spacing: 12) {
-                    Text("Ey \(viewModel.onboardingData.name),")
+                    Text(L10n.text("transition_greeting", viewModel.onboardingData.name))
                         .font(.system(size: 32, weight: .bold, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showLine1 ? 1.0 : 0.0)
                         .offset(y: showLine1 ? 0 : 20)
                     
-                    Text("Gel, vaktimizi birlikte bereketlendirelim...")
+                    Text(.transitionMessage)
                         .font(.system(size: 32, weight: .bold, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showLine2 ? 1.0 : 0.0)
@@ -49,7 +49,7 @@ struct OnboardingTransitionView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("devam etmek için dokun")
+                            Text(.tapToContinue)
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))

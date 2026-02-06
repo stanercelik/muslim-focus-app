@@ -26,7 +26,7 @@ struct OnboardingProductPromiseView: View {
                 Spacer()
                 
                 // Ana başlık
-                Text("Muslim Focus, dünyalık işler arasına ahiret durakları yerleştirir.")
+                Text(.productPromiseTitle)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -39,19 +39,19 @@ struct OnboardingProductPromiseView: View {
                 
                 // Özellikler
                 VStack(alignment: .leading, spacing: 16) {
-                    Text("Zorlamadan, sevdirerek.")
+                    Text(.productPromiseFeature1)
                         .font(.system(size: 17, weight: .medium, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showFeature1 ? 1.0 : 0.0)
                         .offset(y: showFeature1 ? 0 : 20)
                     
-                    Text("Her kilit açılışında,")
+                    Text(.productPromiseFeature2)
                         .font(.system(size: 17, weight: .medium, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showFeature2 ? 1.0 : 0.0)
                         .offset(y: showFeature2 ? 0 : 20)
                     
-                    Text("Kısa bir zikir veya dua ile nefes alıp öyle devam edersin.")
+                    Text(.productPromiseFeature3)
                         .font(.system(size: 17, weight: .medium, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showFeature3 ? 1.0 : 0.0)
@@ -70,7 +70,7 @@ struct OnboardingProductPromiseView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("devam etmek için dokun")
+                            Text(.tapToContinue)
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))

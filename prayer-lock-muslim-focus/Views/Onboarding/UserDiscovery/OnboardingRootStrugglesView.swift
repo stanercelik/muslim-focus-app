@@ -21,7 +21,7 @@ struct OnboardingRootStrugglesView: View {
             
             VStack(spacing: 0) {
                 // Başlık
-                Text("Bazen asıl engel daha derindedir. Bunlardan biri seni zorluyor mu?")
+                Text(.userDiscoveryRootStrugglesTitle)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -37,7 +37,7 @@ struct OnboardingRootStrugglesView: View {
                     .frame(height: 12)
                 
                 // Alt başlık (opsiyonel)
-                Text("İsteğe bağlı, en fazla 2 seçebilirsin.")
+                Text(.userDiscoveryRootStrugglesSubtitle)
                     .font(.system(size: 15, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary.opacity(0.6))
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -53,7 +53,7 @@ struct OnboardingRootStrugglesView: View {
                     VStack(spacing: 12) {
                         ForEach(RootStruggle.allCases, id: \.self) { struggle in
                             RootStruggleOptionButton(
-                                title: struggle.displayText,
+                                title: struggle.localizedDisplayText,
                                 isSelected: viewModel.onboardingData.rootStruggles.contains(struggle),
                                 isDisabled: !viewModel.onboardingData.rootStruggles.contains(struggle) && viewModel.onboardingData.rootStruggles.count >= 2,
                                 action: {
@@ -70,7 +70,7 @@ struct OnboardingRootStrugglesView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: viewModel.canProceedFromRootStruggle,
                     action: {
                         HapticManager.shared.impact(style: .medium)

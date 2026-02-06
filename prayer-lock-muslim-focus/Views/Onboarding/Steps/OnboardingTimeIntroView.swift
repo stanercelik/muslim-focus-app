@@ -26,7 +26,7 @@ struct OnboardingTimeIntroView: View {
                 
                 // Metin
                 VStack(alignment: .leading, spacing: 32) {
-                    Text("Bu döngüyü berekete çevirebiliriz.")
+                    Text(.phoneBlessingIntro)
                         .font(.system(size: 28, weight: .semibold, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showLine1 ? 1.0 : 0.0)
@@ -34,22 +34,8 @@ struct OnboardingTimeIntroView: View {
                     
                     // Rabbimize (cc) ile
                     VStack(alignment: .leading, spacing: 4) {
-                        (Text("Günde sadece ")
-                            .foregroundColor(Color.appTextPrimary)
-                            .font(.system(size: 28, weight: .semibold, design: .rounded)) +
-                        Text("5 dakikanı")
-                            .foregroundColor(Color.appPrimary)
+                        Text(L10n.markdown("time_commitment_question"))
                             .font(.system(size: 28, weight: .semibold, design: .rounded))
-                            .fontWeight(.bold) +
-                        Text(" Rabbimize ")
-                            .foregroundColor(Color.appTextPrimary).font(.system(size: 28, weight: .semibold, design: .rounded)) +
-                        Text("(cc)")
-                            .font(.system(size: 22))
-                            .foregroundColor(Color.appTextPrimary.opacity(0.6))
-                            .fontWeight(.medium)) +
-                        Text(" ayırıp vaktini mühürlemeye var mısın?")
-                            .foregroundColor(Color.appTextPrimary)
-                        .font(.system(size: 28, weight: .semibold, design: .rounded))
                     }
                     .opacity(showLine2 ? 1.0 : 0.0)
                     .offset(y: showLine2 ? 0 : 20)
@@ -57,7 +43,7 @@ struct OnboardingTimeIntroView: View {
                     Spacer()
                         .frame(height: 32)
                     
-                    Text("Şimdi senin için manevi bir plan yapalım.")
+                    Text(.spiritualPlanIntro)
                         .font(.system(size: 17, weight: .medium, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .opacity(showLine3 ? 1.0 : 0.0)
@@ -76,7 +62,7 @@ struct OnboardingTimeIntroView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("devam etmek için dokun")
+                            Text(.tapToContinue)
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))

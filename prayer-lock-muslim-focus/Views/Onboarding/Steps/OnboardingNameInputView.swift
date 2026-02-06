@@ -25,7 +25,7 @@ struct OnboardingNameInputView: View {
                 
                 // Header
                 VStack(spacing: 12) {
-                    Text("önce seni tanıyalım")
+                    Text(.getToKnowYou)
                         .font(.system(size: 14, weight: .bold, design: .rounded))
                         .foregroundColor(Color.appTextPrimary.opacity(0.5))
                         .textCase(.uppercase)
@@ -33,7 +33,7 @@ struct OnboardingNameInputView: View {
                         .opacity(showHeader ? 1.0 : 0.0)
                         .offset(y: showHeader ? 0 : 20)
                     
-                    Text("Sana nasıl hitap etmemizi istersin?")
+                    Text(.nameQuestion)
                         .font(.system(size: 28, weight: .bold, design: .rounded))
                         .foregroundColor(Color.appTextPrimary)
                         .multilineTextAlignment(.center)
@@ -47,7 +47,7 @@ struct OnboardingNameInputView: View {
                     TextField("", text: Binding(
                         get: { viewModel.onboardingData.name },
                         set: { viewModel.updateName($0) }
-                    ), prompt: Text("adın").font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.appTextPrimary.opacity(0.3)))
+                    ), prompt: Text(.nameInputPlaceholder).font(.system(size: 22, weight: .bold, design: .rounded)).foregroundColor(Color.appTextPrimary.opacity(0.3)))
                     .font(.system(size: 22, weight: .bold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .multilineTextAlignment(.center)
@@ -70,7 +70,7 @@ struct OnboardingNameInputView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: viewModel.canProceedFromNameInput,
                     action: {
                         HapticManager.shared.impact(style: .medium)

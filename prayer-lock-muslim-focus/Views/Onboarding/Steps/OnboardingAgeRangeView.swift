@@ -20,7 +20,7 @@ struct OnboardingAgeRangeView: View {
             
             VStack(spacing: 0) {
                 // Başlık
-                Text("Kaç yaşındasın?")
+                Text(.ageQuestion)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -36,7 +36,7 @@ struct OnboardingAgeRangeView: View {
                 VStack(spacing: 16) {
                     ForEach(AgeRange.allCases, id: \.self) { range in
                         AgeRangeOptionButton(
-                            title: range.displayText,
+                            title: range.localizedDisplayText,
                             isSelected: viewModel.onboardingData.ageRange == range,
                             action: {
                                 HapticManager.shared.impact(style: .medium)
@@ -54,7 +54,7 @@ struct OnboardingAgeRangeView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: viewModel.onboardingData.ageRange != nil,
                     action: {
                         HapticManager.shared.impact(style: .medium)

@@ -32,9 +32,9 @@ struct OnboardingSplashView: View {
             VStack {
                 HStack {
                     Button(action: {
-                        viewModel.currentStep = .goalSelection1
+                        viewModel.currentStep = .prayerIsPowerful
                     }) {
-                        Text("[DEV]")
+                        Text(.devBadge)
                             .font(.system(size: 12, weight: .bold, design: .rounded))
                             .foregroundColor(Color.appTextOnPrimary)
                             .padding(.horizontal, 12)
@@ -57,7 +57,7 @@ struct OnboardingSplashView: View {
                 
                 VStack(spacing: 16) {
                     // "Selamun Aleyküm" yazısı
-                    Text("Selamun Aleyküm")
+                    Text(.greeting)
                         .font(.system(size: 48, weight: .bold, design: .rounded))
                         .foregroundColor(Color.appTextOnPrimary)
                         .opacity(showGreeting ? 1.0 : 0.0)
@@ -66,7 +66,7 @@ struct OnboardingSplashView: View {
                         .frame(height: 4)
                     
                     // Alt metin
-                    Text("Yolculuğuna bismillah diyelim mi?")
+                    Text(.journeyBismillah)
                         .font(.system(size: 17, weight: .bold, design: .rounded))
                         .foregroundColor(Color.appTextOnPrimary.opacity(0.8))
                         .multilineTextAlignment(.center)
@@ -83,7 +83,7 @@ struct OnboardingSplashView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("devam etmek için dokun")
+                            Text(.tapToContinue)
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))

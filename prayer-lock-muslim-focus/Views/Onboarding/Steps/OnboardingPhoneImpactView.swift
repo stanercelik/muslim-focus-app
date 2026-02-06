@@ -43,13 +43,7 @@ struct OnboardingPhoneImpactView: View {
                 // Hesaplama sonuçları
                 VStack(alignment: .leading, spacing: 16) {
                     // Yıllık saat
-                    (Text("\(viewModel.onboardingData.name), bu yıl ")
-                        .foregroundColor(Color.appTextPrimary) +
-                    Text("\(yearlyHours) saatini")
-                        .foregroundColor(Color.appPrimary)
-                        .fontWeight(.bold) +
-                    Text(" telefon başında geçireceksin.")
-                        .foregroundColor(Color.appTextPrimary))
+                    Text(L10n.markdown("phone_impact_yearly_hours", viewModel.onboardingData.name, Int64(yearlyHours)))
                     .font(.system(size: 28, weight: .semibold, design: .rounded))
                     .opacity(showLine1 ? 1.0 : 0.0)
                     .offset(y: showLine1 ? 0 : 20)
@@ -58,13 +52,7 @@ struct OnboardingPhoneImpactView: View {
                         .frame(height: 32)
                     
                     // Günlük eşdeğer
-                    (Text("Bu tam ")
-                        .foregroundColor(Color.appTextPrimary) +
-                    Text("\(daysEquivalent) koca gün")
-                        .foregroundColor(Color.appPrimary)
-                        .fontWeight(.bold) +
-                    Text(" demek.")
-                        .foregroundColor(Color.appTextPrimary))
+                    Text(L10n.markdown("phone_impact_days_equivalent", Int64(daysEquivalent)))
                     .font(.system(size: 20, weight: .medium, design: .rounded))
                     .opacity(showLine2 ? 1.0 : 0.0)
                     .offset(y: showLine2 ? 0 : 20)
@@ -73,13 +61,7 @@ struct OnboardingPhoneImpactView: View {
                         .frame(height: 16)
                     
                     // Ömür boyu
-                    (Text("Yani ömründen koca bir ")
-                        .foregroundColor(Color.appTextPrimary) +
-                    Text("\(lifetimeYears) yılı")
-                        .foregroundColor(Color.appPrimary)
-                        .fontWeight(.bold) +
-                    Text(" buraya verdin...")
-                        .foregroundColor(Color.appTextPrimary))
+                    Text(L10n.markdown("phone_impact_lifetime", Int64(lifetimeYears)))
                     .font(.system(size: 20, weight: .medium, design: .rounded))
                     .opacity(showLine3 ? 1.0 : 0.0)
                     .offset(y: showLine3 ? 0 : 20)
@@ -89,18 +71,7 @@ struct OnboardingPhoneImpactView: View {
                     
                     // Soru - Allah (cc) ile
                     VStack(alignment: .leading, spacing: 4) {
-                        (Text("Peki, bu vaktin ne kadarı seni ")
-                            .foregroundColor(Color.appTextPrimary) +
-                        Text("Allah'a")
-                            .foregroundColor(Color.appPrimary)
-                            .fontWeight(.bold) +
-                        Text(" ")
-                            .foregroundColor(Color.appTextPrimary) +
-                        Text("(cc)")
-                            .font(.system(size: 16))
-                            .foregroundColor(Color.appTextPrimary.opacity(0.6)).fontWeight(.medium) +
-                        Text(" yaklaştırıyor?")
-                            .foregroundColor(Color.appTextPrimary))
+                        Text(L10n.markdown("phone_impact_question"))
                         .font(.system(size: 20, weight: .medium, design: .rounded))
                     }
                     .opacity(showLine4 ? 1.0 : 0.0)
@@ -119,7 +90,7 @@ struct OnboardingPhoneImpactView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("devam etmek için dokun")
+                            Text(.tapToContinue)
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))

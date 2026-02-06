@@ -32,12 +32,12 @@ struct OnboardingCompletedView: View {
                     .foregroundColor(Color.appTextOnPrimary)
                 
                 // Başlık
-                Text("Harika!")
+                Text(.onboardingCompletedTitle)
                     .font(.system(size: 48, weight: .bold, design: .rounded))
                     .foregroundColor(Color.appTextOnPrimary)
                 
                 // Alt metin
-                Text("Onboarding tamamlandı. \nDevam eden ekranlar yakında gelecek.")
+                Text(.onboardingCompletedMessage)
                     .font(.system(size: 17, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextOnPrimary.opacity(0.8))
                     .multilineTextAlignment(.center)
@@ -46,7 +46,7 @@ struct OnboardingCompletedView: View {
                 Spacer()
                 
                 // Dev note
-                Text("[DEV MODE: Onboarding tamamlandı]")
+                Text(.devModeOnboardingCompleted)
                     .font(.system(size: 14, weight: .bold, design: .rounded))
                     .foregroundColor(Color.appTextOnPrimary.opacity(0.6))
                     .padding(.bottom, 50)

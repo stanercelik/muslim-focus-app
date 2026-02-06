@@ -20,7 +20,7 @@ struct OnboardingSexView: View {
             
             VStack(spacing: 0) {
                 // Başlık
-                Text("Sana doğru hitap edebilmemiz için cinsiyetin?")
+                Text(.userDiscoverySexTitle)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -38,7 +38,7 @@ struct OnboardingSexView: View {
                 VStack(spacing: 16) {
                     ForEach(Sex.allCases, id: \.self) { sex in
                         SexOptionButton(
-                            title: sex.displayText,
+                            title: sex.localizedDisplayText,
                             isSelected: viewModel.onboardingData.sex == sex,
                             action: {
                                 HapticManager.shared.impact(style: .medium)
@@ -56,7 +56,7 @@ struct OnboardingSexView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: viewModel.onboardingData.sex != nil,
                     action: {
                         HapticManager.shared.impact(style: .medium)

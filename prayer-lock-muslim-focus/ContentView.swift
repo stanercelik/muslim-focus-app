@@ -17,7 +17,7 @@ struct ContentView: View {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        Text(L10n.text("content_item_at", item.timestamp.formatted(date: .numeric, time: .standard)))
                     } label: {
                         Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
                     }
@@ -30,12 +30,12 @@ struct ContentView: View {
                 }
                 ToolbarItem {
                     Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                        Label(.contentAddItem, systemImage: "plus")
                     }
                 }
             }
         } detail: {
-            Text("Select an item")
+            Text(.contentSelectItem)
         }
     }
 

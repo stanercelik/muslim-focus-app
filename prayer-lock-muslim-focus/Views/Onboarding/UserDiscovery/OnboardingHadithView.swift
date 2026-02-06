@@ -29,7 +29,7 @@ struct OnboardingHadithView: View {
             
             VStack(spacing: 0) {
                 // Başlık
-                Text("Dürüstlüğün için teşekkürler, \(viewModel.onboardingData.name)")
+                Text(UserDiscoveryStrings.hadithTitle(name: viewModel.onboardingData.name))
                     .font(.system(size: 28, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -48,7 +48,7 @@ struct OnboardingHadithView: View {
                     ScrollViewReader { proxy in
                         VStack(spacing: 72) {
                             // Mesaj 1
-                            Text("Zorlanmak, bu dünya imtihanının bir parçasıdır. Yalnız değilsin.")
+                            Text(.userDiscoveryHadithMessage1)
                                 .font(.system(size: 18, weight: .medium, design: .rounded))
                                 .foregroundColor(Color.appTextPrimary)
                                 .multilineTextAlignment(.leading)
@@ -63,13 +63,13 @@ struct OnboardingHadithView: View {
                             // Hadis bölümü
                             VStack(spacing: 32) {
                                 // Intro
-                                (Text("Peygamber Efendimiz ")
+                                (Text(.userDiscoveryHadithIntroPrefix)
                                     .foregroundColor(Color.appTextPrimary.opacity(0.7)) +
-                                Text("(sav)")
+                                Text(.userDiscoveryHadithIntroSav)
                                     .font(.system(size: 15))
                                     .foregroundColor(Color.appTextPrimary.opacity(0.6))
                                     .fontWeight(.medium) +
-                                Text(" şöyle buyurmuştur:")
+                                Text(.userDiscoveryHadithIntroSuffix)
                                     .foregroundColor(Color.appTextPrimary.opacity(0.7)))
                                 .font(.system(size: 16, weight: .semibold, design: .rounded))
                                 .multilineTextAlignment(.leading)
@@ -79,7 +79,7 @@ struct OnboardingHadithView: View {
                                 .id("intro")
                                 
                                 // Arapça hadis
-                                Text("كُلُّ بَنِي آدَمَ خَطَّاءٌ وَخَيْرُ الْخَطَّائِينَ التَّوَّابُونَ")
+                                Text(.userDiscoveryHadithArabic)
                                     .font(.system(size: 26, weight: .semibold, design: .serif))
                                     .foregroundColor(Color.appTextPrimary)
                                     .multilineTextAlignment(.center)
@@ -91,17 +91,17 @@ struct OnboardingHadithView: View {
                                     .id("arabic")
                                 
                                 // Meal
-                                (Text("\"Âdemoğullarının hepsi hata edicidir; hata edenlerin ")
+                                (Text(.userDiscoveryHadithTranslationPrefix)
                                     .foregroundColor(Color.appTextPrimary) +
-                                Text("en hayırlısı")
+                                Text(.userDiscoveryHadithTranslationHighlight1)
                                     .foregroundColor(Color.appPrimary)
                                     .fontWeight(.bold) +
-                                Text(" ise ")
+                                Text(.userDiscoveryHadithTranslationMid)
                                     .foregroundColor(Color.appTextPrimary) +
-                                Text("tövbe edenlerdir")
+                                Text(.userDiscoveryHadithTranslationHighlight2)
                                     .foregroundColor(Color.appPrimary)
                                     .fontWeight(.bold) +
-                                Text(".\"")
+                                Text(.userDiscoveryHadithTranslationSuffix)
                                     .foregroundColor(Color.appTextPrimary))
                                 .font(.system(size: 17, weight: .medium, design: .rounded))
                                 .multilineTextAlignment(.center)
@@ -113,7 +113,7 @@ struct OnboardingHadithView: View {
                                 .id("translation")
                                 
                                 // Kaynak
-                                Text("Tirmizî, Kıyâmet, 49; İbn Mâce, Zühd, 30")
+                                Text(.userDiscoveryHadithSource)
                                     .font(.system(size: 13, weight: .medium, design: .rounded))
                                     .foregroundColor(Color.appTextPrimary.opacity(0.5))
                                     .multilineTextAlignment(.center)
@@ -124,17 +124,17 @@ struct OnboardingHadithView: View {
                             }
                         
                             // Müjde mesajı
-                            (Text("Müjde şu ki; ")
+                            (Text(.userDiscoveryHadithMessage2Prefix)
                                 .foregroundColor(Color.appTextPrimary) +
-                            Text("Allah'ın (cc) rahmeti")
+                            Text(.userDiscoveryHadithMessage2Highlight1)
                                 .foregroundColor(Color.appPrimary)
                                 .fontWeight(.bold) +
-                            Text(" her şeyi kuşatmıştır. Senin bu ")
+                            Text(.userDiscoveryHadithMessage2Mid)
                                 .foregroundColor(Color.appTextPrimary) +
-                            Text("samimi niyetin")
+                            Text(.userDiscoveryHadithMessage2Highlight2)
                                 .foregroundColor(Color.appPrimary)
                                 .fontWeight(.bold) +
-                            Text(", O'na giden yolda atılmış en güzel adımdır.")
+                            Text(.userDiscoveryHadithMessage2Suffix)
                                 .foregroundColor(Color.appTextPrimary))
                             .font(.system(size: 18, weight: .medium, design: .rounded))
                             .multilineTextAlignment(.leading)
@@ -144,20 +144,20 @@ struct OnboardingHadithView: View {
                             .id("message2")
                             
                             // Son mesaj
-                            (Text("Dua ve zikir")
+                            (Text(.userDiscoveryHadithMessage3Highlight1)
                                 .foregroundColor(Color.appPrimary)
                                 .fontWeight(.bold) +
-                            Text(", ")
+                            Text(.userDiscoveryHadithMessage3Separator1)
                                 .foregroundColor(Color.appTextPrimary) +
-                            Text("kalbin ilacı")
+                            Text(.userDiscoveryHadithMessage3Highlight2)
                                 .foregroundColor(Color.appPrimary)
                                 .fontWeight(.bold) +
-                            Text(" ve ")
+                            Text(.userDiscoveryHadithMessage3Separator2)
                                 .foregroundColor(Color.appTextPrimary) +
-                            Text("günün bereketidir")
+                            Text(.userDiscoveryHadithMessage3Highlight3)
                                 .foregroundColor(Color.appPrimary)
                                 .fontWeight(.bold) +
-                            Text(". Bu yolculukta her adımında seninleyiz.")
+                            Text(.userDiscoveryHadithMessage3Suffix)
                                 .foregroundColor(Color.appTextPrimary))
                             .font(.system(size: 18, weight: .medium, design: .rounded))
                             .multilineTextAlignment(.leading)
@@ -207,7 +207,7 @@ struct OnboardingHadithView: View {
                         viewModel.nextStep()
                     }) {
                         HStack(spacing: 6) {
-                            Text("devam etmek için dokun")
+                            Text(.tapToContinue)
                                 .font(.system(size: 15, weight: .bold, design: .rounded))
                             Image(systemName: "arrow.right")
                                 .font(.system(size: 13, weight: .bold))

@@ -23,7 +23,7 @@ struct OnboardingPhoneUsageView: View {
             
             VStack(spacing: 0) {
                 // Başlık
-                Text("Günde kaç saatini bu ekrana emanet ediyorsun?")
+                Text(.phoneUsageQuestion)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -40,7 +40,7 @@ struct OnboardingPhoneUsageView: View {
                     .frame(height: 16)
                 
                 // Alt metin
-                Text("Zaman, bize verilmiş en kıymetli sermaye.")
+                Text(.timeIsPrecious)
                     .font(.system(size: 15, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary.opacity(0.6))
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -55,7 +55,7 @@ struct OnboardingPhoneUsageView: View {
                 VStack(spacing: 16) {
                     ForEach(PhoneUsageRange.allCases, id: \.self) { range in
                         PhoneUsageOptionButton(
-                            title: range.displayText,
+                            title: range.localizedDisplayText,
                             isSelected: viewModel.onboardingData.phoneUsageHours == range,
                             action: {
                                 HapticManager.shared.impact(style: .medium)
@@ -73,7 +73,7 @@ struct OnboardingPhoneUsageView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: viewModel.onboardingData.phoneUsageHours != nil,
                     action: {
                         HapticManager.shared.impact(style: .medium)

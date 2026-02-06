@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GradientButton: View {
-    let title: String
+    let title: LocalizedStringKey
     let isEnabled: Bool
     let action: () -> Void
     
@@ -64,8 +64,8 @@ struct GradientButton: View {
 
 #Preview {
     VStack(spacing: 20) {
-        GradientButton(title: "continue", isEnabled: true, action: {})
-        GradientButton(title: "continue", isEnabled: false, action: {})
+        GradientButton(title: .continueButton, isEnabled: true, action: {})
+        GradientButton(title: .continueButton, isEnabled: false, action: {})
     }
     .padding()
 }

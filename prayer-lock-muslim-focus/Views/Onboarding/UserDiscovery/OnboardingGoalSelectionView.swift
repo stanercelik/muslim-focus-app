@@ -21,7 +21,7 @@ struct OnboardingGoalSelectionView: View {
             
             VStack(spacing: 0) {
                 // Başlık
-                Text("Muslim Focus ile neye ulaşmak istersin?")
+                Text(.userDiscoveryGoalTitle)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -37,7 +37,7 @@ struct OnboardingGoalSelectionView: View {
                     .frame(height: 12)
                 
                 // Alt başlık
-                Text("En fazla 3 tane seçebilirsin.")
+                Text(.userDiscoveryGoalSubtitle)
                     .font(.system(size: 15, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary.opacity(0.6))
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -53,7 +53,7 @@ struct OnboardingGoalSelectionView: View {
                     VStack(spacing: 12) {
                         ForEach(UserGoal.allCases, id: \.self) { goal in
                             GoalOptionButton(
-                                title: goal.displayText,
+                                title: goal.localizedDisplayText,
                                 isSelected: viewModel.onboardingData.selectedGoals.contains(goal),
                                 isDisabled: !viewModel.onboardingData.selectedGoals.contains(goal) && viewModel.onboardingData.selectedGoals.count >= 3,
                                 action: {
@@ -70,7 +70,7 @@ struct OnboardingGoalSelectionView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: viewModel.canProceedFromGoalSelection,
                     action: {
                         HapticManager.shared.impact(style: .medium)

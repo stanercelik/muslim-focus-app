@@ -22,7 +22,7 @@ struct OnboardingPrayerFrequencyView: View {
             
             VStack(spacing: 0) {
                 // Başlık
-                Text("Dürüst olalım; haftada kaç gün 5 vakit namazını tam kılabiliyorsun?")
+                Text(.userDiscoveryPrayerFrequencyTitle)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -43,7 +43,7 @@ struct OnboardingPrayerFrequencyView: View {
                         RollingCounter(value: Int(sliderValue))
                             .foregroundColor(Color.appPrimary)
                         
-                        Text(Int(sliderValue) == 1 ? "gün" : "gün")
+                        Text(Int(sliderValue) == 1 ? .userDiscoveryPrayerFrequencyDaySingular : .userDiscoveryPrayerFrequencyDayPlural)
                             .font(.system(size: 18, weight: .semibold, design: .rounded))
                             .foregroundColor(Color.appTextPrimary.opacity(0.6))
                     }
@@ -131,7 +131,7 @@ struct OnboardingPrayerFrequencyView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: true,
                     action: {
                         HapticManager.shared.impact(style: .medium)

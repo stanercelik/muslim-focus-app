@@ -21,7 +21,7 @@ struct OnboardingBlockersView: View {
             
             VStack(spacing: 0) {
                 // Başlık
-                Text("İstediğin o manevi derinliğe engel olan ana şey ne?")
+                Text(.userDiscoveryBlockersTitle)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -41,7 +41,7 @@ struct OnboardingBlockersView: View {
                     VStack(spacing: 12) {
                         ForEach(Blocker.allCases, id: \.self) { blocker in
                             BlockerOptionButton(
-                                title: blocker.displayText,
+                                title: blocker.localizedDisplayText,
                                 isSelected: viewModel.onboardingData.blockers.contains(blocker),
                                 isDisabled: !viewModel.onboardingData.blockers.contains(blocker) && viewModel.onboardingData.blockers.count >= 3,
                                 action: {
@@ -58,7 +58,7 @@ struct OnboardingBlockersView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: viewModel.canProceedFromBlockerSelection,
                     action: {
                         HapticManager.shared.impact(style: .medium)

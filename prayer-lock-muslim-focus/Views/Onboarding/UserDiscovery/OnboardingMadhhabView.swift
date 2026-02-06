@@ -21,7 +21,7 @@ struct OnboardingMadhhabView: View {
             
             VStack(spacing: 0) {
                 // Başlık
-                Text("İbadet içeriklerini sana özel hazırlamamız için fıkhi çizgini seçebilirsin.")
+                Text(.userDiscoveryMadhhabTitle)
                     .font(.system(size: 32, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.appTextPrimary)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -40,7 +40,7 @@ struct OnboardingMadhhabView: View {
                 VStack(spacing: 12) {
                     ForEach(Madhhab.allCases, id: \.self) { madhhab in
                         MadhhabOptionButton(
-                            title: madhhab.displayText,
+                            title: madhhab.localizedDisplayText,
                             isSelected: viewModel.onboardingData.madhhab == madhhab,
                             action: {
                                 HapticManager.shared.impact(style: .medium)
@@ -58,7 +58,7 @@ struct OnboardingMadhhabView: View {
                 
                 // Continue button
                 GradientButton(
-                    title: "Devam Et",
+                    title: .continueButton,
                     isEnabled: viewModel.onboardingData.madhhab != nil,
                     action: {
                         HapticManager.shared.impact(style: .medium)

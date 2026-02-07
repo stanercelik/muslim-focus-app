@@ -326,3 +326,17 @@ extension CommitmentLevel {
         NSLocalizedString(localizedKey, comment: "")
     }
 }
+
+extension DifficultyMode {
+    var localizedKey: String {
+        switch self {
+        case .easy: return "difficulty_easy"
+        case .medium: return "difficulty_medium"
+        case .hard: return "difficulty_hard"
+        }
+    }
+
+    var localizedDisplayText: String {
+        NSLocalizedString(localizedKey, comment: "")
+    }
+}

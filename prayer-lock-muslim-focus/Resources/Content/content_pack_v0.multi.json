@@ -1,0 +1,4837 @@
+{
+  "pack_version": "v0.2.multi",
+  "generated_at": "2026-02-07T15:16:33.927209+00:00",
+  "counts": {
+    "surah": 10,
+    "ayah": 60,
+    "dua": 50
+  },
+  "sources": [
+    {
+      "id": "quran_ar_uthmani",
+      "name": "Tanzil Quran Text (Uthmani)",
+      "url": "https://tanzil.net/download/",
+      "license": "CC BY 3.0",
+      "file": "Documents/Quran-Docs/quran-uthmani.txt"
+    },
+    {
+      "id": "quran_en_sahih",
+      "name": "Saheeh International (Tanzil export)",
+      "url": "https://tanzil.net/trans/",
+      "file": "Documents/Quran-Docs/en.sahih.txt"
+    },
+    {
+      "id": "quran_tr_diyanet",
+      "name": "Diyanet Isleri (Tanzil export)",
+      "url": "https://tanzil.net/trans/",
+      "file": "Documents/Quran-Docs/tr.diyanet.txt"
+    },
+    {
+      "id": "quran_transliteration_seed",
+      "name": "quran-json transliteration seed (fallback to internal transliteration)",
+      "url": "https://github.com/risan/quran-json",
+      "license": "CC BY-SA 4.0",
+      "note": "Used for readable transliteration where available."
+    },
+    {
+      "id": "dua_hisn_seed",
+      "name": "Dua & Dhikr dataset",
+      "url": "https://github.com/fitrahive/dua-dhikr",
+      "license": "MIT"
+    },
+    {
+      "id": "dua_tr_machine_aid",
+      "name": "Google Translate unofficial endpoint",
+      "url": "https://translate.googleapis.com",
+      "note": "Used to generate initial Turkish draft for dua translations."
+    }
+  ],
+  "cards": [
+    {
+      "id": "surah_1",
+      "type": "surah",
+      "title": "Surah Al-Fatihah",
+      "length_bucket": "l",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "surah_1",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "1:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "transliteration_ascii": "Bismi allahi alrrahmani alrraheemi",
+            "translation": {
+              "en": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+              "tr": "Rahman ve Rahim olan Allah'ın adıyla:"
+            }
+          },
+          {
+            "verse_key": "1:2",
+            "arabic": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+            "transliteration_ascii": "Alhamdu lillahi rabbi al'aalameena",
+            "translation": {
+              "en": "[All] praise is [due] to Allah, Lord of the worlds -",
+              "tr": "Hamd, Alemlerin Rabbi Allah'a mahsustur."
+            }
+          },
+          {
+            "verse_key": "1:3",
+            "arabic": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+            "transliteration_ascii": "Alrrahmani alrraheemi",
+            "translation": {
+              "en": "The Entirely Merciful, the Especially Merciful,",
+              "tr": "O Rahman ve Rahim'dir,"
+            }
+          },
+          {
+            "verse_key": "1:4",
+            "arabic": "مَٰلِكِ يَوْمِ ٱلدِّينِ",
+            "transliteration_ascii": "Maliki yawmi alddeeni",
+            "translation": {
+              "en": "Sovereign of the Day of Recompense.",
+              "tr": "Din Gününün sahibidir."
+            }
+          },
+          {
+            "verse_key": "1:5",
+            "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+            "transliteration_ascii": "Iyyaka na'aabudu waiyyaka nasta'aaeenu",
+            "translation": {
+              "en": "It is You we worship and You we ask for help.",
+              "tr": "Ancak Sana kulluk eder ve yalnız Senden yardım dileriz."
+            }
+          },
+          {
+            "verse_key": "1:6",
+            "arabic": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+            "transliteration_ascii": "Ihdina alssirata almustaqeema",
+            "translation": {
+              "en": "Guide us to the straight path -",
+              "tr": "Bizi doğru yola eriştir."
+            }
+          },
+          {
+            "verse_key": "1:7",
+            "arabic": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ",
+            "transliteration_ascii": "Sirata allatheena an'aamta aalayhim ghayri almaghdoobi aalayhim wala alddalleena",
+            "translation": {
+              "en": "The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray.",
+              "tr": "Nimete erdirdiğin kimselerin yoluna; gazaba uğrayanların, ya da sapıtanların yoluna değil."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "1:1-7",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "surah_112",
+      "type": "surah",
+      "title": "Surah Al-Ikhlas",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "surah_112",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "112:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+            "transliteration_ascii": "Qul huwa allahu ahadun",
+            "translation": {
+              "en": "Say, \"He is Allah, [who is] One,",
+              "tr": "De ki: O Allah bir tektir."
+            }
+          },
+          {
+            "verse_key": "112:2",
+            "arabic": "ٱللَّهُ ٱلصَّمَدُ",
+            "transliteration_ascii": "Allahu alssamadu",
+            "translation": {
+              "en": "Allah, the Eternal Refuge.",
+              "tr": "Allah her şeyden müstağni ve her şey O'na muhtaçtır."
+            }
+          },
+          {
+            "verse_key": "112:3",
+            "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+            "transliteration_ascii": "Lam yalid walam yooladu",
+            "translation": {
+              "en": "He neither begets nor is born,",
+              "tr": "O doğurmamış ve doğmamıştır."
+            }
+          },
+          {
+            "verse_key": "112:4",
+            "arabic": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+            "transliteration_ascii": "Walam yakun lahu kufuwan ahadun",
+            "translation": {
+              "en": "Nor is there to Him any equivalent.\"",
+              "tr": "Hiçbir şey O'na denk değildir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "112:1-4",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "surah_113",
+      "type": "surah",
+      "title": "Surah Al-Falaq",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "focus"
+      ],
+      "topic_tags": [
+        "surah_113",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "113:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
+            "transliteration_ascii": "Qul a'aaoothu birabbi alfalaqi",
+            "translation": {
+              "en": "Say, \"I seek refuge in the Lord of daybreak",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "113:2",
+            "arabic": "مِن شَرِّ مَا خَلَقَ",
+            "transliteration_ascii": "Min sharri ma khalaqa",
+            "translation": {
+              "en": "From the evil of that which He created",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "113:3",
+            "arabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+            "transliteration_ascii": "Wamin sharri ghasiqin itha waqaba",
+            "translation": {
+              "en": "And from the evil of darkness when it settles",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "113:4",
+            "arabic": "وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِى ٱلْعُقَدِ",
+            "transliteration_ascii": "Wamin sharri alnnaffathati fee al'aauqadi",
+            "translation": {
+              "en": "And from the evil of the blowers in knots",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "113:5",
+            "arabic": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+            "transliteration_ascii": "Wamin sharri hasidin itha hasada",
+            "translation": {
+              "en": "And from the evil of an envier when he envies.\"",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "113:1-5",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "surah_114",
+      "type": "surah",
+      "title": "Surah An-Nas",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "focus"
+      ],
+      "topic_tags": [
+        "surah_114",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "114:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+            "transliteration_ascii": "Qul a'aaoothu birabbi alnnasi",
+            "translation": {
+              "en": "Say, \"I seek refuge in the Lord of mankind,",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:2",
+            "arabic": "مَلِكِ ٱلنَّاسِ",
+            "transliteration_ascii": "Maliki alnnasi",
+            "translation": {
+              "en": "The Sovereign of mankind.",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:3",
+            "arabic": "إِلَٰهِ ٱلنَّاسِ",
+            "transliteration_ascii": "Ilahi alnnasi",
+            "translation": {
+              "en": "The God of mankind,",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:4",
+            "arabic": "مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ",
+            "transliteration_ascii": "Min sharri alwaswasi alkhannasi",
+            "translation": {
+              "en": "From the evil of the retreating whisperer -",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:5",
+            "arabic": "ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ",
+            "transliteration_ascii": "Allathee yuwaswisu fee sudoori alnnasi",
+            "translation": {
+              "en": "Who whispers [evil] into the breasts of mankind -",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:6",
+            "arabic": "مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+            "transliteration_ascii": "Mina aljinnati wa alnnasm",
+            "translation": {
+              "en": "From among the jinn and mankind.\"",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "114:1-6",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "surah_108",
+      "type": "surah",
+      "title": "Surah Al-Kawthar",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "focus"
+      ],
+      "topic_tags": [
+        "surah_108",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "108:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِنَّآ أَعْطَيْنَٰكَ ٱلْكَوْثَرَ",
+            "transliteration_ascii": "Inna a'aataynaka alkawthara",
+            "translation": {
+              "en": "Indeed, We have granted you, [O Muhammad], al-Kawthar.",
+              "tr": "Doğrusu sana pek çok nimet vermişizdir."
+            }
+          },
+          {
+            "verse_key": "108:2",
+            "arabic": "فَصَلِّ لِرَبِّكَ وَٱنْحَرْ",
+            "transliteration_ascii": "Fasalli lirabbika wainhar",
+            "translation": {
+              "en": "So pray to your Lord and sacrifice [to Him alone].",
+              "tr": "Öyleyse Rabbin için namaz kıl, kurban kes."
+            }
+          },
+          {
+            "verse_key": "108:3",
+            "arabic": "إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ",
+            "transliteration_ascii": "Inna shaniaka huwa alabtaru",
+            "translation": {
+              "en": "Indeed, your enemy is the one cut off.",
+              "tr": "Doğrusu adı sanı ortadan kalkacak olan, sana kin tutan kimsedir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "108:1-3",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "surah_103",
+      "type": "surah",
+      "title": "Surah Al-Asr",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "focus"
+      ],
+      "topic_tags": [
+        "surah_103",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "103:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ وَٱلْعَصْرِ",
+            "transliteration_ascii": "Waal'aasri",
+            "translation": {
+              "en": "By time,",
+              "tr": "İkindi vaktine (Asra; çağa) and olsun ki,"
+            }
+          },
+          {
+            "verse_key": "103:2",
+            "arabic": "إِنَّ ٱلْإِنسَٰنَ لَفِى خُسْرٍ",
+            "transliteration_ascii": "Inna alinsana lafee khusrin",
+            "translation": {
+              "en": "Indeed, mankind is in loss,",
+              "tr": "İnsan hiç şüphesiz hüsran içindedir."
+            }
+          },
+          {
+            "verse_key": "103:3",
+            "arabic": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّٰلِحَٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+            "transliteration_ascii": "Illa allatheena amanoo wa'aamiloo alssalihati watawasaw bialhaqqi watawasaw bialssabri",
+            "translation": {
+              "en": "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
+              "tr": "Ancak inanıp yararlı iş işleyenler, birbirlerine gerçeği tavsiye edenler ve sabırlı olmayı tavsiye edenler bunun dışındadır."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "103:1-3",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "surah_109",
+      "type": "surah",
+      "title": "Surah Al-Kafirun",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "surah_109",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "109:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ يَٰٓأَيُّهَا ٱلْكَٰفِرُونَ",
+            "transliteration_ascii": "Qul ya ayyuha alkafiroona",
+            "translation": {
+              "en": "Say, \"O disbelievers,",
+              "tr": "De ki: \"Ey inkarcılar!\""
+            }
+          },
+          {
+            "verse_key": "109:2",
+            "arabic": "لَآ أَعْبُدُ مَا تَعْبُدُونَ",
+            "transliteration_ascii": "La a'aabudu ma ta'aabudoona",
+            "translation": {
+              "en": "I do not worship what you worship.",
+              "tr": "\"Ben sizin taptıklarınıza tapmam.\""
+            }
+          },
+          {
+            "verse_key": "109:3",
+            "arabic": "وَلَآ أَنتُمْ عَٰبِدُونَ مَآ أَعْبُدُ",
+            "transliteration_ascii": "Wala antum aabidoona ma a'aabudu",
+            "translation": {
+              "en": "Nor are you worshippers of what I worship.",
+              "tr": "\"Benim taptığıma da sizler tapmazsınız.\""
+            }
+          },
+          {
+            "verse_key": "109:4",
+            "arabic": "وَلَآ أَنَا۠ عَابِدٌ مَّا عَبَدتُّمْ",
+            "transliteration_ascii": "Wala ana aabidun ma aabadtum",
+            "translation": {
+              "en": "Nor will I be a worshipper of what you worship.",
+              "tr": "\"Ben de sizin taptığınıza tapacak değilim.\""
+            }
+          },
+          {
+            "verse_key": "109:5",
+            "arabic": "وَلَآ أَنتُمْ عَٰبِدُونَ مَآ أَعْبُدُ",
+            "transliteration_ascii": "Wala antum aabidoona ma a'aabudu",
+            "translation": {
+              "en": "Nor will you be worshippers of what I worship.",
+              "tr": "\"Benim taptığıma da sizler tapmıyorsunuz.\""
+            }
+          },
+          {
+            "verse_key": "109:6",
+            "arabic": "لَكُمْ دِينُكُمْ وَلِىَ دِينِ",
+            "transliteration_ascii": "Lakum deenukum waliya deeni",
+            "translation": {
+              "en": "For you is your religion, and for me is my religion.\"",
+              "tr": "\"Sizin dininiz size, benim dinim banadır.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "109:1-6",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "surah_110",
+      "type": "surah",
+      "title": "Surah An-Nasr",
+      "length_bucket": "l",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "guidance"
+      ],
+      "topic_tags": [
+        "surah_110",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "110:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ",
+            "transliteration_ascii": "Itha jaa nasru allahi waalfathu",
+            "translation": {
+              "en": "When the victory of Allah has come and the conquest,",
+              "tr": "Allah'ın yardımı ve zafer günü gelip, insanların Allah'ın dinine akın akın girdiklerini görünce, Rabbini överek tesbih et; O'ndan bağışlama dile, çünkü O, tevbeleri daima kabul edendir."
+            }
+          },
+          {
+            "verse_key": "110:2",
+            "arabic": "وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًا",
+            "transliteration_ascii": "Waraayta alnnasa yadkhuloona fee deeni allahi afwajan",
+            "translation": {
+              "en": "And you see the people entering into the religion of Allah in multitudes,",
+              "tr": "Allah'ın yardımı ve zafer günü gelip, insanların Allah'ın dinine akın akın girdiklerini görünce, Rabbini överek tesbih et; O'ndan bağışlama dile, çünkü O, tevbeleri daima kabul edendir."
+            }
+          },
+          {
+            "verse_key": "110:3",
+            "arabic": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۢا",
+            "transliteration_ascii": "Fasabbih bihamdi rabbika waistaghfirhu innahu kana tawwaban",
+            "translation": {
+              "en": "Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of repentance.",
+              "tr": "Allah'ın yardımı ve zafer günü gelip, insanların Allah'ın dinine akın akın girdiklerini görünce, Rabbini överek tesbih et; O'ndan bağışlama dile, çünkü O, tevbeleri daima kabul edendir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "110:1-3",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "surah_97",
+      "type": "surah",
+      "title": "Surah Al-Qadr",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "surah_97",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "97:1",
+            "arabic": "بِّسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ إِنَّآ أَنزَلْنَٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+            "transliteration_ascii": "Inna anzalnahu fee laylati alqadri",
+            "translation": {
+              "en": "Indeed, We sent the Qur'an down during the Night of Decree.",
+              "tr": "Doğrusu, Biz, Kuran'ı kadir gecesinde indirmişizdir."
+            }
+          },
+          {
+            "verse_key": "97:2",
+            "arabic": "وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ",
+            "transliteration_ascii": "Wama adraka ma laylatu alqadri",
+            "translation": {
+              "en": "And what can make you know what is the Night of Decree?",
+              "tr": "Kadir gecesinin ne olduğunu sen bilir misin?"
+            }
+          },
+          {
+            "verse_key": "97:3",
+            "arabic": "لَيْلَةُ ٱلْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
+            "transliteration_ascii": "Laylatu alqadri khayrun min alfi shahrin",
+            "translation": {
+              "en": "The Night of Decree is better than a thousand months.",
+              "tr": "Kadir gecesi bin aydan hayırlıdır."
+            }
+          },
+          {
+            "verse_key": "97:4",
+            "arabic": "تَنَزَّلُ ٱلْمَلَٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ",
+            "transliteration_ascii": "Tanazzalu almalaikatu waalrroohu feeha biithni rabbihim min kulli amrin",
+            "translation": {
+              "en": "The angels and the Spirit descend therein by permission of their Lord for every matter.",
+              "tr": "Melekler ve Cebrail o gecede Rablerinin izniyle her türlü iş için inerler."
+            }
+          },
+          {
+            "verse_key": "97:5",
+            "arabic": "سَلَٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ",
+            "transliteration_ascii": "Salamun hiya hatta matla'aai alfajri",
+            "translation": {
+              "en": "Peace it is until the emergence of dawn.",
+              "tr": "O gece, tan yerinin ağarmasına kadar bir esenliktir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "97:1-5",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "surah_105",
+      "type": "surah",
+      "title": "Surah Al-Fil",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "surah_105",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "105:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَٰبِ ٱلْفِيلِ",
+            "transliteration_ascii": "Alam tara kayfa fa'aala rabbuka biashabi alfeeli",
+            "translation": {
+              "en": "Have you not considered, [O Muhammad], how your Lord dealt with the companions of the elephant?",
+              "tr": "Fil sahiplerine Rabbinin ne ettiğini görmedin mi?"
+            }
+          },
+          {
+            "verse_key": "105:2",
+            "arabic": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍ",
+            "transliteration_ascii": "Alam yaj'aal kaydahum fee tadleelin",
+            "translation": {
+              "en": "Did He not make their plan into misguidance?",
+              "tr": "Onların düzenlerini boşa çıkarmadı mı?"
+            }
+          },
+          {
+            "verse_key": "105:3",
+            "arabic": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+            "transliteration_ascii": "Waarsala aalayhim tayran ababeela",
+            "translation": {
+              "en": "And He sent against them birds in flocks,",
+              "tr": "Onların üzerine, sert taşlar atan sürülerle kuşlar gönderdi."
+            }
+          },
+          {
+            "verse_key": "105:4",
+            "arabic": "تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ",
+            "transliteration_ascii": "Tarmeehim bihijaratin min sijjeelin",
+            "translation": {
+              "en": "Striking them with stones of hard clay,",
+              "tr": "Onların üzerine, sert taşlar atan sürülerle kuşlar gönderdi."
+            }
+          },
+          {
+            "verse_key": "105:5",
+            "arabic": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍۭ",
+            "transliteration_ascii": "Faja'aalahum ka'aasfin makoolin",
+            "translation": {
+              "en": "And He made them like eaten straw.",
+              "tr": "Sonunda onları, yenilmiş ekin gibi yaptı."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "105:1-5",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_001",
+      "type": "ayah",
+      "title": "Huzur - 13:28",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "13:28",
+            "arabic": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ ۗ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+            "transliteration_ascii": "Allatheena amanoo watatmainnu quloobuhum bithikri allahi ala bithikri allahi tatmainnu alquloobu",
+            "translation": {
+              "en": "Those who have believed and whose hearts are assured by the remembrance of Allah. Unquestionably, by the remembrance of Allah hearts are assured.\"",
+              "tr": "Onlar inanmışlar, kalbleri Allah'ı anmakla huzura kavuşmuştur. Dikkat edin, kalbler ancak Allah'ı anmakla huzura kavuşur."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "13:28",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_002",
+      "type": "ayah",
+      "title": "Huzur - 94:5",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "94:5",
+            "arabic": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+            "transliteration_ascii": "Fainna ma'aa al'aausri yusran",
+            "translation": {
+              "en": "For indeed, with hardship [will be] ease.",
+              "tr": "Elbette güçlükle beraber şüphesiz bir kolaylık vardır."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "94:5",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_003",
+      "type": "ayah",
+      "title": "Huzur - 94:6",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "94:6",
+            "arabic": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+            "transliteration_ascii": "Inna ma'aa al'aausri yusran",
+            "translation": {
+              "en": "Indeed, with hardship [will be] ease.",
+              "tr": "Gerçekten, güçlükle beraber bir kolaylık vardır."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "94:6",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_004",
+      "type": "ayah",
+      "title": "Huzur - 2:286",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:286",
+            "arabic": "لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا ۚ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا ٱكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًا كَمَا حَمَلْتَهُۥ عَلَى ٱلَّذِينَ مِن قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ ۖ وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ ۚ أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَٰفِرِينَ",
+            "transliteration_ascii": "La yukallifu allahu nafsan illa wus'aaha laha ma kasabat wa'aalayha ma iktasabat rabbana la tuakhithna in naseena aw akhtana rabbana wala tahmil aalayna isran kama hamaltahu aala allatheena min qablina rabbana wala tuhammilna ma la taqata lana bihi wao'aafu aanna waighfir lana wairhamna anta mawlana faonsurna aala alqawmi alkafireena",
+            "translation": {
+              "en": "Allah does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. \"Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people.\"",
+              "tr": "Allah kişiye ancak gücünün yeteceği kadar yükler; kazandığı iyilik lehine, ettiği kötülük de aleyhinedir. Rabbimiz! Eğer unutacak veya yanılacak olursak bizi sorumlu tutma. Rabbimiz bizden öncekilere yüklediğin gibi, bize de ağır yük yükleme. Rabbimiz! Bize gücümüzün yetmeyeceği şeyi taşıtma, bizi affet, bizi bağışla, bize acı. Sen Mevlamızsın, kafirlere karşı bize yardım et."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:286",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_005",
+      "type": "ayah",
+      "title": "Huzur - 65:2-3",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "65:2",
+            "arabic": "فَإِذَا بَلَغْنَ أَجَلَهُنَّ فَأَمْسِكُوهُنَّ بِمَعْرُوفٍ أَوْ فَارِقُوهُنَّ بِمَعْرُوفٍ وَأَشْهِدُوا۟ ذَوَىْ عَدْلٍ مِّنكُمْ وَأَقِيمُوا۟ ٱلشَّهَٰدَةَ لِلَّهِ ۚ ذَٰلِكُمْ يُوعَظُ بِهِۦ مَن كَانَ يُؤْمِنُ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ ۚ وَمَن يَتَّقِ ٱللَّهَ يَجْعَل لَّهُۥ مَخْرَجًا",
+            "transliteration_ascii": "Faitha balaghna ajalahunna faamsikoohunna bima'aaroofin aw fariqoohunna bima'aaroofin waashhidoo thaway aadlin minkum waaqeemoo alshshahadata lillahi thalikum yoo'aathu bihi man kana yuminu bi'allahi waalyawmi alakhiri waman yattaqi allaha yaj'aal lahu makhrajan",
+            "translation": {
+              "en": "And when they have [nearly] fulfilled their term, either retain them according to acceptable terms or part with them according to acceptable terms. And bring to witness two just men from among you and establish the testimony for [the acceptance of] Allah. That is instructed to whoever should believe in Allah and the Last day. And whoever fears Allah - He will make for him a way out",
+              "tr": "Kadınların iddet süreleri biteceğinde, onları ya uygun bir şekilde alıkoyun, ya da onlardan ayrılın; içinizden de iki adil şahit getirin; şahidliği Allah için yapın; işte bu, Allah'a ve ahiret gününe inanan kimseye verilen öğüttür. Allah, kendisine karşı gelmekten sakınan kimseye kurtuluş yolu sağlar, ona beklemediği yerden rızık verir. Allah'a güvenen kimseye O yeter. Allah, buyruğunu yerine getirendir. Allah her şey için bir ölçü var etmiştir."
+            }
+          },
+          {
+            "verse_key": "65:3",
+            "arabic": "وَيَرْزُقْهُ مِنْ حَيْثُ لَا يَحْتَسِبُ ۚ وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ ۚ إِنَّ ٱللَّهَ بَٰلِغُ أَمْرِهِۦ ۚ قَدْ جَعَلَ ٱللَّهُ لِكُلِّ شَىْءٍ قَدْرًا",
+            "transliteration_ascii": "Wayarzuqhu min haythu la yahtasibu waman yatawakkal aala allahi fahuwa hasbuhu inna allaha balighu amrihi qad ja'aala allahu likulli shayin qadran",
+            "translation": {
+              "en": "And will provide for him from where he does not expect. And whoever relies upon Allah - then He is sufficient for him. Indeed, Allah will accomplish His purpose. Allah has already set for everything a [decreed] extent.",
+              "tr": "Kadınların iddet süreleri biteceğinde, onları ya uygun bir şekilde alıkoyun, ya da onlardan ayrılın; içinizden de iki adil şahit getirin; şahidliği Allah için yapın; işte bu, Allah'a ve ahiret gününe inanan kimseye verilen öğüttür. Allah, kendisine karşı gelmekten sakınan kimseye kurtuluş yolu sağlar, ona beklemediği yerden rızık verir. Allah'a güvenen kimseye O yeter. Allah, buyruğunu yerine getirendir. Allah her şey için bir ölçü var etmiştir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "65:2-3",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_006",
+      "type": "ayah",
+      "title": "Huzur - 3:173",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "patience"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "huzur",
+        "patience",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "3:173",
+            "arabic": "ٱلَّذِينَ قَالَ لَهُمُ ٱلنَّاسُ إِنَّ ٱلنَّاسَ قَدْ جَمَعُوا۟ لَكُمْ فَٱخْشَوْهُمْ فَزَادَهُمْ إِيمَٰنًا وَقَالُوا۟ حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ",
+            "transliteration_ascii": "Allatheena qala lahumu alnnasu inna alnnasa qad jama'aaoo lakum faikhshawhum fazadahum eemanan waqaloo hasbuna allahu wani'aama alwakeelu",
+            "translation": {
+              "en": "Those to whom hypocrites said, \"Indeed, the people have gathered against you, so fear them.\" But it [merely] increased them in faith, and they said, \"Sufficient for us is Allah, and [He is] the best Disposer of affairs.\"",
+              "tr": "İnsanlar onlara: \"Düşmanınız olan insanlar size karşı bir ordu topladılar, onlardan korkun\" dediler. Bu, onların imanını artırdı da: \"Allah bize yeter. O ne güzel Vekil'dir\" dediler."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "3:173",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_007",
+      "type": "ayah",
+      "title": "Huzur - 9:51",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "9:51",
+            "arabic": "قُل لَّن يُصِيبَنَآ إِلَّا مَا كَتَبَ ٱللَّهُ لَنَا هُوَ مَوْلَىٰنَا ۚ وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ",
+            "transliteration_ascii": "Qul lan yuseebana illa ma kataba allahu lana huwa mawlana wa'aala allahi falyatawakkali almuminoona",
+            "translation": {
+              "en": "Say, \"Never will we be struck except by what Allah has decreed for us; He is our protector.\" And upon Allah let the believers rely.",
+              "tr": "De ki: \"Allah'ın bize yazdığından başkası başımıza gelmez. O bizim Mevlamızdır, inananlar Allah'a güvensin.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "9:51",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_008",
+      "type": "ayah",
+      "title": "Huzur - 9:129",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "9:129",
+            "arabic": "فَإِن تَوَلَّوْا۟ فَقُلْ حَسْبِىَ ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ۖ عَلَيْهِ تَوَكَّلْتُ ۖ وَهُوَ رَبُّ ٱلْعَرْشِ ٱلْعَظِيمِ",
+            "transliteration_ascii": "Fain tawallaw faqul hasbiya allahu la ilaha illa huwa aalayhi tawakkaltu wahuwa rabbu al'aarshi al'aatheemi",
+            "translation": {
+              "en": "But if they turn away, [O Muhammad], say, \"Sufficient for me is Allah; there is no deity except Him. On Him I have relied, and He is the Lord of the Great Throne.\"",
+              "tr": "Eğer yüz çevirirlerse de ki: \"Allah bana yeter; O'ndan başka tanrı yoktur, yalnız O'na güveniyorum; O büyük arşın Rabbidir.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "9:129",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_009",
+      "type": "ayah",
+      "title": "Huzur - 20:46",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "20:46",
+            "arabic": "قَالَ لَا تَخَافَآ ۖ إِنَّنِى مَعَكُمَآ أَسْمَعُ وَأَرَىٰ",
+            "transliteration_ascii": "Qala la takhafa innanee ma'aakuma asma'aau waara",
+            "translation": {
+              "en": "[Allah] said, \"Fear not. Indeed, I am with you both; I hear and I see.",
+              "tr": "Allah: Korkmayın, dedi; Ben sizinle beraberim; görür ve işitirim. Ona gidin şöyle söyleyin: \"Doğrusu biz senin Rabbinin elçileriyiz. İsrailoğullarını bizimle beraber gönder, onlara azabetme; Rabbinden sana bir mucize getirdik; selam, doğru yolda gidene olsun! Doğrusu bize, yalanlayıp sırt çevirene azap edileceği vahyolundu.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "20:46",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_010",
+      "type": "ayah",
+      "title": "Huzur - 8:2",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "focus",
+        "guidance"
+      ],
+      "topic_tags": [
+        "focus",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "8:2",
+            "arabic": "إِنَّمَا ٱلْمُؤْمِنُونَ ٱلَّذِينَ إِذَا ذُكِرَ ٱللَّهُ وَجِلَتْ قُلُوبُهُمْ وَإِذَا تُلِيَتْ عَلَيْهِمْ ءَايَٰتُهُۥ زَادَتْهُمْ إِيمَٰنًا وَعَلَىٰ رَبِّهِمْ يَتَوَكَّلُونَ",
+            "transliteration_ascii": "Innama almuminoona allatheena itha thukira allahu wajilat quloobuhum waitha tuliyat aalayhim ayatuhu zadathum eemanan wa'aala rabbihim yatawakkaloona",
+            "translation": {
+              "en": "The believers are only those who, when Allah is mentioned, their hearts become fearful, and when His verses are recited to them, it increases them in faith; and upon their Lord they rely -",
+              "tr": "İnananlar ancak, o kimselerdir ki Allah anıldığı zaman kalbleri titrer, ayetleri okunduğu zaman bu onların imanlarını artırır. Ve Rablerine güvenirler; namaz kılarlar; kendilerine verdiğimiz rızıktan yerli yerince sarf ederler."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "8:2",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_011",
+      "type": "ayah",
+      "title": "Huzur - 39:53",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "39:53",
+            "arabic": "قُلْ يَٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا ۚ إِنَّهُۥ هُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+            "transliteration_ascii": "Qul ya aaibadiya allatheena asrafoo aala anfusihim la taqnatoo min rahmati allahi inna allaha yaghfiru alththunooba jamee'aan innahu huwa alghafooru alrraheemu",
+            "translation": {
+              "en": "Say, \"O My servants who have transgressed against themselves [by sinning], do not despair of the mercy of Allah. Indeed, Allah forgives all sins. Indeed, it is He who is the Forgiving, the Merciful.\"",
+              "tr": "De ki: \"Ey kendilerine kötülük edip aşırı giden kullarım! Allah'ın rahmetinden umudunuzu kesmeyin. Doğrusu Allah günahların hepsini bağışlar. Çünkü O, bağışlayandır, merhametlidir.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "39:53",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_012",
+      "type": "ayah",
+      "title": "Huzur - 57:4",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "huzur",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "57:4",
+            "arabic": "هُوَ ٱلَّذِى خَلَقَ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ فِى سِتَّةِ أَيَّامٍ ثُمَّ ٱسْتَوَىٰ عَلَى ٱلْعَرْشِ ۚ يَعْلَمُ مَا يَلِجُ فِى ٱلْأَرْضِ وَمَا يَخْرُجُ مِنْهَا وَمَا يَنزِلُ مِنَ ٱلسَّمَآءِ وَمَا يَعْرُجُ فِيهَا ۖ وَهُوَ مَعَكُمْ أَيْنَ مَا كُنتُمْ ۚ وَٱللَّهُ بِمَا تَعْمَلُونَ بَصِيرٌ",
+            "transliteration_ascii": "Huwa allathee khalaqa alssamawati waalarda fee sittati ayyamin thumma istawa aala al'aarshi ya'aalamu ma yaliju fee alardi wama yakhruju minha wama yanzilu mina alssamai wama ya'aaruju feeha wahuwa ma'aakum ayna ma kuntum wa'allahu bima ta'aamaloona baseerun",
+            "translation": {
+              "en": "It is He who created the heavens and earth in six days and then established Himself above the Throne. He knows what penetrates into the earth and what emerges from it and what descends from the heaven and what ascends therein; and He is with you wherever you are. And Allah, of what you do, is Seeing.",
+              "tr": "Gökleri ve yeri altı günde yaratan, sonra arşa hükmeden, yere gireni ve ondan çıkanı, gökten ineni ve oraya yükseleni bilen O'dur. Nerede olursanız olun, O, sizinle beraberdir. Allah yaptıklarınızı görür."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "57:4",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_013",
+      "type": "ayah",
+      "title": "Sabir - 2:153",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:153",
+            "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ ۚ إِنَّ ٱللَّهَ مَعَ ٱلصَّٰبِرِينَ",
+            "transliteration_ascii": "Ya ayyuha allatheena amanoo ista'aaeenoo bialssabri waalssalati inna allaha ma'aa alssabireena",
+            "translation": {
+              "en": "O you who have believed, seek help through patience and prayer. Indeed, Allah is with the patient.",
+              "tr": "Ey İnananlar! Sabır ve namazla yardım dileyin. Allah, muhakkak ki sabredenlerle beraberdir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:153",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_014",
+      "type": "ayah",
+      "title": "Sabir - 2:155-157",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:155",
+            "arabic": "وَلَنَبْلُوَنَّكُم بِشَىْءٍ مِّنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِّنَ ٱلْأَمْوَٰلِ وَٱلْأَنفُسِ وَٱلثَّمَرَٰتِ ۗ وَبَشِّرِ ٱلصَّٰبِرِينَ",
+            "transliteration_ascii": "Walanabluwannakum bishayin mina alkhawfi waaljoo'aai wanaqsin mina alamwali waalanfusi waalththamarati wabashshiri alssabireena",
+            "translation": {
+              "en": "And We will surely test you with something of fear and hunger and a loss of wealth and lives and fruits, but give good tidings to the patient,",
+              "tr": "Muhakkak sizi biraz korku, biraz açlık ve mallardan, canlardan, ürünlerden biraz eksiltmekle deneriz, sabredenleri müjdele."
+            }
+          },
+          {
+            "verse_key": "2:156",
+            "arabic": "ٱلَّذِينَ إِذَآ أَصَٰبَتْهُم مُّصِيبَةٌ قَالُوٓا۟ إِنَّا لِلَّهِ وَإِنَّآ إِلَيْهِ رَٰجِعُونَ",
+            "transliteration_ascii": "Allatheena itha asabathum museebatun qaloo inna lillahi wainna ilayhi raji'aaoona",
+            "translation": {
+              "en": "Who, when disaster strikes them, say, \"Indeed we belong to Allah, and indeed to Him we will return.\"",
+              "tr": "Onlara bir musibet geldiğinde: \"Biz Allah'ınız ve elbette O'na döneceğiz\" derler."
+            }
+          },
+          {
+            "verse_key": "2:157",
+            "arabic": "أُو۟لَٰٓئِكَ عَلَيْهِمْ صَلَوَٰتٌ مِّن رَّبِّهِمْ وَرَحْمَةٌ ۖ وَأُو۟لَٰٓئِكَ هُمُ ٱلْمُهْتَدُونَ",
+            "transliteration_ascii": "Olaika aalayhim salawatun min rabbihim warahmatun waolaika humu almuhtadoona",
+            "translation": {
+              "en": "Those are the ones upon whom are blessings from their Lord and mercy. And it is those who are the [rightly] guided.",
+              "tr": "Rablerinin mağfiret ve rahmeti onlaradır. O'nun yolunda olanlar da onlardır."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:155-157",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_015",
+      "type": "ayah",
+      "title": "Sabir - 3:200",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "3:200",
+            "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱصْبِرُوا۟ وَصَابِرُوا۟ وَرَابِطُوا۟ وَٱتَّقُوا۟ ٱللَّهَ لَعَلَّكُمْ تُفْلِحُونَ",
+            "transliteration_ascii": "Ya ayyuha allatheena amanoo isbiroo wasabiroo warabitoo waittaqoo allaha la'aallakum tuflihoona",
+            "translation": {
+              "en": "O you who have believed, persevere and endure and remain stationed and fear Allah that you may be successful.",
+              "tr": "Ey İnananlar! Sabredin, düşmanlarınızdan daha sabırlı olun, cihada hazır bulunun, Allah'a karşı gelmekten sakının ki başarıya erişebilesiniz."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "3:200",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_016",
+      "type": "ayah",
+      "title": "Sabir - 16:127",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "16:127",
+            "arabic": "وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ ۚ وَلَا تَحْزَنْ عَلَيْهِمْ وَلَا تَكُ فِى ضَيْقٍ مِّمَّا يَمْكُرُونَ",
+            "transliteration_ascii": "Waisbir wama sabruka illa bi'allahi wala tahzan aalayhim wala taku fee dayqin mimma yamkuroona",
+            "translation": {
+              "en": "And be patient, [O Muhammad], and your patience is not but through Allah. And do not grieve over them and do not be in distress over what they conspire.",
+              "tr": "Sabret, senin sabrın ancak Allah'ın yardımıyladır; onlara üzülme, kurdukları düzenlerden de endişe etme."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "16:127",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_017",
+      "type": "ayah",
+      "title": "Sabir - 29:69",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "29:69",
+            "arabic": "وَٱلَّذِينَ جَٰهَدُوا۟ فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا ۚ وَإِنَّ ٱللَّهَ لَمَعَ ٱلْمُحْسِنِينَ",
+            "transliteration_ascii": "Waallatheena jahadoo feena lanahdiyannahum subulana wainna allaha lama'aa almuhsineena",
+            "translation": {
+              "en": "And those who strive for Us - We will surely guide them to Our ways. And indeed, Allah is with the doers of good.",
+              "tr": "Ama Bizim uğrumuzda cihat edenleri elbette yollarımıza eriştireceğiz. Allah şüphesiz, iyi davrananlarla beraberdir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "29:69",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_018",
+      "type": "ayah",
+      "title": "Sabir - 11:115",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "11:115",
+            "arabic": "وَٱصْبِرْ فَإِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ",
+            "transliteration_ascii": "Waisbir fainna allaha la yudee'aau ajra almuhsineena",
+            "translation": {
+              "en": "And be patient, for indeed, Allah does not allow to be lost the reward of those who do good.",
+              "tr": "Sabret, Allah iyi davrananların ecrini elbette zayi etmez."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "11:115",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_019",
+      "type": "ayah",
+      "title": "Sabir - 42:43",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "42:43",
+            "arabic": "وَلَمَن صَبَرَ وَغَفَرَ إِنَّ ذَٰلِكَ لَمِنْ عَزْمِ ٱلْأُمُورِ",
+            "transliteration_ascii": "Walaman sabara waghafara inna thalika lamin aazmi alomoori",
+            "translation": {
+              "en": "And whoever is patient and forgives - indeed, that is of the matters [requiring] determination.",
+              "tr": "Ama sabredip bağışlayanın işi, işte bu, azmedilmeye değer işlerdendir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "42:43",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_020",
+      "type": "ayah",
+      "title": "Sabir - 12:90",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "12:90",
+            "arabic": "قَالُوٓا۟ أَءِنَّكَ لَأَنتَ يُوسُفُ ۖ قَالَ أَنَا۠ يُوسُفُ وَهَٰذَآ أَخِى ۖ قَدْ مَنَّ ٱللَّهُ عَلَيْنَآ ۖ إِنَّهُۥ مَن يَتَّقِ وَيَصْبِرْ فَإِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ",
+            "transliteration_ascii": "Qaloo ainnaka laanta yoosufa qala ana yoosufu wahatha akhee qad manna allahu aalayna innahu man yattaqi wayasbir fainna allaha la yudee'aau ajra almuhsineena",
+            "translation": {
+              "en": "They said, \"Are you indeed Joseph?\" He said \"I am Joseph, and this is my brother. Allah has certainly favored us. Indeed, he who fears Allah and is patient, then indeed, Allah does not allow to be lost the reward of those who do good.\"",
+              "tr": "\"Yoksa sen Yusuf musun?\" dediler. \"Ben Yusuf'um, bu da kardeşim. Allah bize iyilikte bulundu; doğrusu kim kötülükten sakınır ve sabrederse bilsin ki Allah iyi davrananların ecrini katiyen zayi etmez\" dedi.."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "12:90",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_021",
+      "type": "ayah",
+      "title": "Sabir - 3:139",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "3:139",
+            "arabic": "وَلَا تَهِنُوا۟ وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ",
+            "transliteration_ascii": "Wala tahinoo wala tahzanoo waantumu ala'aalawna in kuntum mumineena",
+            "translation": {
+              "en": "So do not weaken and do not grieve, and you will be superior if you are [true] believers.",
+              "tr": "Gevşemeyin, üzülmeyin, inanmışsanız, mutlaka siz en üstünsünüzdür."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "3:139",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_022",
+      "type": "ayah",
+      "title": "Sabir - 47:7",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "patience",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "patience",
+        "quran",
+        "sabir"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "47:7",
+            "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن تَنصُرُوا۟ ٱللَّهَ يَنصُرْكُمْ وَيُثَبِّتْ أَقْدَامَكُمْ",
+            "transliteration_ascii": "Ya ayyuha allatheena amanoo in tansuroo allaha yansurkum wayuthabbit aqdamakum",
+            "translation": {
+              "en": "O you who have believed, if you support Allah, He will support you and plant firmly your feet.",
+              "tr": "Ey inananlar! Siz Allah'ın dinine yardım ederseniz, O da size yardım eder, ayaklarınızı savaşta sabit kılar."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "47:7",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_023",
+      "type": "ayah",
+      "title": "Tevekkul - 14:12",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "patience"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "patience",
+        "quran",
+        "tevekkul"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "14:12",
+            "arabic": "وَمَا لَنَآ أَلَّا نَتَوَكَّلَ عَلَى ٱللَّهِ وَقَدْ هَدَىٰنَا سُبُلَنَا ۚ وَلَنَصْبِرَنَّ عَلَىٰ مَآ ءَاذَيْتُمُونَا ۚ وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُتَوَكِّلُونَ",
+            "transliteration_ascii": "Wama lana alla natawakkala aala allahi waqad hadana subulana walanasbiranna aala ma athaytumoona wa'aala allahi falyatawakkali almutawakkiloona",
+            "translation": {
+              "en": "And why should we not rely upon Allah while He has guided us to our [good] ways. And we will surely be patient against whatever harm you should cause us. And upon Allah let those who would rely [indeed] rely.\"",
+              "tr": "\"Bize yollarımızı gösteren Allah'a niçin güvenmeyelim? Bize ettiğiniz eziyete elbette katlanacağız. Güvenenler ancak Allah'a güvensinler.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "14:12",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_024",
+      "type": "ayah",
+      "title": "Tevekkul - 10:107",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "quran",
+        "tevekkul"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "10:107",
+            "arabic": "وَإِن يَمْسَسْكَ ٱللَّهُ بِضُرٍّ فَلَا كَاشِفَ لَهُۥٓ إِلَّا هُوَ ۖ وَإِن يُرِدْكَ بِخَيْرٍ فَلَا رَآدَّ لِفَضْلِهِۦ ۚ يُصِيبُ بِهِۦ مَن يَشَآءُ مِنْ عِبَادِهِۦ ۚ وَهُوَ ٱلْغَفُورُ ٱلرَّحِيمُ",
+            "transliteration_ascii": "Wain yamsaska allahu bidurrin fala kashifa lahu illa huwa wain yuridka bikhayrin fala radda lifadlihi yuseebu bihi man yashao min aaibadihi wahuwa alghafooru alrraheemu",
+            "translation": {
+              "en": "And if Allah should touch you with adversity, there is no remover of it except Him; and if He intends for you good, then there is no repeller of His bounty. He causes it to reach whom He wills of His servants. And He is the Forgiving, the Merciful",
+              "tr": "Allah sana bir sıkıntı verirse, onu O'ndan başkası gideremez. Sana bir iyilik dilerse O'nun nimetini engelleyecek yoktur. O'nu kullarından dilediğine verir. O, bağışlayandır, merhametlidir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "10:107",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_025",
+      "type": "ayah",
+      "title": "Tevekkul - 33:3",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "guidance",
+        "quran",
+        "tevekkul"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "33:3",
+            "arabic": "وَتَوَكَّلْ عَلَى ٱللَّهِ ۚ وَكَفَىٰ بِٱللَّهِ وَكِيلًا",
+            "transliteration_ascii": "Watawakkal aala allahi wakafa bi'allahi wakeelan",
+            "translation": {
+              "en": "And rely upon Allah; and sufficient is Allah as Disposer of affairs.",
+              "tr": "Allah'a güven, Allah, vekil olarak yeter."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "33:3",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_026",
+      "type": "ayah",
+      "title": "Tevekkul - 64:11",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "quran",
+        "tevekkul"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "64:11",
+            "arabic": "مَآ أَصَابَ مِن مُّصِيبَةٍ إِلَّا بِإِذْنِ ٱللَّهِ ۗ وَمَن يُؤْمِنۢ بِٱللَّهِ يَهْدِ قَلْبَهُۥ ۚ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ",
+            "transliteration_ascii": "Ma asaba min museebatin illa biithni allahi waman yumin bi'allahi yahdi qalbahu wa'allahu bikulli shayin aaleemun",
+            "translation": {
+              "en": "No disaster strikes except by permission of Allah. And whoever believes in Allah - He will guide his heart. And Allah is Knowing of all things.",
+              "tr": "Başa gelen hiçbir musibet Allah'ın izni olmaksızın olamaz; Allah'a kim inanırsa onun gönlünü doğruya yöneltir. Allah herşeyi bilendir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "64:11",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_027",
+      "type": "ayah",
+      "title": "Tevekkul - 5:23",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "quran",
+        "tevekkul"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "5:23",
+            "arabic": "قَالَ رَجُلَانِ مِنَ ٱلَّذِينَ يَخَافُونَ أَنْعَمَ ٱللَّهُ عَلَيْهِمَا ٱدْخُلُوا۟ عَلَيْهِمُ ٱلْبَابَ فَإِذَا دَخَلْتُمُوهُ فَإِنَّكُمْ غَٰلِبُونَ ۚ وَعَلَى ٱللَّهِ فَتَوَكَّلُوٓا۟ إِن كُنتُم مُّؤْمِنِينَ",
+            "transliteration_ascii": "Qala rajulani mina allatheena yakhafoona an'aama allahu aalayhima odkhuloo aalayhimu albaba faitha dakhaltumoohu fainnakum ghaliboona wa'aala allahi fatawakkaloo in kuntum mumineena",
+            "translation": {
+              "en": "Said two men from those who feared [to disobey] upon whom Allah had bestowed favor, \"Enter upon them through the gate, for when you have entered it, you will be predominant. And upon Allah rely, if you should be believers.\"",
+              "tr": "Korkanlar arasında bulunan, Allah'ın nimete erdirdiği iki adam: \"Üstlerine kapıdan yürüyün, oradan girerseniz şüphesiz galip gelirsiniz; eğer inanıyorsanız Allah'a güvenin\" demişlerdi."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "5:23",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_028",
+      "type": "ayah",
+      "title": "Tevekkul - 3:159",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guidance",
+        "patience"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "tevekkul"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "3:159",
+            "arabic": "فَبِمَا رَحْمَةٍ مِّنَ ٱللَّهِ لِنتَ لَهُمْ ۖ وَلَوْ كُنتَ فَظًّا غَلِيظَ ٱلْقَلْبِ لَٱنفَضُّوا۟ مِنْ حَوْلِكَ ۖ فَٱعْفُ عَنْهُمْ وَٱسْتَغْفِرْ لَهُمْ وَشَاوِرْهُمْ فِى ٱلْأَمْرِ ۖ فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى ٱللَّهِ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلْمُتَوَكِّلِينَ",
+            "transliteration_ascii": "Fabima rahmatin mina allahi linta lahum walaw kunta faththan ghaleetha alqalbi lainfaddoo min hawlika fao'aafu aanhum waistaghfir lahum washawirhum fee alamri faitha aazamta fatawakkal aala allahi inna allaha yuhibbu almutawakkileena",
+            "translation": {
+              "en": "So by mercy from Allah, [O Muhammad], you were lenient with them. And if you had been rude [in speech] and harsh in heart, they would have disbanded from about you. So pardon them and ask forgiveness for them and consult them in the matter. And when you have decided, then rely upon Allah. Indeed, Allah loves those who rely [upon Him].",
+              "tr": "Allah'ın rahmetinden dolayı, sen onlara karşı yumuşak davrandın. Eğer kaba ve katı kalbli olsaydın, şüphesiz etrafından dağılır giderlerdi. Onları affet, onlara mağfiret dile, iş hakkında onlara danış, fakat karar verdin mi Allah'a güven, doğrusu Allah güvenenleri sever."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "3:159",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_029",
+      "type": "ayah",
+      "title": "Tevekkul - 8:49",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "quran",
+        "tevekkul"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "8:49",
+            "arabic": "إِذْ يَقُولُ ٱلْمُنَٰفِقُونَ وَٱلَّذِينَ فِى قُلُوبِهِم مَّرَضٌ غَرَّ هَٰٓؤُلَآءِ دِينُهُمْ ۗ وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَإِنَّ ٱللَّهَ عَزِيزٌ حَكِيمٌ",
+            "transliteration_ascii": "Ith yaqoolu almunafiqoona waallatheena fee quloobihim maradun gharra haolai deenuhum waman yatawakkal aala allahi fainna allaha aazeezun hakeemun",
+            "translation": {
+              "en": "[Remember] when the hypocrites and those in whose hearts was disease said, \"Their religion has deluded those [Muslims].\" But whoever relies upon Allah - then indeed, Allah is Exalted in Might and Wise.",
+              "tr": "İkiyüzlüler ve kalblerinde hastalık bulunanlar \"Müslümanları dinleri aldattı\" diyorlardı; oysa, kim Allah'a güvenirse bilmelidir ki Allah güçlüdür, hakimdir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "8:49",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_030",
+      "type": "ayah",
+      "title": "Tevekkul - 12:67",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guidance",
+        "patience"
+      ],
+      "topic_tags": [
+        "guidance",
+        "patience",
+        "quran",
+        "tevekkul"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "12:67",
+            "arabic": "وَقَالَ يَٰبَنِىَّ لَا تَدْخُلُوا۟ مِنۢ بَابٍ وَٰحِدٍ وَٱدْخُلُوا۟ مِنْ أَبْوَٰبٍ مُّتَفَرِّقَةٍ ۖ وَمَآ أُغْنِى عَنكُم مِّنَ ٱللَّهِ مِن شَىْءٍ ۖ إِنِ ٱلْحُكْمُ إِلَّا لِلَّهِ ۖ عَلَيْهِ تَوَكَّلْتُ ۖ وَعَلَيْهِ فَلْيَتَوَكَّلِ ٱلْمُتَوَكِّلُونَ",
+            "transliteration_ascii": "Waqala ya baniyya la tadkhuloo min babin wahidin waodkhuloo min abwabin mutafarriqatin wama oghnee aankum mina allahi min shayin ini alhukmu illa lillahi aalayhi tawakkaltu wa'aalayhi falyatawakkali almutawakkiloona",
+            "translation": {
+              "en": "And he said, \"O my sons, do not enter from one gate but enter from different gates; and I cannot avail you against [the decree of] Allah at all. The decision is only for Allah; upon Him I have relied, and upon Him let those who would rely [indeed] rely.\"",
+              "tr": "Babaları: \"Oğullarım! Tek bir kapıdan değil, ayrı ayrı kapılardan girin. Ama Allah katında size bir faydam olmaz, hüküm ancak Allah'ındır, O'na güvendim, güvenenler de O'na güvensinler\" dedi."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "12:67",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_031",
+      "type": "ayah",
+      "title": "Sukur - 14:7",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "guidance"
+      ],
+      "topic_tags": [
+        "gratitude",
+        "guidance",
+        "quran",
+        "sukur"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "14:7",
+            "arabic": "وَإِذْ تَأَذَّنَ رَبُّكُمْ لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ ۖ وَلَئِن كَفَرْتُمْ إِنَّ عَذَابِى لَشَدِيدٌ",
+            "transliteration_ascii": "Waith taaththana rabbukum lain shakartum laazeedannakum walain kafartum inna aathabee lashadeedun",
+            "translation": {
+              "en": "And [remember] when your Lord proclaimed, 'If you are grateful, I will surely increase you [in favor]; but if you deny, indeed, My punishment is severe.' \"",
+              "tr": "Rabbiniz: \"Şükrederseniz and olsun ki, size karşılığını artıracağım; nankörlük ederseniz bilin ki azabım pek çetindir\" diye bildirmişti."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "14:7",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_032",
+      "type": "ayah",
+      "title": "Sukur - 2:152",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "gratitude",
+        "quran",
+        "sukur"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:152",
+            "arabic": "فَٱذْكُرُونِىٓ أَذْكُرْكُمْ وَٱشْكُرُوا۟ لِى وَلَا تَكْفُرُونِ",
+            "transliteration_ascii": "Faothkuroonee athkurkum waoshkuroo lee wala takfurooni",
+            "translation": {
+              "en": "So remember Me; I will remember you. And be grateful to Me and do not deny Me.",
+              "tr": "Artık Beni anın, Ben de sizi anayım; Bana şükredin, nankörlük etmeyin."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:152",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_033",
+      "type": "ayah",
+      "title": "Sukur - 16:18",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "guidance"
+      ],
+      "topic_tags": [
+        "gratitude",
+        "guidance",
+        "quran",
+        "sukur"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "16:18",
+            "arabic": "وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌ رَّحِيمٌ",
+            "transliteration_ascii": "Wain ta'aauddoo ni'aamata allahi la tuhsooha inna allaha laghafoorun raheemun",
+            "translation": {
+              "en": "And if you should count the favors of Allah, you could not enumerate them. Indeed, Allah is Forgiving and Merciful.",
+              "tr": "Allah'ın verdiği nimetleri sayacak olsanız bitiremezsiniz; doğrusu Allah bağışlar, merhamet eder."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "16:18",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_034",
+      "type": "ayah",
+      "title": "Sukur - 27:19",
+      "length_bucket": "l",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "guidance"
+      ],
+      "topic_tags": [
+        "gratitude",
+        "guidance",
+        "quran",
+        "sukur"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "27:19",
+            "arabic": "فَتَبَسَّمَ ضَاحِكًا مِّن قَوْلِهَا وَقَالَ رَبِّ أَوْزِعْنِىٓ أَنْ أَشْكُرَ نِعْمَتَكَ ٱلَّتِىٓ أَنْعَمْتَ عَلَىَّ وَعَلَىٰ وَٰلِدَىَّ وَأَنْ أَعْمَلَ صَٰلِحًا تَرْضَىٰهُ وَأَدْخِلْنِى بِرَحْمَتِكَ فِى عِبَادِكَ ٱلصَّٰلِحِينَ",
+            "transliteration_ascii": "Fatabassama dahikan min qawliha waqala rabbi awzi'aanee an ashkura ni'aamataka allatee an'aamta aalayya wa'aala walidayya waan a'aamala salihan tardahu waadkhilnee birahmatika fee aaibadika alssaliheena",
+            "translation": {
+              "en": "So [Solomon] smiled, amused at her speech, and said, \"My Lord, enable me to be grateful for Your favor which You have bestowed upon me and upon my parents and to do righteousness of which You approve. And admit me by Your mercy into [the ranks of] Your righteous servants.\"",
+              "tr": "Süleyman, onun sözüne hafifçe güldü ve: \"Rabbim! Bana ve ana babama verdiğin nimete şükürde, hoşnut olacağın işi yapmakta beni muvaffak kıl. Rahmetinle, beni iyi kullarının arasına koy\" dedi."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "27:19",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_035",
+      "type": "ayah",
+      "title": "Sukur - 93:11",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "gratitude",
+        "quran",
+        "sukur"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "93:11",
+            "arabic": "وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
+            "transliteration_ascii": "Waamma bini'aamati rabbika fahaddith",
+            "translation": {
+              "en": "But as for the favor of your Lord, report [it].",
+              "tr": "Yalnızca Rabbinin nimetini anlat."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "93:11",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_036",
+      "type": "ayah",
+      "title": "Sukur - 55:13",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "guidance"
+      ],
+      "topic_tags": [
+        "gratitude",
+        "guidance",
+        "quran",
+        "sukur"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "55:13",
+            "arabic": "فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ",
+            "transliteration_ascii": "Fabiayyi alai rabbikuma tukaththibani",
+            "translation": {
+              "en": "So which of the favors of your Lord would you deny?",
+              "tr": "Ey insanlar ve cinler! Öyleyken, Rabbinizin nimetlerinden hangisini yalanlarsınız?"
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "55:13",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_037",
+      "type": "ayah",
+      "title": "Sukur - 31:12",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "guidance"
+      ],
+      "topic_tags": [
+        "gratitude",
+        "guidance",
+        "quran",
+        "sukur"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "31:12",
+            "arabic": "وَلَقَدْ ءَاتَيْنَا لُقْمَٰنَ ٱلْحِكْمَةَ أَنِ ٱشْكُرْ لِلَّهِ ۚ وَمَن يَشْكُرْ فَإِنَّمَا يَشْكُرُ لِنَفْسِهِۦ ۖ وَمَن كَفَرَ فَإِنَّ ٱللَّهَ غَنِىٌّ حَمِيدٌ",
+            "transliteration_ascii": "Walaqad atayna luqmana alhikmata ani oshkur lillahi waman yashkur fainnama yashkuru linafsihi waman kafara fainna allaha ghaniyyun hameedun",
+            "translation": {
+              "en": "And We had certainly given Luqman wisdom [and said], \"Be grateful to Allah.\" And whoever is grateful is grateful for [the benefit of] himself. And whoever denies [His favor] - then indeed, Allah is Free of need and Praiseworthy.",
+              "tr": "And olsun ki, Lokman'a, Allah'a şükretmesi için hikmet verdik. Şükreden kimse ancak kendisi için şükretmiş olur. Nankörlük eden ise, bilsin ki, Allah her şeyden müstağnidir, övülmeğe layık olandır."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "31:12",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_038",
+      "type": "ayah",
+      "title": "Sukur - 76:9",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "gratitude",
+        "quran",
+        "sukur"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "76:9",
+            "arabic": "إِنَّمَا نُطْعِمُكُمْ لِوَجْهِ ٱللَّهِ لَا نُرِيدُ مِنكُمْ جَزَآءً وَلَا شُكُورًا",
+            "transliteration_ascii": "Innama nut'aaimukum liwajhi allahi la nureedu minkum jazaan wala shukooran",
+            "translation": {
+              "en": "[Saying], \"We feed you only for the countenance of Allah. We wish not from you reward or gratitude.",
+              "tr": "\"Biz sizi ancak Allah rızası için doyuruyoruz, bir karşılık ve teşekkür beklemiyoruz. Doğrusu biz çok asık suratların bulunacağı bir günde Rabbimizden korkarız\" derler."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "76:9",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_039",
+      "type": "ayah",
+      "title": "Istiğfar - 4:110",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "4:110",
+            "arabic": "وَمَن يَعْمَلْ سُوٓءًا أَوْ يَظْلِمْ نَفْسَهُۥ ثُمَّ يَسْتَغْفِرِ ٱللَّهَ يَجِدِ ٱللَّهَ غَفُورًا رَّحِيمًا",
+            "transliteration_ascii": "Waman ya'aamal sooan aw yathlim nafsahu thumma yastaghfiri allaha yajidi allaha ghafooran raheeman",
+            "translation": {
+              "en": "And whoever does a wrong or wrongs himself but then seeks forgiveness of Allah will find Allah Forgiving and Merciful.",
+              "tr": "Kim kötülük işler veya kendine yazık eder de sonra Allah'tan bağışlanma dilerse, Allah'ı mağfiret ve merhamet sahibi olarak bulur."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "4:110",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_040",
+      "type": "ayah",
+      "title": "Istiğfar - 25:70",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "25:70",
+            "arabic": "إِلَّا مَن تَابَ وَءَامَنَ وَعَمِلَ عَمَلًا صَٰلِحًا فَأُو۟لَٰٓئِكَ يُبَدِّلُ ٱللَّهُ سَيِّـَٔاتِهِمْ حَسَنَٰتٍ ۗ وَكَانَ ٱللَّهُ غَفُورًا رَّحِيمًا",
+            "transliteration_ascii": "Illa man taba waamana wa'aamila aamalan salihan faolaika yubaddilu allahu sayyiatihim hasanatin wakana allahu ghafooran raheeman",
+            "translation": {
+              "en": "Except for those who repent, believe and do righteous work. For them Allah will replace their evil deeds with good. And ever is Allah Forgiving and Merciful.",
+              "tr": "Ancak tevbe eden, inanıp yararlı iş işleyenlerin, işte Allah onların kötülüklerini iyiliklere çevirir. Allah bağışlar ve merhamet eder."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "25:70",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_041",
+      "type": "ayah",
+      "title": "Istiğfar - 3:135",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "3:135",
+            "arabic": "وَٱلَّذِينَ إِذَا فَعَلُوا۟ فَٰحِشَةً أَوْ ظَلَمُوٓا۟ أَنفُسَهُمْ ذَكَرُوا۟ ٱللَّهَ فَٱسْتَغْفَرُوا۟ لِذُنُوبِهِمْ وَمَن يَغْفِرُ ٱلذُّنُوبَ إِلَّا ٱللَّهُ وَلَمْ يُصِرُّوا۟ عَلَىٰ مَا فَعَلُوا۟ وَهُمْ يَعْلَمُونَ",
+            "transliteration_ascii": "Waallatheena itha fa'aaloo fahishatan aw thalamoo anfusahum thakaroo allaha faistaghfaroo lithunoobihim waman yaghfiru alththunooba illa allahu walam yusirroo aala ma fa'aaloo wahum ya'aalamoona",
+            "translation": {
+              "en": "And those who, when they commit an immorality or wrong themselves [by transgression], remember Allah and seek forgiveness for their sins - and who can forgive sins except Allah? - and [who] do not persist in what they have done while they know.",
+              "tr": "Onlar fena bir şey yaptıklarında veya kendilerine zulmettiklerinde Allah'ı anarlar, günahlarının bağışlanmasını dilerler. Günahları Allah'tan başka bağışlayan kim vardır? Onlar, yaptıklarında bile bile direnmezler."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "3:135",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_042",
+      "type": "ayah",
+      "title": "Istiğfar - 66:8",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "66:8",
+            "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ تُوبُوٓا۟ إِلَى ٱللَّهِ تَوْبَةً نَّصُوحًا عَسَىٰ رَبُّكُمْ أَن يُكَفِّرَ عَنكُمْ سَيِّـَٔاتِكُمْ وَيُدْخِلَكُمْ جَنَّٰتٍ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَٰرُ يَوْمَ لَا يُخْزِى ٱللَّهُ ٱلنَّبِىَّ وَٱلَّذِينَ ءَامَنُوا۟ مَعَهُۥ ۖ نُورُهُمْ يَسْعَىٰ بَيْنَ أَيْدِيهِمْ وَبِأَيْمَٰنِهِمْ يَقُولُونَ رَبَّنَآ أَتْمِمْ لَنَا نُورَنَا وَٱغْفِرْ لَنَآ ۖ إِنَّكَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ",
+            "transliteration_ascii": "Ya ayyuha allatheena amanoo tooboo ila allahi tawbatan nasoohan aasa rabbukum an yukaffira aankum sayyiatikum wayudkhilakum jannatin tajree min tahtiha alanharu yawma la yukhzee allahu alnnabiyya waallatheena amanoo ma'aahu nooruhum yas'aa bayna aydeehim wabiaymanihim yaqooloona rabbana atmim lana noorana waighfir lana innaka aala kulli shayin qadeerun",
+            "translation": {
+              "en": "O you who have believed, repent to Allah with sincere repentance. Perhaps your Lord will remove from you your misdeeds and admit you into gardens beneath which rivers flow [on] the Day when Allah will not disgrace the Prophet and those who believed with him. Their light will proceed before them and on their right; they will say, \"Our Lord, perfect for us our light and forgive us. Indeed, You are over all things competent.\"",
+              "tr": "Ey inananlar! Yürekten tevbe ederek Allah'a dönün ki, Rabbiniz kötülüklerinizi örtsün, sizi, içlerinden ırmaklar akan cennetlere koysun. Allah'ın Peygamberini ve onunla beraber olan müminleri utandırmayacağı o gün, ışıkları önlerinde ve defterleri sağlarından verilmiş olarak yürürler ve: \"Rabbimiz! Işığımızı tamamla, bizi bağışla, doğrusu Sen herşeye Kadir'sin\" derler."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "66:8",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_043",
+      "type": "ayah",
+      "title": "Istiğfar - 8:33",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "8:33",
+            "arabic": "وَمَا كَانَ ٱللَّهُ لِيُعَذِّبَهُمْ وَأَنتَ فِيهِمْ ۚ وَمَا كَانَ ٱللَّهُ مُعَذِّبَهُمْ وَهُمْ يَسْتَغْفِرُونَ",
+            "transliteration_ascii": "Wama kana allahu liyu'aaththibahum waanta feehim wama kana allahu mu'aaththibahum wahum yastaghfiroona",
+            "translation": {
+              "en": "But Allah would not punish them while you, [O Muhammad], are among them, and Allah would not punish them while they seek forgiveness.",
+              "tr": "Oysa, sen içlerinde iken Allah onlara azabetmez. Onlar bağışlanma dilerlerken de elbette Allah azab edecek değildir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "8:33",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_044",
+      "type": "ayah",
+      "title": "Istiğfar - 11:3",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "11:3",
+            "arabic": "وَأَنِ ٱسْتَغْفِرُوا۟ رَبَّكُمْ ثُمَّ تُوبُوٓا۟ إِلَيْهِ يُمَتِّعْكُم مَّتَٰعًا حَسَنًا إِلَىٰٓ أَجَلٍ مُّسَمًّى وَيُؤْتِ كُلَّ ذِى فَضْلٍ فَضْلَهُۥ ۖ وَإِن تَوَلَّوْا۟ فَإِنِّىٓ أَخَافُ عَلَيْكُمْ عَذَابَ يَوْمٍ كَبِيرٍ",
+            "transliteration_ascii": "Waani istaghfiroo rabbakum thumma tooboo ilayhi yumatti'aakum mata'aan hasanan ila ajalin musamman wayuti kulla thee fadlin fadlahu wain tawallaw fainee akhafu aalaykum aathaba yawmin kabeerin",
+            "translation": {
+              "en": "And [saying], \"Seek forgiveness of your Lord and repent to Him, [and] He will let you enjoy a good provision for a specified term and give every doer of favor his favor. But if you turn away, then indeed, I fear for you the punishment of a great Day.",
+              "tr": "Elif, Lam, Ra. Bu Kitap, hakim ve haberdar olan Allah tarafından, Allah'tan başkasına kulluk etmeyesiniz diye ayetleri kesin kılınmış, sonra da uzun uzadıya açıklanmış bir Kitap'dır. Ben size, O'nun tarafından gönderilmiş bir uyarıcı ve müjdeciyim. Rabbinizden mağfiret dileyin ve O'na tevbe edin ki, belli bir süreye kadar sizi güzelce geçindirsin ve her fazilet sahibine faziletinin karşılığını versin. Eğer yüz çevirirseniz o zaman ben doğrusu hakkınızda büyük günün azabından korkarım."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "11:3",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_045",
+      "type": "ayah",
+      "title": "Istiğfar - 71:10-12",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "71:10",
+            "arabic": "فَقُلْتُ ٱسْتَغْفِرُوا۟ رَبَّكُمْ إِنَّهُۥ كَانَ غَفَّارًا",
+            "transliteration_ascii": "Faqultu istaghfiroo rabbakum innahu kana ghaffaran",
+            "translation": {
+              "en": "And said, 'Ask forgiveness of your Lord. Indeed, He is ever a Perpetual Forgiver.",
+              "tr": "Dedim ki: \"Rabbinizden bağışlanma dileyin; doğrusu O, çok bağışlayandır. Size gökten bol bol yağmur indirsin.\""
+            }
+          },
+          {
+            "verse_key": "71:11",
+            "arabic": "يُرْسِلِ ٱلسَّمَآءَ عَلَيْكُم مِّدْرَارًا",
+            "transliteration_ascii": "Yursili alssamaa aalaykum midraran",
+            "translation": {
+              "en": "He will send [rain from] the sky upon you in [continuing] showers",
+              "tr": "Dedim ki: \"Rabbinizden bağışlanma dileyin; doğrusu O, çok bağışlayandır. Size gökten bol bol yağmur indirsin.\""
+            }
+          },
+          {
+            "verse_key": "71:12",
+            "arabic": "وَيُمْدِدْكُم بِأَمْوَٰلٍ وَبَنِينَ وَيَجْعَل لَّكُمْ جَنَّٰتٍ وَيَجْعَل لَّكُمْ أَنْهَٰرًا",
+            "transliteration_ascii": "Wayumdidkum biamwalin wabaneena wayaj'aal lakum jannatin wayaj'aal lakum anharan",
+            "translation": {
+              "en": "And give you increase in wealth and children and provide for you gardens and provide for you rivers.",
+              "tr": "\"Sizi, mallar ve oğullarla desteklesin; sizin için bahçeler var etsin, ırmaklar akıtsın.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "71:10-12",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_046",
+      "type": "ayah",
+      "title": "Istiğfar - 24:31",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "24:31",
+            "arabic": "وَقُل لِّلْمُؤْمِنَٰتِ يَغْضُضْنَ مِنْ أَبْصَٰرِهِنَّ وَيَحْفَظْنَ فُرُوجَهُنَّ وَلَا يُبْدِينَ زِينَتَهُنَّ إِلَّا مَا ظَهَرَ مِنْهَا ۖ وَلْيَضْرِبْنَ بِخُمُرِهِنَّ عَلَىٰ جُيُوبِهِنَّ ۖ وَلَا يُبْدِينَ زِينَتَهُنَّ إِلَّا لِبُعُولَتِهِنَّ أَوْ ءَابَآئِهِنَّ أَوْ ءَابَآءِ بُعُولَتِهِنَّ أَوْ أَبْنَآئِهِنَّ أَوْ أَبْنَآءِ بُعُولَتِهِنَّ أَوْ إِخْوَٰنِهِنَّ أَوْ بَنِىٓ إِخْوَٰنِهِنَّ أَوْ بَنِىٓ أَخَوَٰتِهِنَّ أَوْ نِسَآئِهِنَّ أَوْ مَا مَلَكَتْ أَيْمَٰنُهُنَّ أَوِ ٱلتَّٰبِعِينَ غَيْرِ أُو۟لِى ٱلْإِرْبَةِ مِنَ ٱلرِّجَالِ أَوِ ٱلطِّفْلِ ٱلَّذِينَ لَمْ يَظْهَرُوا۟ عَلَىٰ عَوْرَٰتِ ٱلنِّسَآءِ ۖ وَلَا يَضْرِبْنَ بِأَرْجُلِهِنَّ لِيُعْلَمَ مَا يُخْفِينَ مِن زِينَتِهِنَّ ۚ وَتُوبُوٓا۟ إِلَى ٱللَّهِ جَمِيعًا أَيُّهَ ٱلْمُؤْمِنُونَ لَعَلَّكُمْ تُفْلِحُونَ",
+            "transliteration_ascii": "Waqul lilmuminati yaghdudna min absarihinna wayahfathna furoojahunna wala yubdeena zeenatahunna illa ma thahara minha walyadribna bikhumurihinna aala juyoobihinna wala yubdeena zeenatahunna illa libu'aaoolatihinna aw abaihinna aw abai bu'aaoolatihinna aw abnaihinna aw abnai bu'aaoolatihinna aw ikhwanihinna aw banee ikhwanihinna aw banee akhawatihinna aw nisaihinna aw ma malakat aymanuhunna awi alttabi'aaeena ghayri olee alirbati mina alrrijali awi alttifli allatheena lam yathharoo aala aawrati alnnisai wala yadribna biarjulihinna liyu'aalama ma yukhfeena min zeenatihinna watooboo ila allahi jamee'aan ayyuha almuminoona la'aallakum tuflihoona",
+            "translation": {
+              "en": "And tell the believing women to reduce [some] of their vision and guard their private parts and not expose their adornment except that which [necessarily] appears thereof and to wrap [a portion of] their headcovers over their chests and not expose their adornment except to their husbands, their fathers, their husbands' fathers, their sons, their husbands' sons, their brothers, their brothers' sons, their sisters' sons, their women, that which their right hands possess, or those male attendants having no physical desire, or children who are not yet aware of the private aspects of women. And let them not stamp their feet to make known what they conceal of their adornment. And turn to Allah in repentance, all of you, O believers, that you might succeed.",
+              "tr": "Mümin kadınlara da söyle: Gözlerini bakılması yasak olandan çevirsinler, iffetlerini korusunlar. Süslerini, kendiliğinden görünen kısmı müstesna, açmasınlar. Baş örtülerini yakalarının üzerine salsınlar. Süslerini kocaları veya babaları ve kayınpederleri veya oğulları veya kocalarının oğulları veya kardeşleri veya erkek kardeşlerinin oğulları veya kızkardeşlerinin oğulları veya müslüman kadınları veya cariyeleri veya erkekliği kalmamış hizmetçiler, ya da kadınların mahrem yerlerini henüz anlamayan çocuklardan başkasına göstermesinler. Gizledikleri süslerin bilinmesi için ayaklarını yere vurmasınlar. Ey inananlar! Saadete ermeniz için hepiniz tevbe ederek Allah'ın hükmüne dönün."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "24:31",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_047",
+      "type": "ayah",
+      "title": "Istiğfar - 2:222",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:222",
+            "arabic": "وَيَسْـَٔلُونَكَ عَنِ ٱلْمَحِيضِ ۖ قُلْ هُوَ أَذًى فَٱعْتَزِلُوا۟ ٱلنِّسَآءَ فِى ٱلْمَحِيضِ ۖ وَلَا تَقْرَبُوهُنَّ حَتَّىٰ يَطْهُرْنَ ۖ فَإِذَا تَطَهَّرْنَ فَأْتُوهُنَّ مِنْ حَيْثُ أَمَرَكُمُ ٱللَّهُ ۚ إِنَّ ٱللَّهَ يُحِبُّ ٱلتَّوَّٰبِينَ وَيُحِبُّ ٱلْمُتَطَهِّرِينَ",
+            "transliteration_ascii": "Wayasaloonaka aani almaheedi qul huwa athan fai'aataziloo alnnisaa fee almaheedi wala taqraboohunna hatta yathurna faitha tatahharna fatoohunna min haythu amarakumu allahu inna allaha yuhibbu alttawwabeena wayuhibbu almutatahhireena",
+            "translation": {
+              "en": "And they ask you about menstruation. Say, \"It is harm, so keep away from wives during menstruation. And do not approach them until they are pure. And when they have purified themselves, then come to them from where Allah has ordained for you. Indeed, Allah loves those who are constantly repentant and loves those who purify themselves.\"",
+              "tr": "Sana, kadınların aybaşı hali hakkında da sorarlar, de ki: \"O bir ezadır (rahatsızlıktır)\". Aybaşı halinde iken kadınlardan el çekin, temizlenmelerine kadar onlara yaklaşmayın. Temizlendikleri zaman, Allah'ın size buyurduğu yoldan yaklaşın. Allah şüphesiz daima tevbe edenleri sever, temizlenenleri de sever."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:222",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_048",
+      "type": "ayah",
+      "title": "Istiğfar - 2:186",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt",
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "guilt",
+        "istigfar",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:186",
+            "arabic": "وَإِذَا سَأَلَكَ عِبَادِى عَنِّى فَإِنِّى قَرِيبٌ ۖ أُجِيبُ دَعْوَةَ ٱلدَّاعِ إِذَا دَعَانِ ۖ فَلْيَسْتَجِيبُوا۟ لِى وَلْيُؤْمِنُوا۟ بِى لَعَلَّهُمْ يَرْشُدُونَ",
+            "transliteration_ascii": "Waitha saalaka aaibadee aannee fainnee qareebun ojeebu da'aawata aldda'aai itha da'aani falyastajeeboo lee walyuminoo bee la'aallahum yarshudoona",
+            "translation": {
+              "en": "And when My servants ask you, [O Muhammad], concerning Me - indeed I am near. I respond to the invocation of the supplicant when he calls upon Me. So let them respond to Me [by obedience] and believe in Me that they may be [rightly] guided.",
+              "tr": "Kullarım sana Beni sorarlarsa, bilsinler ki Ben, şüphesiz onlara yakınım. Benden isteyenin, dua ettiğinde duasını kabul ederim. Artık onlar da davetimi kabul edip Bana inansınlar ki doğru yolda yürüyenlerden olsunlar."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:186",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_049",
+      "type": "ayah",
+      "title": "Rehberlik - 1:6",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "guidance",
+        "quran",
+        "rehberlik"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "1:6",
+            "arabic": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+            "transliteration_ascii": "Ihdina alssirata almustaqeema",
+            "translation": {
+              "en": "Guide us to the straight path -",
+              "tr": "Bizi doğru yola eriştir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "1:6",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_050",
+      "type": "ayah",
+      "title": "Rehberlik - 2:2",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "guidance",
+        "quran",
+        "rehberlik"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:2",
+            "arabic": "ذَٰلِكَ ٱلْكِتَٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ",
+            "transliteration_ascii": "Thalika alkitabu la rayba feehi hudan lilmuttaqeena",
+            "translation": {
+              "en": "This is the Book about which there is no doubt, a guidance for those conscious of Allah -",
+              "tr": "Bu, doğruluğu şüphe götürmeyen ve Allah'a karşı gelmekten sakınanlara yol gösteren Kitap'dır."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:2",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_051",
+      "type": "ayah",
+      "title": "Rehberlik - 2:38",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "guidance",
+        "quran",
+        "rehberlik"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:38",
+            "arabic": "قُلْنَا ٱهْبِطُوا۟ مِنْهَا جَمِيعًا ۖ فَإِمَّا يَأْتِيَنَّكُم مِّنِّى هُدًى فَمَن تَبِعَ هُدَاىَ فَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ",
+            "transliteration_ascii": "Qulna ihbitoo minha jamee'aan faimma yatiyannakum minnee hudan faman tabi'aa hudaya fala khawfun aalayhim wala hum yahzanoona",
+            "translation": {
+              "en": "We said, \"Go down from it, all of you. And when guidance comes to you from Me, whoever follows My guidance - there will be no fear concerning them, nor will they grieve.",
+              "tr": "\"İnin oradan hepiniz, tarafımdan size bir yol gösteren gelecektir; Benim yoluma uyanlar için artık korku yoktur, onlar üzülmeyeceklerdir\" dedik."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:38",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_052",
+      "type": "ayah",
+      "title": "Rehberlik - 17:9",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "guidance",
+        "quran",
+        "rehberlik"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "17:9",
+            "arabic": "إِنَّ هَٰذَا ٱلْقُرْءَانَ يَهْدِى لِلَّتِى هِىَ أَقْوَمُ وَيُبَشِّرُ ٱلْمُؤْمِنِينَ ٱلَّذِينَ يَعْمَلُونَ ٱلصَّٰلِحَٰتِ أَنَّ لَهُمْ أَجْرًا كَبِيرًا",
+            "transliteration_ascii": "Inna hatha alqurana yahdee lillatee hiya aqwamu wayubashshiru almumineena allatheena ya'aamaloona alssalihati anna lahum ajran kabeeran",
+            "translation": {
+              "en": "Indeed, this Qur'an guides to that which is most suitable and gives good tidings to the believers who do righteous deeds that they will have a great reward.",
+              "tr": "Doğrusu bu Kuran en doğru yola götürür ve yararlı iş yapan müminlere büyük ecir olduğunu, ahirete inanmayanlara can yakıcı bir azap hazırladığımızı müjdeler."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "17:9",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_053",
+      "type": "ayah",
+      "title": "Rehberlik - 24:35",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "guidance",
+        "quran",
+        "rehberlik"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "24:35",
+            "arabic": "ٱللَّهُ نُورُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ ۚ مَثَلُ نُورِهِۦ كَمِشْكَوٰةٍ فِيهَا مِصْبَاحٌ ۖ ٱلْمِصْبَاحُ فِى زُجَاجَةٍ ۖ ٱلزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّىٌّ يُوقَدُ مِن شَجَرَةٍ مُّبَٰرَكَةٍ زَيْتُونَةٍ لَّا شَرْقِيَّةٍ وَلَا غَرْبِيَّةٍ يَكَادُ زَيْتُهَا يُضِىٓءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ ۚ نُّورٌ عَلَىٰ نُورٍ ۗ يَهْدِى ٱللَّهُ لِنُورِهِۦ مَن يَشَآءُ ۚ وَيَضْرِبُ ٱللَّهُ ٱلْأَمْثَٰلَ لِلنَّاسِ ۗ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ",
+            "transliteration_ascii": "Allahu nooru alssamawati waalardi mathalu noorihi kamishkatin feeha misbahun almisbahu fee zujajatin alzzujajatu kaannaha kawkabun durriyyun yooqadu min shajaratin mubarakatin zaytoonatin la sharqiyyatin wala gharbiyyatin yakadu zaytuha yudeeo walaw lam tamsashu narun noorun aala noorin yahdee allahu linoorihi man yashao wayadribu allahu alamthala lilnnasi wa'allahu bikulli shayin aaleemun",
+            "translation": {
+              "en": "Allah is the Light of the heavens and the earth. The example of His light is like a niche within which is a lamp, the lamp is within glass, the glass as if it were a pearly [white] star lit from [the oil of] a blessed olive tree, neither of the east nor of the west, whose oil would almost glow even if untouched by fire. Light upon light. Allah guides to His light whom He wills. And Allah presents examples for the people, and Allah is Knowing of all things.",
+              "tr": "Allah göklerin ve yerin Nur'udur. O'nun nuru, içinde ışık bulunan bir kandil yuvasına benzer. O ışık bir cam içindedir, cam ise, sanki inci gibi parlayan bir yıldızdır; bu ne yalnız doğuda ve ne de yalnız batıda bulunan bereketli zeytin ağacından yakılır. Ateş değmese bile, nerdeyse yağın kendisi aydınlatacak! Nur üstüne nurdur. Allah dilediğini nuruna kavuşturur. Allah insanlara misaller verir. O, herşeyi bilir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "24:35",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_054",
+      "type": "ayah",
+      "title": "Rehberlik - 6:162-163",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "guidance",
+        "quran",
+        "rehberlik"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "6:162",
+            "arabic": "قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+            "transliteration_ascii": "Qul inna salatee wanusukee wamahyaya wamamatee lillahi rabbi al'aalameena",
+            "translation": {
+              "en": "Say, \"Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allah, Lord of the worlds.",
+              "tr": "De ki: \"Namazım, ibadetlerim, hayatım ve ölümüm, alemlerin Rabbi Allah içindir."
+            }
+          },
+          {
+            "verse_key": "6:163",
+            "arabic": "لَا شَرِيكَ لَهُۥ ۖ وَبِذَٰلِكَ أُمِرْتُ وَأَنَا۠ أَوَّلُ ٱلْمُسْلِمِينَ",
+            "transliteration_ascii": "La shareeka lahu wabithalika omirtu waana awwalu almuslimeena",
+            "translation": {
+              "en": "No partner has He. And this I have been commanded, and I am the first [among you] of the Muslims.\"",
+              "tr": "O'nun hiçbir ortağı yoktur; böyle emrolundum ve ben Müslümanların ilkiyim.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "6:162-163",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_055",
+      "type": "ayah",
+      "title": "Korunma - 2:255",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "focus"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "focus",
+        "korunma",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:255",
+            "arabic": "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ ۗ مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ",
+            "transliteration_ascii": "Allahu la ilaha illa huwa alhayyu alqayyoomu la takhuthuhu sinatun wala nawmun lahu ma fee alssamawati wama fee alardi man tha allathee yashfa'aau aaindahu illa biithnihi ya'aalamu ma bayna aydeehim wama khalfahum wala yuheetoona bishayin min aailmihi illa bima shaa wasi'aa kursiyyuhu alssamawati waalarda wala yaooduhu hifthuhuma wahuwa al'aaliyyu al'aatheemu",
+            "translation": {
+              "en": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is [presently] before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.",
+              "tr": "Allah, O'ndan başka tanrı olmayan, kendisini uyuklama ve uyku tutmayan, diri, her an yaratıklarını gözetip durandır. Göklerde olan ve yerde olan ancak O'nundur. O'nun izni olmadan katında şefaat edecek kimdir? Onların işlediklerini ve işleyeceklerini bilir, dilediğinden başka ilminden hiçbir şeyi kavrayamazlar. Hükümranlığı gökleri ve yeri kaplamıştır, onların gözetilmesi O'na ağır gelmez. O yücedir, büyüktür."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:255",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_056",
+      "type": "ayah",
+      "title": "Korunma - 2:285",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "focus"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "focus",
+        "korunma",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "2:285",
+            "arabic": "ءَامَنَ ٱلرَّسُولُ بِمَآ أُنزِلَ إِلَيْهِ مِن رَّبِّهِۦ وَٱلْمُؤْمِنُونَ ۚ كُلٌّ ءَامَنَ بِٱللَّهِ وَمَلَٰٓئِكَتِهِۦ وَكُتُبِهِۦ وَرُسُلِهِۦ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِۦ ۚ وَقَالُوا۟ سَمِعْنَا وَأَطَعْنَا ۖ غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ ٱلْمَصِيرُ",
+            "transliteration_ascii": "Amana alrrasoolu bima onzila ilayhi min rabbihi waalmuminoona kullun amana bi'allahi wamalaikatihi wakutubihi warusulihi la nufarriqu bayna ahadin min rusulihi waqaloo sami'aana waata'aana ghufranaka rabbana wailayka almaseeru",
+            "translation": {
+              "en": "The Messenger has believed in what was revealed to him from his Lord, and [so have] the believers. All of them have believed in Allah and His angels and His books and His messengers, [saying], \"We make no distinction between any of His messengers.\" And they say, \"We hear and we obey. [We seek] Your forgiveness, our Lord, and to You is the [final] destination.\"",
+              "tr": "Peygamber ve inananlar, ona Rabb'inden indirilene inandı. Hepsi Allah'a, meleklerine, kitaplarına, peygamberlerine inandı. \"Peygamberleri arasından hiçbirini ayırdetmeyiz, işittik, itaat ettik, Rabbimiz! Affını dileriz, dönüş Sanadır\" dediler."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "2:285",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_057",
+      "type": "ayah",
+      "title": "Korunma - 113:1-5",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "focus"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "focus",
+        "korunma",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "113:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
+            "transliteration_ascii": "Qul a'aaoothu birabbi alfalaqi",
+            "translation": {
+              "en": "Say, \"I seek refuge in the Lord of daybreak",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "113:2",
+            "arabic": "مِن شَرِّ مَا خَلَقَ",
+            "transliteration_ascii": "Min sharri ma khalaqa",
+            "translation": {
+              "en": "From the evil of that which He created",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "113:3",
+            "arabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+            "transliteration_ascii": "Wamin sharri ghasiqin itha waqaba",
+            "translation": {
+              "en": "And from the evil of darkness when it settles",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "113:4",
+            "arabic": "وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِى ٱلْعُقَدِ",
+            "transliteration_ascii": "Wamin sharri alnnaffathati fee al'aauqadi",
+            "translation": {
+              "en": "And from the evil of the blowers in knots",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "113:5",
+            "arabic": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+            "transliteration_ascii": "Wamin sharri hasidin itha hasada",
+            "translation": {
+              "en": "And from the evil of an envier when he envies.\"",
+              "tr": "De ki: \"Yaratıkların şerrinden, bastırdığı zaman karanlığın şerrinden, düğümlere nefes eden büyücülerin şerrinden, hased ettiği zaman hasedcilerin şerrinden, tan yerini ağartan Rabbe sığınırım.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "113:1-5",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_058",
+      "type": "ayah",
+      "title": "Korunma - 114:1-6",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "focus"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "focus",
+        "korunma",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "114:1",
+            "arabic": "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+            "transliteration_ascii": "Qul a'aaoothu birabbi alnnasi",
+            "translation": {
+              "en": "Say, \"I seek refuge in the Lord of mankind,",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:2",
+            "arabic": "مَلِكِ ٱلنَّاسِ",
+            "transliteration_ascii": "Maliki alnnasi",
+            "translation": {
+              "en": "The Sovereign of mankind.",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:3",
+            "arabic": "إِلَٰهِ ٱلنَّاسِ",
+            "transliteration_ascii": "Ilahi alnnasi",
+            "translation": {
+              "en": "The God of mankind,",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:4",
+            "arabic": "مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ",
+            "transliteration_ascii": "Min sharri alwaswasi alkhannasi",
+            "translation": {
+              "en": "From the evil of the retreating whisperer -",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:5",
+            "arabic": "ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ",
+            "transliteration_ascii": "Allathee yuwaswisu fee sudoori alnnasi",
+            "translation": {
+              "en": "Who whispers [evil] into the breasts of mankind -",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          },
+          {
+            "verse_key": "114:6",
+            "arabic": "مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+            "transliteration_ascii": "Mina aljinnati wa alnnasm",
+            "translation": {
+              "en": "From among the jinn and mankind.\"",
+              "tr": "De ki: \"İnsanlardan ve cinlerden ve insanların gönüllerine vesvese veren o sinsi vesvesecinin şerrinden, insanların Tanrısı, insanların Hükümranı ve insanların Rabbi olan Allah'a sığınırım.\""
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "114:1-6",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_059",
+      "type": "ayah",
+      "title": "Korunma - 3:18",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guidance",
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "guidance",
+        "korunma",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "3:18",
+            "arabic": "شَهِدَ ٱللَّهُ أَنَّهُۥ لَآ إِلَٰهَ إِلَّا هُوَ وَٱلْمَلَٰٓئِكَةُ وَأُو۟لُوا۟ ٱلْعِلْمِ قَآئِمًۢا بِٱلْقِسْطِ ۚ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+            "transliteration_ascii": "Shahida allahu annahu la ilaha illa huwa waalmalaikatu waoloo al'aailmi qaiman bialqisti la ilaha illa huwa al'aazeezu alhakeemu",
+            "translation": {
+              "en": "Allah witnesses that there is no deity except Him, and [so do] the angels and those of knowledge - [that He is] maintaining [creation] in justice. There is no deity except Him, the Exalted in Might, the Wise.",
+              "tr": "Allah, melekler ve adaleti yerine getiren ilim sahibleri, O'ndan başka tanrı olmadığına şahidlik etmişlerdir. O'ndan başka tanrı yoktur, O güçlüdür, Hakim'dir."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "3:18",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "ayah_060",
+      "type": "ayah",
+      "title": "Korunma - 3:160",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guidance"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "guidance",
+        "korunma",
+        "quran"
+      ],
+      "content": {
+        "verses": [
+          {
+            "verse_key": "3:160",
+            "arabic": "إِن يَنصُرْكُمُ ٱللَّهُ فَلَا غَالِبَ لَكُمْ ۖ وَإِن يَخْذُلْكُمْ فَمَن ذَا ٱلَّذِى يَنصُرُكُم مِّنۢ بَعْدِهِۦ ۗ وَعَلَى ٱللَّهِ فَلْيَتَوَكَّلِ ٱلْمُؤْمِنُونَ",
+            "transliteration_ascii": "In yansurkumu allahu fala ghaliba lakum wain yakhthulkum faman tha allathee yansurukum min ba'aadihi wa'aala allahi falyatawakkali almuminoona",
+            "translation": {
+              "en": "If Allah should aid you, no one can overcome you; but if He should forsake you, who is there that can aid you after Him? And upon Allah let the believers rely.",
+              "tr": "Allah size yardım ederse, sizi yenecek yoktur; eğer sizi yardımsız bırakıverirse, O'ndan başka size yardım edecek kimdir? İnananlar yalnız Allah'a güvensinler."
+            }
+          }
+        ]
+      },
+      "source": {
+        "quran_ref": "3:160",
+        "source_name": "Tanzil Quran Text + Tanzil Translations",
+        "source_url": "https://tanzil.net"
+      }
+    },
+    {
+      "id": "dua_001",
+      "type": "dua",
+      "title": "Supplication Before Sleeping",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "بِاسْمِكَ اللَّهُمَّ أَمُوْتُ وَأَحْيَا",
+          "transliteration_ascii": "Bismika allahumma amutu wa ahya",
+          "translation": {
+            "en": "In Your name, O Allah, I die and I live.",
+            "tr": "Senin isminle Allah'ım ölürüm ve yaşarım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukhari",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_002",
+      "type": "dua",
+      "title": "Supplication Upon Waking Up",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "gratitude"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "الحَمْدُ للهِ الَّذِي أَحْيَانَا بعْدَ مَا أماتَنَا وإِلَيْهِ النُّشُورُ",
+          "transliteration_ascii": "Alhamdulillahilladhi ahyana ba'da ma amatana wa ilayhin-nushur",
+          "translation": {
+            "en": "All praise is for Allah who gives us life after He has caused us to die, and to Him is the resurrection.",
+            "tr": "Hamd, bizi öldürdükten sonra dirilten Allah'a mahsustur ve diriliş O'nadır."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Bukhari: 6327",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_003",
+      "type": "dua",
+      "title": "Supplication Entering the Bathroom",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "daily_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
+          "transliteration_ascii": "Allahumma inni a'udhu bika minal-khubuthi wal-khaba'ith",
+          "translation": {
+            "en": "O Allah, I seek refuge in You from the evil and the wicked.",
+            "tr": "Allah'ım şerrden ve kötülerden sana sığınırım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukhari and Muslim",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_004",
+      "type": "dua",
+      "title": "Supplication Leaving the Bathroom",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "غُفْرَانَكَ",
+          "transliteration_ascii": "Ghufranak",
+          "translation": {
+            "en": "I ask for Your forgiveness (O Allah).",
+            "tr": "Senden mağfiret dilerim (Allah'ım)."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. at-Tirmidzi",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_005",
+      "type": "dua",
+      "title": "Supplication Before Eating",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "بِسْمِ اللَّهِ",
+          "transliteration_ascii": "Bismillah",
+          "translation": {
+            "en": "In the name of Allah.",
+            "tr": "Allah'ın adıyla."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukari No. 5376 and Muslim No. 2022",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_006",
+      "type": "dua",
+      "title": "Supplication If Forgetting Bismillah at the Beginning of a Meal",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ",
+          "transliteration_ascii": "Bismillahi awwalahu wa akhirahu",
+          "translation": {
+            "en": "In the name of Allah, at its beginning and its end.",
+            "tr": "Başında ve sonunda Allah'ın adıyla."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Abu Dawud",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_007",
+      "type": "dua",
+      "title": "Supplication After Eating",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "gratitude"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "الْحَمْدُ لِلَّهِ الَّذِى أَطْعَمَنِى هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّى وَلاَ قُوَّةٍ",
+          "transliteration_ascii": "Alhamdulillahilladhi at'amani hadha wa razaqanihi min ghayri hawlin minni wa la quwwah",
+          "translation": {
+            "en": "All praise is to Allah who has fed me this and provided for me without any power or strength from me.",
+            "tr": "Bütün hamdler, benden hiçbir güç ve kuvvet olmaksızın bana bunu yediren ve bana rızık veren Allah'a mahsustur."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "Shahih at-Tirmidzi",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_008",
+      "type": "dua",
+      "title": "Supplication Entering the Mosque",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اَللَّهُمَّ افْتَحْ لِيْ أَبْوَابَ رَحْمَتِكَ",
+          "transliteration_ascii": "Allahummaftah li abwaba rahmatik",
+          "translation": {
+            "en": "O Allah, open the doors of Your mercy for me.",
+            "tr": "Allahım bana rahmetinin kapılarını aç."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Muslim",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_009",
+      "type": "dua",
+      "title": "Supplication Leaving the Mosque",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اَللَّهُمَّ إِنِّيْ أَسْأَلُكَ مِنْ فَضْلِكَ",
+          "transliteration_ascii": "Allahumma inni as'aluka min fadlik",
+          "translation": {
+            "en": "O Allah, I ask You for Your bounty.",
+            "tr": "Allah'ım senden lütfunu isterim."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Muslim No. 713",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_010",
+      "type": "dua",
+      "title": "Supplication Before Performing Ablution",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "بِسْمِ اللَّهِ",
+          "transliteration_ascii": "Bismillah",
+          "translation": {
+            "en": "In the name of Allah.",
+            "tr": "Allah'ın adıyla."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. at-Tirmidzi and al-Baihaqi",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_011",
+      "type": "dua",
+      "title": "Supplication After Performing Ablution",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "guilt"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "gratitude",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "أشْهَدُ أنْ لا إله إِلاَّ اللَّهُ وَحْدَهُ لا شَرِيك لَهُ ، وأشْهَدُ أنَّ مُحَمَّداً عَبْدُهُ وَرَسُولُهُ ، اللَّهُمَّ اجْعَلْنِي مِنَ التَوَّابِينَ ، واجْعَلْني مِنَ المُتَطَهِّرِينَ ، سُبْحانَكَ اللَّهُمَّ وبِحَمْدِكَ ، أشْهَدُ أنْ لا إلهَ إِلاَّ أنْتَ ، أسْتَغْفِرُكَ وأتُوبُ إِلَيْكَ",
+          "transliteration_ascii": "Ashhadu alla ilaha illa allah wahdahu la sharika lahu wa ashhadu anna muhammadan 'abduhu wa rasuluh allahummaj'alni minat-tawwabina waj'alni minal-mutatahhirin subhanakallahumma wa bihamdika ashhadu alla ilaha illa anta astaghfiruka wa atubu ilayk",
+          "translation": {
+            "en": "I bear witness that there is no deity except Allah alone, with no partner, and I bear witness that Muhammad is His servant and Messenger. O Allah, make me among those who repent and make me among those who purify themselves. Glory be to You, O Allah, and with Your praise, I bear witness that there is no deity except You. I seek Your forgiveness and repent to You.",
+            "tr": "Tek ve ortağı olmayan Allah'tan başka ilah olmadığına ve Muhammed'in O'nun kulu ve elçisi olduğuna şahitlik ederim. Allah'ım beni tevbe edenlerden eyle ve temizlenenlerden eyle. Seni tesbih ederim Allah'ım, hamdınla şehadet ederim ki Senden başka ilah yoktur. Senden bağışlanma diler ve sana tövbe ederim."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Muslim, at-Tirmidzi and an-Nasa'i",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_012",
+      "type": "dua",
+      "title": "Supplication for Breaking the Fast",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "ذَهَبَ الظَّمَأُ وابْتَلَّتِ الْعُرُوقُ وثَبَتَ اْلأَجْرُ إِنْ شَاءَاللهُ",
+          "transliteration_ascii": "Dhahabadh-dhama'u wabtallatil-'uruqu wa thabatal-ajru insha allah",
+          "translation": {
+            "en": "The thirst has gone, the veins are moistened, and the reward is confirmed, Insha Allah.",
+            "tr": "Susuzluk gitti, damarlar nemlendi, sevap kesinleşti inşaAllah."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Abu Daud, As-Sunan Al-Kubra Lil Baihaqi, Vol. 4, p. 239, al-Hakim in Mustadrak 'alas Shahihain No. 1484",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_013",
+      "type": "dua",
+      "title": "Supplication Entering the House #1",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اَلسَّلَامُ عَلَيْكُمْ",
+          "transliteration_ascii": "Assalamu 'alaykum",
+          "translation": {
+            "en": "Peace be upon you.",
+            "tr": "Selam üzerinize olsun."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. at-Tirmidzi",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_014",
+      "type": "dua",
+      "title": "Supplication Entering the House #2",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "guilt"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "gratitude",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ",
+          "transliteration_ascii": "Assalamu 'alaykum wa rahmatullahi wa barakatuh",
+          "translation": {
+            "en": "Peace, mercy, and blessings of Allah be upon you.",
+            "tr": "Allah'ın selamı, rahmeti ve bereketi üzerinize olsun."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. at-Tirmidzi",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_015",
+      "type": "dua",
+      "title": "Supplication Leaving the House",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+          "transliteration_ascii": "Bismillah tawakkaltu 'alallah la hawla wa la quwwata illa billah",
+          "translation": {
+            "en": "In the name of Allah, I place my trust in Allah. There is no might nor power except with Allah.",
+            "tr": "Allah'ın adıyla Allah'a tevekkül ediyorum. Allah'tan başka güç ve kuvvet yoktur."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Abu Dawud and at-Tirmidzi",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_016",
+      "type": "dua",
+      "title": "Supplication for Protection from Causing or Experiencing Harm Outside the House",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "guilt"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "daily_dua",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ إِنِّى أَعُوذُ بِكَ أَنْ أَضِلَّ أَوْ أُضَلَّ أَوْ أَزِلَّ أَوْ أُزَلَّ أَوْ أَظْلِمَ أَوْ أُظْلَمَ أَوْ أَجْهَلَ أَوْ يُجْهَلَ عَلَىَّ",
+          "transliteration_ascii": "Allahumma inni a'udhu bika an adilla aw udalla aw azilla aw uzalla aw adhlima aw udhlama aw ajhala aw yujhala 'alayya",
+          "translation": {
+            "en": "O Allah, I seek refuge in You lest I should stray or be led astray, slip or be tripped, wrong or be wronged, or act foolishly or have foolishness done to me.",
+            "tr": "Allah'ım, sapmaktan, saptırılmaktan, kaymaktan, takılıp düşmekten, haksızlığa uğramaktan, haksızlığa uğramaktan, ahmaklık yapmaktan veya bana akılsızlığa uğramaktan sana sığınırım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Abu Dawud, at-Tirmidzi, Ibn Majah and an-Nasa'i",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_017",
+      "type": "dua",
+      "title": "Travel Supplication",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "patience"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "daily_dua",
+        "patience"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "الله أَكْبَرُ،الله أَكْبَرُ،الله أَكْبَرُ،سُبْحَانَ الَّذِى سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ اللَّهُمَّ إِنَّا نَسْأَلُكَ فِى سَفَرِنَا هَذَا الْبِرَّ وَالتَّقْوَى وَمِنَ الْعَمَلِ مَا تَرْضَى اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا وَاطْوِ عَنَّا بُعْدَهُ اللَّهُمَّ أَنْتَ الصَّاحِبُ فِى السَّفَرِ وَالْخَلِيفَةُ فِى الأَهْلِ اللَّهُمَّ إِنِّى أَعُوذُ بِكَ مِنْ وَعْثَاءِ السَّفَرِ وَكَآبَةِ الْمَنْظَرِ وَسُوءِ الْمُنْقَلَبِ فِى الْمَالِ وَالأَهْلِ",
+          "transliteration_ascii": "Allahu akbar allahu akbar allahu akbar subhanalladhi sakhkhara lana hadha wa ma kunna lahu muqrinin wa inna ila rabbina lamunqalibun allahumma inna nas'aluka fi safarina hadhal-birra wat-taqwa wa minal-'amali ma tarda allahumma hawwin 'alayna safarana hadha watwi 'anna bu'dah allahumma antas-sahibu fis-safar wal-khalifatu fil-ahl allahumma inni a'udhu bika min wa'tha'is-safar wa ka'abatil-mandhari wa su'il-munqalabi fil-mali wal-ahl",
+          "translation": {
+            "en": "Allah is the Greatest, Allah is the Greatest, Allah is the Greatest. Glory be to Him who has provided this for us, though we could never have had it by our own efforts. Surely to our Lord we are returning. O Allah, we ask You for righteousness and piety in this journey of ours, and for deeds that please You. O Allah, lighten for us the hardship of this journey and quickly bring us to our destination. O Allah, You are our Companion on the journey and the Guardian of our families. O Allah, I seek refuge in You from the hardship of travel, from a bad return, and from seeing something unpleasant concerning our wealth, family, or children.",
+            "tr": "Allah en büyüktür, Allah en büyüktür, Allah en büyüktür. Kendi çabalarımızla asla elde edemeyeceğimiz halde, bunu bize sağlayan Allah'a hamd olsun. Şüphesiz biz Rabbimize dönüyoruz. Allah'ım, bu yolculuğumuzda Senden iyilik, takva ve razı olacağın amel dileriz. Allah'ım bu yolculuğun sıkıntısını üzerimizden hafiflet ve bizi gideceğimiz yere çabuk ulaştır. Allah'ım, sen bizim yol arkadaşımız ve ailemizin koruyucususun. Allah'ım, yolculuğun zorluğundan, kötü dönüşten, mallarımız, ailemiz ve çocuklarımızla ilgili hoş olmayan bir şey görmekten sana sığınırım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Muslim",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_018",
+      "type": "dua",
+      "title": "Supplication of a Resident for Someone Who is Traveling",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "guidance"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "أَسْتَوْدِعُ اللَّهَ دِينَكَ وَأَمَانَتَكَ وَخَوَاتِيمَ عَمَلِكَ",
+          "transliteration_ascii": "Astawdi'ullaha dinaka wa amanataka wa khawatima 'amalik",
+          "translation": {
+            "en": "I entrust your religion, your trust, and the end of your deeds to Allah.",
+            "tr": "Dininizi, emanetinizi ve amellerinizin sonunu Allah'a emanet ediyorum."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Abu Dawud: 2601",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_019",
+      "type": "dua",
+      "title": "Supplication for Piety from a Resident to Someone Who is Traveling",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "زَوَّدَكَ اللَّهُ التَّقْوَى وَغَفَرَ ذَنْبَكَ  وَيَسَّرَ لَكَ الْخَيْرَ حَيْثُمَا كُنْتَ",
+          "transliteration_ascii": "Zawwadakallahut-taqwa wa ghafara dhanbaka wa yassara lakal-khayra haythuma kunta",
+          "translation": {
+            "en": "May Allah provide you with piety, forgive your sins, and ease goodness for you wherever you are.",
+            "tr": "Allah sana takvayı versin, günahlarını bağışlasın ve nerede olursan ol sana iyilik kolaylaştırsın."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. at-Tirmidzi",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_020",
+      "type": "dua",
+      "title": "Supplication When Wearing New Clothes",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "gratitude"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "daily_dua",
+        "gratitude"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا صُنِعَ لَهُ وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ",
+          "transliteration_ascii": "Allahumma lakal-hamdu anta kasawtanihi as'aluka min khayrihi wa khayri ma suni'a lah wa a'udhu bika min sharrihi wa sharri ma suni'a lah",
+          "translation": {
+            "en": "O Allah, to You is all praise. You have clothed me with this. I ask You for its goodness and the goodness for which it was made, and I seek refuge in You from its evil and the evil for which it was made.",
+            "tr": "Allah'ım, hamd sana mahsustur. Bunu bana sen giydirdin. Senden onun hayrını ve ne için yaratıldığının hayırlarını isterim, onun şerrinden ve ne için yaratıldığı şerrinden de sana sığınırım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Ahmad, Abu Dawud, at-Tirmidzi and Al-Hakim",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_021",
+      "type": "dua",
+      "title": "Supplication When Wearing Clothes",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "gratitude"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "الْحَمْدُ لِلَّهِ الَّذِى كَسَانِى هَذَا الثَّوْبَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّى وَلاَ قُوَّةٍ",
+          "transliteration_ascii": "Alhamdulillahilladhi kasani hadha wa razaqanihi min ghayri hawlin minni wa la quwwah",
+          "translation": {
+            "en": "Praise be to Allah who has clothed me with this garment and provided it for me without any power or strength from me.",
+            "tr": "Bu elbiseyi bana giydiren ve benden hiçbir güç ve kuvvet olmaksızın onu bana rızık kılan Allah'a hamd olsun."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. all compilers of Sunan books, except Nasa'i",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_022",
+      "type": "dua",
+      "title": "Supplication When Mounting a Vehicle",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "gratitude",
+        "guilt"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "gratitude",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "بِسْمِ اللَّهِ، بِسْمِ اللَّهِ، بِسْمِ اللَّهِ، الحَمْدُ للِه، سُبْحَانَ الَّذِى سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ، سُبْحَانَكَ إِنِّى قَدْ ظَلَمْتُ نَفْسِى فَاغْفِرْ لِى فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ",
+          "transliteration_ascii": "Bismillah bismillah bismillah alhamdulillah subhanalladhi sakhkhara lana hadha wa ma kunna lahu muqrinin wa inna ila rabbina lamunqalibun subhanaka inni qad dhalamtu nafsi faghfir li fa innahu la yaghfirudh-dhunuba illa anta",
+          "translation": {
+            "en": "In the name of Allah, in the name of Allah, in the name of Allah. All praise is to Allah. Glory be to Him who has subjected this to us, and we could not have done so by ourselves. And indeed, to our Lord we will return. Glory be to You, indeed I have wronged myself, so forgive me, for none can forgive sins except You.",
+            "tr": "Allah'ın adıyla, Allah'ın adıyla, Allah'ın adıyla. Bütün övgüler Allah'a mahsustur. Bunu bize nasip eden Allah'a hamdolsun, biz bunu kendi başımıza yapamazdık. Ve şüphesiz biz Rabbimize döneceğiz. Seni tenzih ederim, gerçekten ben kendime zulmettim, beni bağışla, çünkü günahları Senden başkası bağışlayamaz."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Abu Dawud and at-Tirmidzi",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_023",
+      "type": "dua",
+      "title": "Supplication When it Rains",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ صَيِّبًا نَافِعًا",
+          "transliteration_ascii": "Allahumma sayyiban nafi'a",
+          "translation": {
+            "en": "O Allah, make it a beneficial rain.",
+            "tr": "Allah'ım, onu faydalı bir yağmur eyle."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukhari No. 1032",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_024",
+      "type": "dua",
+      "title": "Supplication During Heavy Rain",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ حَوَالَيْنَا وَلاَ عَلَيْنَا ، اللَّهُمَّ عَلَى الآكَامِ وَالظِّرَابِ وَبُطُونِ الأَوْدِيَةِ وَمَنَابِتِ الشَّجَرِ",
+          "transliteration_ascii": "Allahumma hawalayna wa la 'alayna allahumma 'alal-akami wadh-dhirabi wa butunil-awdiyati wa manabitish-shajar",
+          "translation": {
+            "en": "O Allah, (let the rain fall) around us, not on us. O Allah, (let it fall) on the hills, mountains, small mountains, valleys, and places where trees grow.",
+            "tr": "Allah'ım, (yağmur) etrafımıza yağsın, üzerimize değil. Allah'ım, tepelere, dağlara, küçük dağlara, vadilere, ağaçların yetiştiği yerlere (düştür.)"
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukhari No. 1014",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_025",
+      "type": "dua",
+      "title": "Supplication After it Rains",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "مُطِرْنا بفَضْلِ اللهِ ورَحْمَتِهِ",
+          "transliteration_ascii": "Mutirna bi fadlillahi wa rahmatih",
+          "translation": {
+            "en": "We have been given rain by the bounty and mercy of Allah.",
+            "tr": "Allah'ın lütfu ve rahmeti sayesinde bize yağmur verildi."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukhari No. 846 and Muslim No. 71",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_026",
+      "type": "dua",
+      "title": "Supplication During Strong Wind",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "daily_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا، وَأَعُوْذُ بِكَ مِنْ شَرِّهَا",
+          "transliteration_ascii": "Allahumma inni as'aluka khayraha wa a'udhu bika min sharriha",
+          "translation": {
+            "en": "O Allah, I ask You for the good of this wind, and I seek refuge in You from its evil.",
+            "tr": "Allah'ım, Senden bu rüzgârın hayrını isterim, şerrinden de Sana sığınırım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Abu Dawud and Ibn Majah",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_027",
+      "type": "dua",
+      "title": "The Best Supplication for Seeking Forgiveness (Sayyid al-Istighfar)",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety",
+        "gratitude",
+        "guilt"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "daily_dua",
+        "gratitude",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اَللَّهُمَّ أَنْتَ رَبِّيْ ، لَا إِلٰـهَ إِلاَّ أَنْتَ خَلَقْتَنِيْ وَأَنَا عَبْدُكَ ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ ، أَعُوْذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ ، أَبُوْءُ لَكَ بِنِعْمتِكَ عَلَيَّ ، وَأَبُوْءُ بِذَنْبِيْ فَاغْفِرْ لِيْ ، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ",
+          "transliteration_ascii": "Allahumma anta rabbi la ilaha illa anta khalaqtani wa ana 'abduka wa ana 'ala 'ahdika wa wa'dika mastata'tu a'udhu bika min sharri ma sana'tu abu'u laka bini'matika 'alayya wa abu'u bidhanbi faghfir li fa innahu la yaghfirudh-dhunuba illa anta",
+          "translation": {
+            "en": "O Allah, You are my Lord. There is no deity worthy of worship except You. You created me, and I am Your servant. I abide to Your covenant and promise as best I can. I seek refuge in You from the evil of what I have done. I acknowledge Your blessings upon me, and I acknowledge my sin. So forgive me, for none can forgive sins except You.",
+            "tr": "Allah'ım sen benim Rabbimsin. Senden başka ibadete layık ilah yoktur. Beni sen yarattın, ben de senin kulunum. Gücüm yettiğince ahdine ve vaadine uyuyorum. Yaptığım şeylerin şerrinden sana sığınırım. Üzerimdeki nimetini ikrar ediyorum, günahımı da ikrar ediyorum. O halde beni bağışla, çünkü günahları Senden başkası bağışlayamaz."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukhari No. 6306, 6323, Ahmad IV/122-125, an-Nasa'i VIII/279-280",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_028",
+      "type": "dua",
+      "title": "Supplication for Ease in All Matters",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ لاَ سَهْلَ إِلاَّ مَا جَعَلْتَهُ سَهْلاً وَأَنْتَ تَجْعَلُ الحَزْنَ إِذَا شِئْتَ سَهْلاً",
+          "transliteration_ascii": "Allahumma la sahla illa ma ja'altahu sahla wa anta taj'alul-hazna idha shi'ta sahla",
+          "translation": {
+            "en": "O Allah, there is no ease except in that which You make easy, and You make the difficult easy if You wish.",
+            "tr": "Allah'ım senin kolaylaştırdığından başka kolaylık yoktur, sen dilersen zoru da kolaylaştırırsın."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Ibn Hibban",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_029",
+      "type": "dua",
+      "title": "Supplication When Afflicted by Calamity",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ اللَّهُمَّ أْجُرْنِى فِى مُصِيبَتِى وَأَخْلِفْ لِى خَيْرًا مِنْهَا",
+          "transliteration_ascii": "Inna lillahi wa inna ilayhi raji'un allahumma'jurni fi musibati wa akhlif li khayran minha",
+          "translation": {
+            "en": "Indeed we belong to Allah, and indeed to Him we will return. O Allah, reward me for my affliction and replace it with something better.",
+            "tr": "Şüphesiz biz Allah'ız ve şüphesiz O'na döneceğiz. Allah'ım, bu musibetten dolayı beni mükafatlandır ve onun yerine daha hayırlısını ver."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Muslim",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_030",
+      "type": "dua",
+      "title": "Supplication When in Debt",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ اكْفِنِى بِحَلاَلِكَ عَنْ حَرَامِكَ وَأَغْنِنِى بِفَضْلِكَ عَمَّنْ سِوَاكَ",
+          "transliteration_ascii": "Allahummakfini bi halalika 'an haramik wa aghnini bi fadlika 'amman siwak",
+          "translation": {
+            "en": "O Allah, suffice me with what is lawful and keep me away from what is unlawful, and enrich me with Your bounty so I do not depend on anyone besides You.",
+            "tr": "Allah'ım, beni helâl ile yetin, beni haramdan uzak tut ve lütfunla beni zenginleştir ki, senden başkasına muhtaç olmayayım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. at-Tirmidzi No. 2563",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_031",
+      "type": "dua",
+      "title": "Supplication for Protection from Laziness, Sadness, and Debt",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "daily_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اَللّٰهُمَّ إِنِّى أَعُوْذُبِكَ مِنَ الْهَمِّ وَالْحَزْنِ وَأَعُوْذُبِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَأَعُوْذُبِكَ مِنَ الْجُبْنِ وَالْبُخْلِ وَأَعُوْذُبِكَ مِنْ غَلَبَتِ الدَّيْنِ وَقَهْرِ الرجال",
+          "transliteration_ascii": "Allahumma inni a'udhu bika minal-hammi wal-hazan wa a'udhu bika minal-'ajzi wal-kasal wa a'udhu bika minal-jubni wal-bukhl wa a'udhu bika min ghalabatid-dayni wa qahrir-rijal",
+          "translation": {
+            "en": "O Allah, I seek refuge in You from anxiety and grief, and I seek refuge in You from incapacity and laziness, and I seek refuge in You from cowardice and miserliness, and I seek refuge in You from being overpowered by debt and from being overcome by men.",
+            "tr": "Allah'ım, kaygı ve kederden sana sığınırım, acizlik ve tembellikten sana sığınırım, korkaklık ve cimrilikten sana sığınırım, borç altında ezilmekten ve insanların galip gelmesinden sana sığınırım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Abu Dawud No. 1555",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_032",
+      "type": "dua",
+      "title": "Supplication After Sneezing",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "gratitude"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "الحَمْدُ للهِ",
+          "transliteration_ascii": "Alhamdulillah",
+          "translation": {
+            "en": "All praise is to Allah.",
+            "tr": "Bütün övgüler Allah'a mahsustur."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukhari",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_033",
+      "type": "dua",
+      "title": "Supplication Upon Hearing Someone Sneeze",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "يَرْحَمُكَ اللهُ",
+          "transliteration_ascii": "Yarhamukallah",
+          "translation": {
+            "en": "May Allah have mercy on you.",
+            "tr": "Allah sana rahmet etsin."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukhari",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_034",
+      "type": "dua",
+      "title": "Response to Someone Who Says 'Yarhamukallah' After You Sneeze",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "guidance"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "يَهْدِيكُمُ اللهُ وَيُصْلِحُ بَالَكُمْ",
+          "transliteration_ascii": "Yahdikumullah wa yuslihu balakum",
+          "translation": {
+            "en": "May Allah guide you and improve your condition.",
+            "tr": "Allah size yol göstersin ve durumunuzu iyileştirsin."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. al-Bukhari",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_035",
+      "type": "dua",
+      "title": "Supplication for Good Character",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "focus"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ كَمَا حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
+          "transliteration_ascii": "Allahumma kama hassanta khalqi fahassin khuluqi",
+          "translation": {
+            "en": "O Allah, just as You have made my external form good, make my character good as well.",
+            "tr": "Allah'ım, dış görünüşümü güzel kıldığın gibi, ahlâkımı da güzel kıl."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "HR. Ahmad, authenticated by al-Albani in al-Irwa', 1/115",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_036",
+      "type": "dua",
+      "title": "Prayer for Protection from Satan",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "daily_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "رَبِّ أَعُوْذُ بِكَ مِنْ هَمَزَاتِ الشَّيَاطِيْنِ وَأَعُوْذُ بِكَ رَبِّ أَنْ يَحْضُرُوْنِ",
+          "transliteration_ascii": "Rabbi a'udhu bika min hamazatish-shayatin wa a'udhu bika rabbi ay-yahdurun",
+          "translation": {
+            "en": "My Lord, I seek refuge in You from the whispers of Satan, and I seek refuge in You, my Lord, from their presence around me.",
+            "tr": "Rabbim, şeytanın vesveselerinden sana sığınırım, onların etrafımda bulunmasından da sana sığınırım Rabbim."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "QS. Al-Mu'minun: 97-98",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_037",
+      "type": "dua",
+      "title": "Prayer After the Adhan",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "gratitude"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ",
+          "transliteration_ascii": "Allahumma rabba hadhihid-da'watit-tammah was-salatil-qa'imah ati muhammadanil-wasilata wal-fadilah wab'ath-hu maqaman mahmudanilladhi wa'adtah",
+          "translation": {
+            "en": "O Allah, Lord of this perfect call and the established prayer, grant Muhammad the wasilah (a high status in Paradise) and the excellence (above all creation), and raise him to the praiseworthy station that You have promised him.",
+            "tr": "Ey bu mükemmel davetin ve kılınan namazın Rabbi olan Allah'ım, Muhammed'e vesîle (Cennette yüksek bir makam) ve üstünlük (yaratılmışların üstünde) ver ve onu, kendisine vaad ettiğin övgüye değer makama yükselt."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "Narrated by Abu Dawud (529), at-Tirmidhi (211), an-Nasa'i (2:26), Ibn Majah (722)",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_038",
+      "type": "dua",
+      "title": "Prayer for Forgiveness for Parents",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "guilt"
+      ],
+      "topic_tags": [
+        "daily_dua",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "رَبَّنَا ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ ٱلْحِسَابُ",
+          "transliteration_ascii": "Rabbanaghfir li wa liwalidayya wa lil-mu'minina yawma yaqumul-hisab",
+          "translation": {
+            "en": "Our Lord, forgive me and my parents and all the believers on the Day the account is established.",
+            "tr": "Rabbimiz, hesap görülecek günde beni, ana-babamı ve bütün mü'minleri bağışla."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "daily-dua",
+        "hadith_ref": "QS. Ibrahim: 41",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_039",
+      "type": "dua",
+      "title": "Dua Seeking Good In This World And In The Hereafter",
+      "length_bucket": "m",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus"
+      ],
+      "topic_tags": [
+        "focus",
+        "selected_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "رَبَّنَا آَتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآَخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+          "transliteration_ascii": "Rabbana atina fid-dunya hasanatan wa fil-akhirati hasanatan wa qina 'adhaban-nar",
+          "translation": {
+            "en": "Our Lord! Give us good in this world and give us good in the Hereafter, and save us from the torment of the hell fire.",
+            "tr": "Rabbimiz! Bize dünyada iyilik ver, ahirette de iyilik ver ve bizi cehennem ateşi azabından koru."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "selected-dua",
+        "hadith_ref": "QS. Al-Baqarah: 201, al-Bukhari: 6389, HR. Muslim: 2690",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_040",
+      "type": "dua",
+      "title": "Dua To Make Heart Firm Upon Deen #1",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "selected_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِى عَلَى دِينِكَ",
+          "transliteration_ascii": "Ya muqallibal-qulubi thabbit qalbi 'ala dinik",
+          "translation": {
+            "en": "O Changer of the hearts, make my heart firm upon Your religion.",
+            "tr": "Ey kalpleri değiştiren, kalbimi dinin üzere sabit kıl."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "selected-dua",
+        "hadith_ref": "HR. at-Tirmidzi, No. 3522 and Ahmad, 6: 315",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_041",
+      "type": "dua",
+      "title": "Dua To Make Heart Firm Upon Deen #2",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "selected_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ مُصَرِّفَ الْقُلُوبِ صَرِّفْ قُلُوبَنَا عَلَى طَاعَتِكَ",
+          "transliteration_ascii": "Allahumma musarrifal-qulubi sarrif qulubana 'ala ta'atik",
+          "translation": {
+            "en": "O Allah! Controller of the hearts, direct our hearts to Your obedience.",
+            "tr": "Allah'ım! Kalpleri idare eden, kalplerimizi Senin itaatine yönelt."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "selected-dua",
+        "hadith_ref": "HR. Muslim No. 2654",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_042",
+      "type": "dua",
+      "title": "Dua To Make Heart Firm Upon Deen #3",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "guidance"
+      ],
+      "topic_tags": [
+        "guidance",
+        "selected_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا",
+          "transliteration_ascii": "Rabbana la tuzigh qulubana ba'da idh hadaytana",
+          "translation": {
+            "en": "O our Lord, do not make our hearts incline to error after You have guided us.",
+            "tr": "Ey Rabbimiz, bizi doğru yola ilettikten sonra kalplerimizi sapıklığa meyletme."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "selected-dua",
+        "hadith_ref": "QS. Ali Imran: 8",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_043",
+      "type": "dua",
+      "title": "Dua To Seek Refuge Against The Loss Of Pleasure",
+      "length_bucket": "m",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "selected_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ إِنِّى أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ وَتَحَوُّلِ عَافِيَتِكَ وَفُجَاءَةِ نِقْمَتِكَ وَجَمِيعِ سَخَطِكَ",
+          "transliteration_ascii": "Allahumma inni a'udhu bika min zawali ni'matik wa tahawwuli 'afiyatik wa fuja'ati niqmatik wa jami'i sakhatik",
+          "translation": {
+            "en": "O Allah, I seek refuge in You from the loss of the pleasures that You have bestowed, from changes in the health that You have bestowed, from Your sudden torment, and from all Your wrath.",
+            "tr": "Allah'ım, verdiğin nimetlerin kaybolmasından, verdiğin afiyetin değişmesinden, ani azabından ve her türlü gazabından sana sığınırım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "selected-dua",
+        "hadith_ref": "HR. Muslim No. 2739",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_044",
+      "type": "dua",
+      "title": "Dua To Resist Affliction",
+      "length_bucket": "s",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "selected_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنْ جَهْدِ البَلاَءِ ، وَدَرَكِ الشَّقَاءِ ، وَسُوءِ القَضَاءِ ، وَشَمَاتَةِ الأَعْدَاء",
+          "transliteration_ascii": "Allahumma inni a'udhu bika min jahdil-bala' wa darakish-shaqa' wa su'il-qada' wa shamatatil-a'da'",
+          "translation": {
+            "en": "O Allah, I seek refuge in You from severe calamity, being overtaken by misery, evil destiny, and the triumphant mockery of enemies.",
+            "tr": "Allah'ım, şiddetli musibetlerden, bedbahtlıktan, kötü kaderden, düşmanların alay konusu olmasından sana sığınırım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "selected-dua",
+        "hadith_ref": "HR. al-Bukhari: 6616, Muslim: 2707",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_045",
+      "type": "dua",
+      "title": "Dua To Be Released From Debt, Anxiety, Weakness, Laziness, Fear, And Pressure from Others",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "anxiety"
+      ],
+      "topic_tags": [
+        "anxiety",
+        "selected_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اَللّٰهُمَّ إِنِّى أَعُوْذُبِكَ مِنَ الْهَمِّ وَالْحَزْنِ وَأَعُوْذُبِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَأَعُوْذُبِكَ مِنَ الْجُبْنِ وَالْبُخْلِ وَأَعُوْذُبِكَ مِنْ غَلَبَتِ الدَّيْنِ وَقَهْرِ الرجال",
+          "transliteration_ascii": "Allahumma inni a'udhu bika minal-hammi wal-huzni wa a'udhu bika minal-'ajzi wal-kasali wa a'udhu bika minal-jubni wal-bukhli wa a'udhu bika min ghalabatid-dayni wa qahrir-rijal",
+          "translation": {
+            "en": "O Allah, I seek refuge in You from care and grief, I seek refuge in You from incapacity and slackness, I seek refuge in You from cowardice and niggardliness, and I seek refuge in You from being overcome by debt and being put in subjection by men.",
+            "tr": "Allah'ım, tasa ve kederden sana sığınırım, acizlik ve gevşeklikten sana sığınırım, korkaklık ve cimrilikten sana sığınırım, borca ​​girmekten ve insanların boyunduruğu altına girmekten sana sığınırım."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "selected-dua",
+        "hadith_ref": "HR. Abu Dawud No. 1555",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_046",
+      "type": "dua",
+      "title": "Dua When Getting Good News",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "gratitude"
+      ],
+      "topic_tags": [
+        "gratitude",
+        "selected_dua"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "الْحَمْدُ لِلَّهِ الَّذِى بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ",
+          "transliteration_ascii": "Alhamdu lillahi alladhi bini'matihi tattimmu assalihat",
+          "translation": {
+            "en": "Praise be to Allah, by whose grace goodness is perfected.",
+            "tr": "Lütfuyla iyiliği tamamlayan Allah'a hamd olsun."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "selected-dua",
+        "hadith_ref": "HR. Ibn Majah in the Sunan, No. 3803 and al-Hakim in al-Mustadrak (1/499)",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_047",
+      "type": "dua",
+      "title": "Istighfar",
+      "length_bucket": "xs",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "focus",
+        "guilt"
+      ],
+      "topic_tags": [
+        "dhikr_after_salah",
+        "focus",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "أَسْتَغْفِرُ اللَّهَ",
+          "transliteration_ascii": "Astaghfirullah",
+          "translation": {
+            "en": "I seek forgiveness from Allah.",
+            "tr": "Allah'tan mağfiret dilerim."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "dhikr-after-salah",
+        "hadith_ref": "HR. Muslim No. 591",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_048",
+      "type": "dua",
+      "title": "Allah, The Giver of Peace",
+      "length_bucket": "s",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus",
+        "gratitude"
+      ],
+      "topic_tags": [
+        "dhikr_after_salah",
+        "focus",
+        "gratitude"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "اَللَّهُمَّ أَنْتَ السَّلاَمُ، وَمِنْكَ السَّلاَمُ، تَبَارَكْتَ يَا ذَا الْجَلاَلِ وَاْلإِكْرَامِ",
+          "transliteration_ascii": "Allahumma antas-salam wa minkas-salam tabarakta ya dhal-jalali wal-ikram",
+          "translation": {
+            "en": "O Allah, You are Peace, and from You is peace. Blessed are You, O Possessor of majesty and honor.",
+            "tr": "Allah'ım, sen selamsın, selam sendendir. Ne mutlu sana, ey azamet ve şeref sahibi."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "dhikr-after-salah",
+        "hadith_ref": "HR. Muslim No. 591",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_049",
+      "type": "dua",
+      "title": "Allah, The Preventer and The Giver of All Things",
+      "length_bucket": "l",
+      "mood_levels": [
+        "low",
+        "mid"
+      ],
+      "mood_tags": [
+        "focus",
+        "gratitude"
+      ],
+      "topic_tags": [
+        "dhikr_after_salah",
+        "focus",
+        "gratitude"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "لاَ إِلَـهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرُ، اَللَّهُمَّ لاَ مَانِعَ لِمَا أَعْطَيْتَ، وَلاَ مُعْطِيَ لِمَا مَنَعْتَ، وَلاَ يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ",
+          "transliteration_ascii": "La ilaha illa allah wahdahu la sharika lah lahul-mulku wa lahul-hamdu wa huwa 'ala kulli shay'in qadir allahumma la mani'a lima a'tayta wa la mu'tiya lima mana'ta wa la yanfa'u dhal-jaddi minkal-jaddu",
+          "translation": {
+            "en": "There is no deity worthy of worship except Allah alone, He has no partner. To Him belongs dominion and praise, and He is over all things competent. O Allah, there is no preventer of what You give, and no giver of what You withhold, and wealth and honor do not benefit their possessor (except faith and righteous deeds that save from punishment). Only from You is wealth and honor.",
+            "tr": "Tek olan Allah'tan başka ibadete layık ilah yoktur, O'nun ortağı yoktur. Mülk ve hamd O'nundur ve O, her şeye kadirdir. Allah'ım, senin verdiğine engel olan, vermediğini veren yoktur; mal ve şeref, (iman ve azaptan kurtaran salih amel hariç) sahibine fayda sağlamaz. Zenginlik ve şeref ancak Sendendir."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "dhikr-after-salah",
+        "hadith_ref": "HR. Bukhari No. 844 and Muslim No. 593",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    },
+    {
+      "id": "dua_050",
+      "type": "dua",
+      "title": "Allah, The Possessor of All and The Only One Worthy of Worship",
+      "length_bucket": "l",
+      "mood_levels": [
+        "mid",
+        "high"
+      ],
+      "mood_tags": [
+        "focus",
+        "gratitude",
+        "guidance",
+        "guilt"
+      ],
+      "topic_tags": [
+        "dhikr_after_salah",
+        "focus",
+        "gratitude",
+        "guidance",
+        "guilt"
+      ],
+      "content": {
+        "dua": {
+          "arabic": "لاَ إِلَـهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرُ. لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللهِ، لاَ إِلَـهَ إِلاَّ اللهُ، وَلاَ نَعْبُدُ إِلاَّ إِيَّاهُ، لَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ وَلَهُ الثَّنَاءُ الْحَسَنُ، لاَ إِلَـهَ إِلاَّ اللهُ مُخْلِصِيْنَ لَهُ الدِّيْنَ وَلَوْ كَرِهَ الْكَافِرُوْنَ",
+          "transliteration_ascii": "La ilaha illa allah wahdahu la sharika lah lahul-mulku wa lahul-hamdu wa huwa 'ala kulli shay'in qadir la hawla wa la quwwata illa billah la ilaha illa allah wa la na'budu illa iyyah lahun-ni'mah wa lahul-fadl wa lahuth-thana'ul-hasan la ilaha illa allah mukhlisina lahud-dina wa law karihal-kafirun",
+          "translation": {
+            "en": "There is no deity worthy of worship except Allah alone, He has no partner. To Him belongs dominion and praise, and He is over all things competent. There is no power and no strength except by Allah. There is no deity worthy of worship except Allah, and we do not worship except Him. To Him belongs all favor, grace, and good praise. There is no deity worthy of worship except Allah, making our religion sincerely for Him, even if the disbelievers dislike it.",
+            "tr": "Tek olan Allah'tan başka ibadete layık ilah yoktur, O'nun ortağı yoktur. Mülk ve hamd O'nundur ve O, her şeye kadirdir. Allah'tan başka güç ve kuvvet yoktur. Allah'tan başka ibadete layık ilah yoktur ve biz O'ndan başkasına ibadet etmeyiz. Bütün iyilikler, lütuflar ve güzel övgüler O'na aittir. Kâfirler hoşlanmasa da dinimizi O'na halis kılan Allah'tan başka ibadete layık ilah yoktur."
+          }
+        }
+      },
+      "source": {
+        "hisn_category": "dhikr-after-salah",
+        "hadith_ref": "HR. Muslim No. 594",
+        "source_name": "Hisn al-Muslim via fitrahive/dua-dhikr",
+        "source_url": "https://github.com/fitrahive/dua-dhikr"
+      }
+    }
+  ]
+}

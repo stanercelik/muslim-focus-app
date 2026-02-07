@@ -35,11 +35,12 @@ enum OnboardingStep: String, Codable, CaseIterable {
     case howItWorksModal           // E21
     case prayerIsPowerful          // E22
     case planSummary               // E23
-    case moodCheckIn1              // E24
-    case moodCheckIn2              // E25
-    case moodCheckIn3              // E26
-    case guidedPrayer              // E27
-    case verseOfDay                // E28
+    case difficultyModeSelection   // E23.5
+    case moodCheckIn1              // E24 - mood level
+    case moodCheckIn2              // E25 - mood tag
+    case moodCheckIn3              // E26 - card preview
+    case guidedPrayer              // E27 - guided content
+    case verseOfDay                // E28 - ayah of the moment
     case congratulations           // E29
     case ratingPrompt              // E30
     case streakScreen              // E31
@@ -65,7 +66,6 @@ enum OnboardingStep: String, Codable, CaseIterable {
             .relationshipWithAllah,
             .prayerFrequency,
             .deeperStruggles,
-            .madhhabSelection,
             .sexSelection
         ]
         

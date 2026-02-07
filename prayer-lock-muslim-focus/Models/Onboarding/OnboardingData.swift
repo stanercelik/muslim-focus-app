@@ -20,8 +20,48 @@ struct OnboardingData: Codable, Equatable {
     var madhhab: Madhhab?
     var sex: Sex?
     var mood: Mood?
+    var preferredDifficulty: DifficultyMode = .medium
     var commitment: CommitmentLevel?
     var hasCompletedOnboarding: Bool = false
+
+    enum CodingKeys: String, CodingKey {
+        case name
+        case ageRange
+        case phoneUsageHours
+        case selectedGoals
+        case biggerVision
+        case ibadahDaysPerWeek
+        case spiritualState
+        case blockers
+        case rootStruggles
+        case madhhab
+        case sex
+        case mood
+        case preferredDifficulty
+        case commitment
+        case hasCompletedOnboarding
+    }
+
+    init() {}
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+        ageRange = try container.decodeIfPresent(AgeRange.self, forKey: .ageRange)
+        phoneUsageHours = try container.decodeIfPresent(PhoneUsageRange.self, forKey: .phoneUsageHours)
+        selectedGoals = try container.decodeIfPresent([UserGoal].self, forKey: .selectedGoals) ?? []
+        biggerVision = try container.decodeIfPresent(BiggerVision.self, forKey: .biggerVision)
+        ibadahDaysPerWeek = try container.decodeIfPresent(Int.self, forKey: .ibadahDaysPerWeek) ?? 0
+        spiritualState = try container.decodeIfPresent(SpiritualState.self, forKey: .spiritualState)
+        blockers = try container.decodeIfPresent([Blocker].self, forKey: .blockers) ?? []
+        rootStruggles = try container.decodeIfPresent([RootStruggle].self, forKey: .rootStruggles) ?? []
+        madhhab = try container.decodeIfPresent(Madhhab.self, forKey: .madhhab)
+        sex = try container.decodeIfPresent(Sex.self, forKey: .sex)
+        mood = try container.decodeIfPresent(Mood.self, forKey: .mood)
+        preferredDifficulty = try container.decodeIfPresent(DifficultyMode.self, forKey: .preferredDifficulty) ?? .medium
+        commitment = try container.decodeIfPresent(CommitmentLevel.self, forKey: .commitment)
+        hasCompletedOnboarding = try container.decodeIfPresent(Bool.self, forKey: .hasCompletedOnboarding) ?? false
+    }
 }
 
 // MARK: - Enums

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OnboardingCompletedView: View {
     @ObservedObject var viewModel: OnboardingViewModel
+    @State private var showSettings = false
     
     var body: some View {
         ZStack {
@@ -44,13 +45,36 @@ struct OnboardingCompletedView: View {
                     .padding(.horizontal, 32)
                 
                 Spacer()
-                
+
+                VStack(spacing: 12) {
+                    Text("Difficulty: \(viewModel.currentDifficultyMode.localizedDisplayText.capitalized)")
+                        .font(.system(size: 14, weight: .bold, design: .rounded))
+                        .foregroundColor(Color.appTextOnPrimary.opacity(0.75))
+
+                    Button {
+                        showSettings = true
+                    } label: {
+                        Text("Open difficulty settings")
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                            .foregroundColor(Color.appPrimary)
+                            .padding(.horizontal, 18)
+                            .padding(.vertical, 12)
+                            .background(
+                                RoundedRectangle(cornerRadius: 14)
+                                    .fill(Color.appSurface)
+                            )
+                    }
+                }
+
                 // Dev note
                 Text(.devModeOnboardingCompleted)
                     .font(.system(size: 14, weight: .bold, design: .rounded))
                     .foregroundColor(Color.appTextOnPrimary.opacity(0.6))
                     .padding(.bottom, 50)
             }
+        }
+        .sheet(isPresented: $showSettings) {
+            SettingsDifficultyView(viewModel: viewModel)
         }
     }
 }

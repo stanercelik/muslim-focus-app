@@ -63,6 +63,7 @@ struct OnboardingPrayerIsPowerfulView: View {
                     .transition(.opacity)
 
                 HowItWorksDialog(isPresented: $showHowItWorksDialog)
+                    .environmentObject(viewModel)
                     .padding(.horizontal, 28)
                     .transition(.scale(scale: 0.96).combined(with: .opacity))
             }
@@ -394,6 +395,7 @@ private struct WeekLabels: View {
 
 private struct HowItWorksDialog: View {
     @Binding var isPresented: Bool
+    @EnvironmentObject private var viewModel: OnboardingViewModel
 
     var body: some View {
         VStack(spacing: 18) {
@@ -440,7 +442,10 @@ private struct HowItWorksDialog: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 6)
 
-            Button(action: {}) {
+            Button(action: {
+                HapticManager.shared.impact(style: .medium)
+                viewModel.nextStep()
+            }) {
                 Text(.prayerIsPowerfulDialogButton)
                     .font(.system(size: 16, weight: .bold, design: .rounded))
                     .foregroundColor(Color.appTextOnPrimary)

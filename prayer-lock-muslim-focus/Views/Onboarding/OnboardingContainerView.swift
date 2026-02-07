@@ -69,13 +69,27 @@ struct OnboardingContainerView: View {
         case .deeperStruggles:
             OnboardingRootStrugglesView(viewModel: viewModel)
         case .madhhabSelection:
-            OnboardingMadhhabView(viewModel: viewModel)
+            OnboardingSexView(viewModel: viewModel)
         case .sexSelection:
             OnboardingSexView(viewModel: viewModel)
         case .onboardingSummary:
             OnboardingSummaryView(viewModel: viewModel)
+        case .howItWorksModal:
+            OnboardingDifficultyModeView(viewModel: viewModel)
         case .prayerIsPowerful:
             OnboardingPrayerIsPowerfulView(viewModel: viewModel)
+        case .difficultyModeSelection:
+            OnboardingDifficultyModeView(viewModel: viewModel)
+        case .moodCheckIn1:
+            LockMoodSelectionView(viewModel: viewModel, stage: .level)
+        case .moodCheckIn2:
+            LockMoodSelectionView(viewModel: viewModel, stage: .tag)
+        case .moodCheckIn3:
+            GuidedPrayerContentView(viewModel: viewModel)
+        case .guidedPrayer:
+            GuidedPrayerContentView(viewModel: viewModel)
+        case .verseOfDay:
+            VerseOfMomentView(viewModel: viewModel)
         case .completed:
             OnboardingCompletedView(viewModel: viewModel)
         default:
@@ -98,7 +112,7 @@ struct OnboardingContainerView: View {
         switch viewModel.currentStep {
         case .splash, .problemFraming, .productPromise, .nameInput, .transition, .ageRange, .phoneUsage, .phoneImpact, .timeIntro, .youreInRightPlace:
             return false
-        case .hadithScreen, .howItWorksModal, .ratingPrompt, .prayerIsPowerful, .onboardingSummary:
+        case .hadithScreen, .howItWorksModal, .ratingPrompt, .prayerIsPowerful, .onboardingSummary, .difficultyModeSelection, .moodCheckIn1, .moodCheckIn2, .moodCheckIn3, .guidedPrayer, .verseOfDay:
             return false
         default:
             return true

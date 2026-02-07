@@ -68,7 +68,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				204D1C6B2F32BC150001C05A /* prayer-lock-muslim-focus */,
-				204D1C7A2F32BC290001C05A /* Documents */,
 			);
 			name = "prayer-lock-muslim-focus";
 			packageProductDependencies = (
